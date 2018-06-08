@@ -1,0 +1,44 @@
+{js:kindeditor}
+<div class="headbar">
+	<div class="position"><span>积分</span><span>></span><span>积分管理</span><span>></span><span>积分添加</span></div>
+</div>
+<div class="content_box">
+	<div class="content form_content">
+		<form action="{url:/point/point_add}" method="post">
+			<table class="form_table" cellpadding="0" cellspacing="0">
+				<colgroup>
+					<col width="150px" />
+					<col />
+				</colgroup>
+
+				<tr>
+					<th>期数：</th>
+					<td>
+						<input class="normal" name="sum_num" type="text" value="" pattern="required" alt="期数不能为空" /><label>* 必选项</label>
+					</td>
+				</tr>
+				<tr>
+					<th>是否显示：</th>
+					<td>
+						<label class='attr'><input name="is_show" type="radio" value="1" checked="checked" /> 是 </label>
+						<label class='attr'><input name="is_show" type="radio" value="0" /> 否 </label>
+					</td>
+				</tr>
+				<tr>
+					<th>目标积分：</th><td><input class="normal" name="sum_point" pattern="required" type="text" value="" alt="积分不能为空" /><label>* 必选项</label></td>
+				</tr>
+				<tr>
+					<td></td><td><button class="submit" type="submit"><span>确 定</span></button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
+
+<script type="text/javascript">
+// $(function()
+// {
+// 	var formObj = new Form();
+// 	formObj.init({echo:JSON::encode($this->categoryRow)});
+// })
+</script>
