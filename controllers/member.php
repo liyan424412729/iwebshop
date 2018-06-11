@@ -911,4 +911,53 @@ class Member extends IController implements adminAuthorization
 
     	die('<script type="text/javascript">parent.searchSellerCallback("'.$sellerIds.'");</script>');
     }
+
+
+    /*
+	* 奖金转存 接口
+	* @param decimal 用户奖金
+	* return 返回
+    */
+	public function savebonus(){
+
+		$jin = IFilter::act(IReq::get('jin'),'decimal');
+		$id  = IFilter::act(IReq::get('user_id'),'int');
+		if (empty($id)) die('请登录');
+		$member = new IModel('member');
+		$user_info = $member->getObj('user_id='.$id);
+
+		if (!is_numeric($jin) || empty($jin) || $jin <= 0 || $jin>$user_info['bonus']) {
+			$arr = [
+				'code' => 10001,
+				'message' => '请输入正确的数',
+				'data' => ''
+			];
+		}else{
+
+			$consumption = $jin * 0.4;
+			$balance = $jin * 0.6;
+			$bonus = $user_bonus['bonus'] - $jin;
+
+			// $members = new IModel('member');
+			$data = array(
+				'consumption' => $user_info['consumption'] + $consumption,
+				'balance'     => $user_info['balance'] + $balance,
+				'bonus'       => $bonus
+			);
+			$member->setData($data);
+			$res = $member->update('user_id='.$id);
+
+			// $arr = [
+			// 	'code' => 200,
+			// 	'message' => 'aaa',
+			// 	'data' => $jin
+			// ];
+		}
+
+		// echo json_encode($arr);
+		
+	}
+
+
+
 }

@@ -26,9 +26,9 @@
 		<ul class="user_stat">
 			<!-- <li>奖金钱包：<strong>￥{$user['balance']}</strong></li> -->
 			<li>奖金钱包：
-				<strong>￥{$user['bonus']}
-				<input type="" name="">
-				<button>转存</button>
+				<strong>￥<span>{$user['bonus']}</span>
+				<input type="" id="jiangjin" value="">
+				<button id="btn_zhuan">转存</button>
 				<input type="" name="">
 				<button>分投</button>
 			    </strong>
@@ -38,7 +38,7 @@
 			<li>经验值：<strong>{$user['exp']}</strong></li>
 		</ul>
 		<ul class="user_stat">
-			<li>消费钱包：<strong>￥{$user['consumption']}</strong></strong></li>
+			<li>消费钱包：<strong>￥<span>{$user['consumption']}</span></strong></strong></li>
 			<li>待付款订单：(<strong>{echo:statistics::countUserWaitPay($this->user['user_id'])}</strong>)</li>
 			<li>待确认收货：(<strong><a href="{url:/ucenter/order}">{echo:statistics::countUserWaitCommit($this->user['user_id'])}</a></strong>)</li>
 		</ul>
@@ -104,4 +104,18 @@ function callback_user_ico(content){
 	}
 	art.dialog({id:'user_ico'}).close();
 }
+
+// 个人中心转存
+$(function(){
+	$('#btn_zhuan').click(function(){
+		var jiangjin = $('#jiangjin').val();
+		var user_id = "{$user['user_id']}";
+
+		$.get('{url:/member/savebonus}',{jin:jiangjin,user_id:user_id},function(result){
+			console.log(result);
+		});
+	})
+
+})
+
 </script>
