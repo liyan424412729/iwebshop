@@ -729,6 +729,7 @@ errorTime: 2018-06-08 11:58:05
 </ERROR_BLOCK>
 
 <ERROR_BLOCK>
+<<<<<<< HEAD
 errorInfo: Undefined variable: user_info
 errorFile: IWEB_PATH/controllers/member.php
 errorLine: 947
@@ -738,11 +739,23 @@ errorTime: 2018-06-08 18:53:03
 #1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
 #2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
 #3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(savebonus)
+=======
+errorInfo: Undefined variable: starttime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 15:57:38
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+>>>>>>> master
 #4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
 #5 IWEB_PATH/index.php(5): IApplication->run()
 </ERROR_BLOCK>
 
 <ERROR_BLOCK>
+<<<<<<< HEAD
 errorInfo: Undefined variable: user_bonus
 errorFile: IWEB_PATH/controllers/member.php
 errorLine: 939
@@ -752,6 +765,45 @@ errorTime: 2018-06-08 18:58:20
 #1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
 #2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
 #3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(savebonus)
+=======
+errorInfo: Undefined variable: endtime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 15:57:38
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: starttime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 15:57:46
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: endtime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 15:57:46
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+>>>>>>> master
 #4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
 #5 IWEB_PATH/index.php(5): IApplication->run()
 </ERROR_BLOCK>
