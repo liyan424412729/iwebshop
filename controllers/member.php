@@ -920,8 +920,9 @@ class Member extends IController implements adminAuthorization
     */
 	public function savebonus(){
 
-		$jin = IFilter::act(IReq::get('jin'),'decimal');
-		$id  = IFilter::act(IReq::get('user_id'),'int');
+		$jin = IFilter::act(IReq::get('jin'));
+		$id  = IFilter::act(IReq::get('user_id'));
+
 		if (empty($id)) die('请登录');
 		$member = new IModel('member');
 		$user_info = $member->getObj('user_id='.$id);
@@ -938,23 +939,22 @@ class Member extends IController implements adminAuthorization
 			$balance = $jin * 0.6;
 			$bonus = $user_bonus['bonus'] - $jin;
 
-			// $members = new IModel('member');
 			$data = array(
 				'consumption' => $user_info['consumption'] + $consumption,
 				'balance'     => $user_info['balance'] + $balance,
 				'bonus'       => $bonus
 			);
 			$member->setData($data);
-			$res = $member->update('user_id='.$id);
+			$member->update('user_id='.$id);
 
-			// $arr = [
-			// 	'code' => 200,
-			// 	'message' => 'aaa',
-			// 	'data' => $jin
-			// ];
+			$arr = [
+				'code' => 200,
+				'message' => 'aaa',
+				'data' => $jin
+			];
 		}
 
-		// echo json_encode($arr);
+		echo json_encode($arr);
 		
 	}
 
