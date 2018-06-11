@@ -1,0 +1,101 @@
+<ERROR_BLOCK>
+errorInfo: mysqli::mysqli(): (HY000/2002): ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó·ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½È·ï¿½ğ¸´»ï¿½Óµï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ğ·ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½Ó³ï¿½ï¿½ï¿½Ê§ï¿½Ü¡ï¿½
+
+errorFile: IWEB_PATH/lib/db/driver/mysqli_class.php
+errorLine: 27
+errorCode: 2
+errorTime: 2018-06-11 09:40:02
+#0 IWEB_PATH/lib/db/driver/mysqli_class.php(27): mysqli->mysqli(101.201.239.155,root,root,iwebshop,3306)
+#1 IWEB_PATH/lib/db/db_class.php(59): IMysqli->connect()
+#2 IWEB_PATH/lib/db/db_class.php(144): IDB->rTarget()
+#3 IWEB_PATH/lib/web/model/model_class.php(210): IDB->query(SELECT class_name FROM iwebshop_plugin WHERE is_open = 1 ORDER BY sort asc limit 50000)
+#4 IWEB_PATH/classes/plugin.php(32): IModel->query(is_open = 1,class_name,sort asc)
+#5 IWEB_PATH/classes/plugin.php(210): plugin::init()
+#6 : plugin::onCreateApp()
+#7 IWEB_PATH/lib/core/interceptor_class.php(114): call_user_func()
+#8 IWEB_PATH/lib/core/application_class.php(93): IInterceptor::run(onCreateApp)
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: ÓÉÓÚÁ¬½Ó·½ÔÚÒ»¶ÎÊ±¼äºóÃ»ÓĞÕıÈ·´ğ¸´»òÁ¬½ÓµÄÖ÷»úÃ»ÓĞ·´Ó¦£¬Á¬½Ó³¢ÊÔÊ§°Ü¡£
+
+excepFile: IWEB_PATH/lib/db/driver/mysqli_class.php
+excepLine: 30
+excepCode: 1000
+excepTime: 2018-06-11 09:40:02
+#0 IWEB_PATH/lib/db/db_class.php(59): IMysqli->connect()
+#1 IWEB_PATH/lib/db/db_class.php(144): IDB->rTarget()
+#2 IWEB_PATH/lib/web/model/model_class.php(210): IDB->query(SELECT class_name FROM iwebshop_plugin WHERE is_open = 1 ORDER BY sort asc limit 50000)
+#3 IWEB_PATH/classes/plugin.php(32): IModel->query(is_open = 1,class_name,sort asc)
+#4 IWEB_PATH/classes/plugin.php(210): plugin::init()
+#5 : plugin::onCreateApp()
+#6 IWEB_PATH/lib/core/interceptor_class.php(114): call_user_func()
+#7 IWEB_PATH/lib/core/application_class.php(93): IInterceptor::run(onCreateApp)
+#8 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: mysqli::query(): MySQL server has gone away
+errorFile: IWEB_PATH/lib/db/driver/mysqli_class.php
+errorLine: 59
+errorCode: 2
+errorTime: 2018-06-11 09:55:40
+#0 IWEB_PATH/lib/db/driver/mysqli_class.php(59): mysqli->query(SELECT class_name FROM iwebshop_plugin WHERE is_open = 1 ORDER BY sort asc limit 50000)
+#1 IWEB_PATH/lib/db/db_class.php(145): IMysqli->read(SELECT class_name FROM iwebshop_plugin WHERE is_open = 1 ORDER BY sort asc limit 50000)
+#2 IWEB_PATH/lib/web/model/model_class.php(210): IDB->query(SELECT class_name FROM iwebshop_plugin WHERE is_open = 1 ORDER BY sort asc limit 50000)
+#3 IWEB_PATH/classes/plugin.php(32): IModel->query(is_open = 1,class_name,sort asc)
+#4 IWEB_PATH/classes/plugin.php(210): plugin::init()
+#5 : plugin::onCreateApp()
+#6 IWEB_PATH/lib/core/interceptor_class.php(114): call_user_func()
+#7 IWEB_PATH/lib/core/application_class.php(93): IInterceptor::run(onCreateApp)
+#8 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: mysqli::query(): Error reading result set's header
+errorFile: IWEB_PATH/lib/db/driver/mysqli_class.php
+errorLine: 59
+errorCode: 2
+errorTime: 2018-06-11 09:55:40
+#0 IWEB_PATH/lib/db/driver/mysqli_class.php(59): mysqli->query(SELECT class_name FROM iwebshop_plugin WHERE is_open = 1 ORDER BY sort asc limit 50000)
+#1 IWEB_PATH/lib/db/db_class.php(145): IMysqli->read(SELECT class_name FROM iwebshop_plugin WHERE is_open = 1 ORDER BY sort asc limit 50000)
+#2 IWEB_PATH/lib/web/model/model_class.php(210): IDB->query(SELECT class_name FROM iwebshop_plugin WHERE is_open = 1 ORDER BY sort asc limit 50000)
+#3 IWEB_PATH/classes/plugin.php(32): IModel->query(is_open = 1,class_name,sort asc)
+#4 IWEB_PATH/classes/plugin.php(210): plugin::init()
+#5 : plugin::onCreateApp()
+#6 IWEB_PATH/lib/core/interceptor_class.php(114): call_user_func()
+#7 IWEB_PATH/lib/core/application_class.php(93): IInterceptor::run(onCreateApp)
+#8 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: SELECT class_name FROM iwebshop_plugin WHERE is_open = 1 ORDER BY sort asc limit 50000
+ -- MySQL server has gone away
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-11 09:55:40
+#0 IWEB_PATH/lib/web/model/model_class.php(210): IDB->query(SELECT class_name FROM iwebshop_plugin WHERE is_open = 1 ORDER BY sort asc limit 50000)
+#1 IWEB_PATH/classes/plugin.php(32): IModel->query(is_open = 1,class_name,sort asc)
+#2 IWEB_PATH/classes/plugin.php(210): plugin::init()
+#3 : plugin::onCreateApp()
+#4 IWEB_PATH/lib/core/interceptor_class.php(114): call_user_func()
+#5 IWEB_PATH/lib/core/application_class.php(93): IInterceptor::run(onCreateApp)
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: user_bonus
+errorFile: IWEB_PATH/controllers/member.php
+errorLine: 940
+errorCode: 8
+errorTime: 2018-06-11 09:59:05
+#0 : Member->savebonus()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(savebonus)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
