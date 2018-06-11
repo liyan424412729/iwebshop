@@ -65,6 +65,7 @@ class Simple extends IController
     {
     	//调用_userInfo登录插件
 		$result = plugin::trigger('userLoginAct',$_POST);
+
 		if(is_array($result))
 		{
 			//自定义跳转页面

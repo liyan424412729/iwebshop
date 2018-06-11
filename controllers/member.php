@@ -913,63 +913,6 @@ class Member extends IController implements adminAuthorization
     }
 
 
-    /*
-	* 奖金转存 接口
-	* @param decimal 用户奖金
-	* return 返回
-    */
-	public function savebonus(){
-
-		$jin = IFilter::act(IReq::get('jin'));
-		$id  = IFilter::act(IReq::get('user_id'));
-
-		if (empty($id)) die('请登录');
-		$member = new IModel('member');
-		$user_info = $member->getObj('user_id='.$id);
-
-		if (!is_numeric($jin) || empty($jin) || $jin <= 0 || $jin>$user_info['bonus']) {
-			$arr = [
-				'code' => 10001,
-				'message' => '请输入正确的数',
-				'data' => ''
-			];
-		}else{
-
-			$consumption = $jin * 0.4;
-			$balance = $jin * 0.6;
-			$bonus = $user_info['bonus'] - $jin;
-
-			$data = array(
-				'consumption' => $user_info['consumption'] + $consumption,
-				'balance'     => $user_info['balance'] + $balance,
-				'bonus'       => $bonus
-			);
-
-			// 更新钱包数据
-			$member->setData($data);
-			if($member->update('user_id='.$id)){
-				$new_info = $member->getObj('user_id='.$id);
-
-				$arr = [
-					'code' => 200,
-					'message' => '转存成功',
-					'data' => $new_info
-				];
-
-			}else{
-				$arr = [
-					'code' => 10002,
-					'message' => '转存失败',
-					'data' => ''
-				];
-			}
-
-		}
-
-		echo json_encode($arr);
-		
-	}
-
 
 
 }

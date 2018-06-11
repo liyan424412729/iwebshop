@@ -12,11 +12,17 @@
 	<script type="text/javascript" charset="UTF-8" src="/runtime/_systemjs/artTemplate/artTemplate.js"></script><script type="text/javascript" charset="UTF-8" src="/runtime/_systemjs/artTemplate/artTemplate-plugin.js"></script>
 	<!--[if IE]><script src="<?php echo $this->getWebViewPath()."javascript/html5.js";?>"></script><![endif]-->
 	<script src='<?php echo $this->getWebViewPath()."javascript/site.js";?>'></script>
+	<script type='text/javascript' src='<?php echo IUrl::creatUrl("")."public/javascript/public.js";?>'></script>
 	<link rel="stylesheet" href="<?php echo $this->getWebSkinPath()."style/style.css";?>">
-  <script type='text/javascript' src='<?php echo IUrl::creatUrl("")."public/javascript/public.js";?>'></script>
 </head>
 <body>
+<!--
 
+模版使用字体图标为优化过的 awesome 3.0 图标字体库
+
+使用帮助见:http://www.bootcss.com/p/font-awesome/
+
+ -->
 <!-- 顶部工具栏 -->
 <div class="header_top">
 	<div class="web">
@@ -151,11 +157,11 @@
 			</div>
 		</div>
 	</div>
-	<!-- logo与搜索 -->
+		<!-- logo与搜索 -->
 
-	<!-- 导航栏 -->
 	<div class="nav_bar">
-		<div class="user_center">
+		<div class="home_nav_bar user_center">
+		<!-- 导航栏 -->
 		<div class="web">
 			<!-- 分类列表 -->
 			<div class="category_list">
@@ -166,7 +172,7 @@
 				<!-- 全部商品 -->
 				<!-- 分类列表-详情 -->
 				<ul class="cat_list none">
-					<?php foreach($items=Api::run('getCategoryListTop') as $key => $first){?>
+					<?php foreach($items=Api::run('getCategoryListTop', 6) as $key => $first){?>
 					<li>
 						<!-- 分类列表-导航模块 -->
 						<div class="cat_nav">
@@ -212,9 +218,9 @@
 			<!-- 导航索引 -->
 			<div class="nav_index">
 				<ul class="nav">
-					<li class="user_nav_index"><a href="<?php echo IUrl::creatUrl("/site/index");?>"><span>首 页</span></a></li>
+					<li class="user_nav_index home_nav_index"><a href="<?php echo IUrl::creatUrl("/site/index");?>"><span>首 页</span></a></li>
 					<?php foreach($items=Api::run('getGuideList') as $key => $item){?>
-					<li class="user_nav_index"><a href="<?php echo IUrl::creatUrl("".$item['link']."");?>"><span><?php echo isset($item['name'])?$item['name']:"";?></span></a></li>
+					<li class="user_nav_index home_nav_index"><a href="<?php echo IUrl::creatUrl("".$item['link']."");?>"><span><?php echo isset($item['name'])?$item['name']:"";?></span></a></li>
 					<?php }?>
 				</ul>
 			</div>
@@ -223,193 +229,43 @@
 	</div>
 </header>
 
-<!-- 个人中心内容 -->
-<div class="center_content">
-	<section class="breadcrumb">
-		<span></span> <a href="<?php echo IUrl::creatUrl("");?>">首页</a> \ <a href="<?php echo IUrl::creatUrl("/ucenter/index");?>">我的账户</a>
+<!--主要模板内容 开始-->
+<div class="home_content">
+
+<section class="web">
+	<header class="login_header">
+		<h3>忘记密码</h3>
+		<p>欢迎来到我们的网站，如果忘记密码，请填写下面表单来重新获取密码</p>
+	</header>
+	<section class="reg_box">
+		<form action='<?php echo $this->formAction;?>' method='post'>
+			<dl>
+				<dt>你想要的新密码：</dt>
+				<dd>
+					<input type='password' class="input_text" name="password" pattern='^\w{6,32}$' alt='密码由英文字母、数字组成，长度6-32位'>
+					<span>密码由英文字母、数字组成，长度6-32位</span>
+				</dd>
+			</dl>
+			<dl>
+				<dt>请再次输入新密码：</dt>
+				<dd>
+					<input type='password' class="input_text" name="repassword" pattern='^\w{6,32}$' alt='密码由英文字母、数字组成，长度6-32位' bind='password'>
+					<span>密码由英文字母、数字组成，长度6-32位</span>
+				</dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dd>
+					<input class="input_submit" type="submit" value="修改密码">
+					<input class="input_reset" type="reset" value="取消">
+				</dd>
+			</dl>
+		</form>
 	</section>
-
-
-	<section class="web">
-		<div class="ucenter_content_bar">
-			<section class="ucenter_main">
-				
-<?php if($msgNum>0){?>
-<div class="prompt">
-	<strong>温馨提示：</strong> 您有<span class="red"><?php echo isset($msgNum)?$msgNum:"";?></span> 条站内未读短信息，<a href="<?php echo IUrl::creatUrl("/ucenter/message");?>">现在去看看</a>
-</div>
-<?php }?>
-
-<!-- <header class="uc_head_red">
-	<time>上一次登录时间：<?php echo ISafe::get('last_login');?></time>
-	<h3>您好，<?php echo isset($this->user['username'])?$this->user['username']:"";?> 欢迎回来!</h3>
-</header> -->
-
-<section class="uc_info">
-	<?php $user_ico = $this->user['head_ico']?>
-	<div class="user_ico">
-		<img id="user_ico_img" onclick="select_ico()" src="<?php echo IUrl::creatUrl("".$user_ico."");?>" onerror="this.src='<?php echo $this->getWebSkinPath()."image/user_ico.gif";?>'">
-		<!-- <span onclick="select_ico()">修改头像</span> -->
-	</div>
-	<div class="user_info">
-		<h2><?php echo isset($this->user['username'])?$this->user['username']:"";?>，欢迎您</h2>
-		<ul class="user_baseinfo">
-			<li>总积分：<a href="<?php echo IUrl::creatUrl("/ucenter/integral");?>"><strong><?php echo isset($user['point'])?$user['point']:"";?></strong> 分</a></li>
-			<li>交易总数量：<a href="<?php echo IUrl::creatUrl("/ucenter/order");?>"><strong><?php echo isset($statistics['num'])?$statistics['num']:"";?></strong> 笔</a></li>
-			<li>总消费额：<strong>￥<?php echo isset($statistics['amount'])?$statistics['amount']:"";?></strong></li>
-		</ul>
-		<ul class="user_stat">
-			<!-- <li>奖金钱包：<strong>￥<?php echo isset($user['balance'])?$user['balance']:"";?></strong></li> -->
-			<li>奖金钱包：
-				<strong>￥<span id="bonus"><?php echo isset($user['bonus'])?$user['bonus']:"";?></span>
-				<input type="" id="jiangjin" value="">
-				<button id="btn_zhuan">转存</button>
-				<input type="" name="">
-				<button>分投</button>
-			    </strong>
-			</li>
-			<!-- <li>消费钱包（余额）：<strong>￥<?php echo isset($user['balance'])?$user['balance']:"";?></strong></li> -->
-			<li>代金券：<strong><?php echo isset($propData['prop_num'])?$propData['prop_num']:"";?></strong> 张</li>
-			<li>经验值：<strong><?php echo isset($user['exp'])?$user['exp']:"";?></strong></li>
-		</ul>
-		<ul class="user_stat">
-			<li>消费钱包：<strong>￥<span id="consumption"><?php echo isset($user['consumption'])?$user['consumption']:"";?></span></strong></strong></li>
-			<li>待付款订单：(<strong><?php echo statistics::countUserWaitPay($this->user['user_id']);?></strong>)</li>
-			<li>待确认收货：(<strong><a href="<?php echo IUrl::creatUrl("/ucenter/order");?>"><?php echo statistics::countUserWaitCommit($this->user['user_id']);?></a></strong>)</li>
-		</ul>
-		<ul class="user_stat">
-			<li>提现钱包（余额）：<strong>￥<span id="balance"><?php echo isset($user['balance'])?$user['balance']:"";?></span></strong></li>
-		</ul>
-	</div>
 </section>
 
-<header class="uc_head mt30">
-	<h3>我的订单</h3>
-	<a href="<?php echo IUrl::creatUrl("/ucenter/order");?>" class="more">更多 ></a>
-</header>
-<section class="uc_table">
-	<table>
-		<thead>
-			<tr>
-				<th>订单编号</th><th>下单日期</th><th>收货人</th><th>支付方式</th><th>总金额</th><th>订单状态</th>
-			</tr>
-		</thead>
-		<tbody>
-		<?php foreach($items=Api::run('getOrderListByUserid',array('#user_id#',$user['user_id'])) as $key => $item){?>
-		<tr>
-			<td><a href="<?php echo IUrl::creatUrl("/ucenter/order_detail/id/".$item['id']."");?>"><?php echo isset($item['order_no'])?$item['order_no']:"";?></a></td>
-			<td><?php echo isset($item['create_time'])?$item['create_time']:"";?></td>
-			<td><?php echo isset($item['accept_name'])?$item['accept_name']:"";?></td>
-			<td><?php echo isset($this->payments[$item['pay_type']]['name'])?$this->payments[$item['pay_type']]['name']:"";?></td>
-			<td>￥<?php echo ($item['order_amount']);?></td>
-			<td>
-				<?php $orderStatus = Order_Class::getOrderStatus($item)?>
-				<b class="<?php if($orderStatus >= 6){?>green<?php }else{?>orange<?php }?>"><?php echo Order_Class::orderStatusText($orderStatus);?></b>
-			</td>
-		</tr>
-		<?php }?>
-		</tbody>
-	</table>
-</section>
-
-
-<script>
-//选择头像
-function select_ico(){
-	<?php $callback = urlencode(IUrl::creatUrl('/ucenter/user_ico_upload'))?>
-	art.dialog.open('<?php echo IUrl::creatUrl("/block/photo_upload?callback=".$callback."");?>',
-	{
-		'id':'user_ico',
-		'title':'设置头像',
-		'ok':function(iframeWin, topWin)
-		{
-			iframeWin.document.forms[0].submit();
-			return false;
-		}
-	});
-}
-
-//头像上传回调函数
-function callback_user_ico(content){
-	var content = eval(content);
-	if(content.isError == true){
-		alert(content.message);
-	}else{
-		$('#user_ico_img').prop('src',content.data);
-	}
-	art.dialog({id:'user_ico'}).close();
-}
-
-// 个人中心转存
-$(function(){
-	$('#btn_zhuan').click(function(){
-		$(this).attr('disabled',true);
-		var jiangjin = $('#jiangjin').val();
-		var user_id = "<?php echo isset($user['user_id'])?$user['user_id']:"";?>";
-
-		$.get('<?php echo IUrl::creatUrl("/ucenter/savebonus");?>',{jin:jiangjin,user_id:user_id},function(result){
-			if (result.code == 10001) {
-				alert(result.message);return false;
-			}
-			if (result.code == 10002) {
-				alert(result.message);return false;
-			}
-			if (result.code == 200) {
-				alert(result.message);
-			}
-			$('#bonus').html(result.data.bonus);
-			$('#consumption').html(result.data.consumption);
-			$('#balance').html(result.data.balance);
-		},'JSON');
-		$(this).attr('disabled',false);
-	})
-
-})
-
-</script>
-
-			</section>
-			<!-- 个人中心内容-功能栏 -->
-			<aside class="ucenter_bar">
-				<!-- 我的商城 -->
-				<div class="ucenter_bar_wapper">
-					<a href="<?php echo IUrl::creatUrl("/ucenter/index");?>">我的商城</a>
-				</div>
-				<!-- 我的商城 -->
-				<!-- 功能栏 -->
-				<?php $index=0;?>
-				<?php foreach($items=menuUcenter::init() as $key => $item){?>
-				<?php $index++;?>
-				<nav class="user_bar">
-					<h3><?php echo isset($key)?$key:"";?></h3>
-					<ul>
-						<?php foreach($items=$item as $moreKey => $moreValue){?>
-						<li><a title="<?php echo isset($moreValue)?$moreValue:"";?>" href="<?php echo IUrl::creatUrl("".$moreKey."");?>"><?php echo isset($moreValue)?$moreValue:"";?></a></li>
-						<?php }?>
-					</ul>
-				</nav>
-				<?php }?>
-				<!-- 功能栏 -->
-			</aside>
-			<!-- 个人中心内容-功能栏 -->
-		</div>
-		<section class="ucenter_goods">
-			<h3>也许你会对下列商品感兴趣</h3>
-			<ul>
-				<?php foreach($items=Api::run('getGoodsByCommendgoods',8) as $key => $item){?>
-				<li>
-					<a href="<?php echo IUrl::creatUrl("/site/products/id/".$item['id']."");?>">
-						<img src="<?php echo IUrl::creatUrl("/pic/thumb/img/".$item['img']."/w/170/h/170");?>" alt="<?php echo isset($item['name'])?$item['name']:"";?>">
-						<p class="pro_title"><?php echo isset($item['name'])?$item['name']:"";?></p>
-						<p class="pro_price">￥<?php echo isset($item['sell_price'])?$item['sell_price']:"";?></p>
-					</a>
-				</li>
-				<?php }?>
-			</ul>
-		</section>
-	</section>
 </div>
-<!-- 个人中心内容 -->
+<!--主要模板内容 结束-->
 
 <footer class="foot">
 	<section class="service">
@@ -459,27 +315,15 @@ $(function(){
 	</section>
 </footer>
 
-
-
-<script>
-//DOM加载完毕后运行
-$(function(){
-	//隔行换色
-	$(".list_table tr:nth-child(even)").addClass('even');
-	$(".list_table tr").hover(
-		function () {
-			$(this).addClass("sel");
-		},
-		function () {
-			$(this).removeClass("sel");
-		}
-	);
-
-	//按钮高亮
-	var localUrl = "<?php echo IUrl::getUri();?>";
-	$('a[href^="'+localUrl+'"]').parent().addClass('current');
-});
-
-</script>
 </body>
 </html>
+<script>
+//当首页时显示分类
+<?php if(IWeb::$app->getController()->getId() == 'site' && IWeb::$app->getController()->getAction()->getId() == 'index'){?>
+$('.cat_list').removeClass('none');
+<?php }?>
+
+$(function(){
+	$('input:text[name="word"]').val("<?php echo $this->word;?>");
+});
+</script>

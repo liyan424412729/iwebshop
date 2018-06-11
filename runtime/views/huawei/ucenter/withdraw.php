@@ -234,139 +234,81 @@
 		<div class="ucenter_content_bar">
 			<section class="ucenter_main">
 				
-<?php if($msgNum>0){?>
-<div class="prompt">
-	<strong>温馨提示：</strong> 您有<span class="red"><?php echo isset($msgNum)?$msgNum:"";?></span> 条站内未读短信息，<a href="<?php echo IUrl::creatUrl("/ucenter/message");?>">现在去看看</a>
-</div>
-<?php }?>
-
-<!-- <header class="uc_head_red">
-	<time>上一次登录时间：<?php echo ISafe::get('last_login');?></time>
-	<h3>您好，<?php echo isset($this->user['username'])?$this->user['username']:"";?> 欢迎回来!</h3>
-</header> -->
-
-<section class="uc_info">
-	<?php $user_ico = $this->user['head_ico']?>
-	<div class="user_ico">
-		<img id="user_ico_img" onclick="select_ico()" src="<?php echo IUrl::creatUrl("".$user_ico."");?>" onerror="this.src='<?php echo $this->getWebSkinPath()."image/user_ico.gif";?>'">
-		<!-- <span onclick="select_ico()">修改头像</span> -->
-	</div>
-	<div class="user_info">
-		<h2><?php echo isset($this->user['username'])?$this->user['username']:"";?>，欢迎您</h2>
-		<ul class="user_baseinfo">
-			<li>总积分：<a href="<?php echo IUrl::creatUrl("/ucenter/integral");?>"><strong><?php echo isset($user['point'])?$user['point']:"";?></strong> 分</a></li>
-			<li>交易总数量：<a href="<?php echo IUrl::creatUrl("/ucenter/order");?>"><strong><?php echo isset($statistics['num'])?$statistics['num']:"";?></strong> 笔</a></li>
-			<li>总消费额：<strong>￥<?php echo isset($statistics['amount'])?$statistics['amount']:"";?></strong></li>
-		</ul>
-		<ul class="user_stat">
-			<!-- <li>奖金钱包：<strong>￥<?php echo isset($user['balance'])?$user['balance']:"";?></strong></li> -->
-			<li>奖金钱包：
-				<strong>￥<span id="bonus"><?php echo isset($user['bonus'])?$user['bonus']:"";?></span>
-				<input type="" id="jiangjin" value="">
-				<button id="btn_zhuan">转存</button>
-				<input type="" name="">
-				<button>分投</button>
-			    </strong>
-			</li>
-			<!-- <li>消费钱包（余额）：<strong>￥<?php echo isset($user['balance'])?$user['balance']:"";?></strong></li> -->
-			<li>代金券：<strong><?php echo isset($propData['prop_num'])?$propData['prop_num']:"";?></strong> 张</li>
-			<li>经验值：<strong><?php echo isset($user['exp'])?$user['exp']:"";?></strong></li>
-		</ul>
-		<ul class="user_stat">
-			<li>消费钱包：<strong>￥<span id="consumption"><?php echo isset($user['consumption'])?$user['consumption']:"";?></span></strong></strong></li>
-			<li>待付款订单：(<strong><?php echo statistics::countUserWaitPay($this->user['user_id']);?></strong>)</li>
-			<li>待确认收货：(<strong><a href="<?php echo IUrl::creatUrl("/ucenter/order");?>"><?php echo statistics::countUserWaitCommit($this->user['user_id']);?></a></strong>)</li>
-		</ul>
-		<ul class="user_stat">
-			<li>提现钱包（余额）：<strong>￥<span id="balance"><?php echo isset($user['balance'])?$user['balance']:"";?></span></strong></li>
-		</ul>
-	</div>
-</section>
-
-<header class="uc_head mt30">
-	<h3>我的订单</h3>
-	<a href="<?php echo IUrl::creatUrl("/ucenter/order");?>" class="more">更多 ></a>
+<header class="uc_head">
+	<h3><a href="<?php echo IUrl::creatUrl("/ucenter/account_log");?>">交易记录</a></h3>
+	<h3 class="current"><a href='<?php echo IUrl::creatUrl("/ucenter/withdraw");?>'>提现申请</a></h3>
+	<span class="money">账户余额：<em>￥<?php echo isset($this->memberRow['balance'])?$this->memberRow['balance']:"";?></em></span>
 </header>
+
 <section class="uc_table">
 	<table>
+		<col />
+		<col />
+		<col width="100px" />
+		<col width="140px" />
+		<col width="80px" />
+		<col width="80px" />
 		<thead>
 			<tr>
-				<th>订单编号</th><th>下单日期</th><th>收货人</th><th>支付方式</th><th>总金额</th><th>订单状态</th>
+				<th>会员备注</th><th>管理员备注</th><th>金额</th><th>申请时间</th><th>状态</th><th>操作</th>
 			</tr>
 		</thead>
 		<tbody>
-		<?php foreach($items=Api::run('getOrderListByUserid',array('#user_id#',$user['user_id'])) as $key => $item){?>
-		<tr>
-			<td><a href="<?php echo IUrl::creatUrl("/ucenter/order_detail/id/".$item['id']."");?>"><?php echo isset($item['order_no'])?$item['order_no']:"";?></a></td>
-			<td><?php echo isset($item['create_time'])?$item['create_time']:"";?></td>
-			<td><?php echo isset($item['accept_name'])?$item['accept_name']:"";?></td>
-			<td><?php echo isset($this->payments[$item['pay_type']]['name'])?$this->payments[$item['pay_type']]['name']:"";?></td>
-			<td>￥<?php echo ($item['order_amount']);?></td>
-			<td>
-				<?php $orderStatus = Order_Class::getOrderStatus($item)?>
-				<b class="<?php if($orderStatus >= 6){?>green<?php }else{?>orange<?php }?>"><?php echo Order_Class::orderStatusText($orderStatus);?></b>
-			</td>
-		</tr>
-		<?php }?>
+			<?php $page=(isset($_GET['page'])&&(intval($_GET['page'])>0))?intval($_GET['page']):1;?>
+			<?php $user_id = $this->user['user_id']?>
+			<?php $queryWithdrawList = Api::run('getWithdrawList',$user_id)?>
+			<?php foreach($items=$queryWithdrawList->find() as $key => $item){?>
+			<tr>
+				<td><?php echo isset($item['note'])?$item['note']:"";?></td>
+				<td><?php echo isset($item['re_note'])?$item['re_note']:"";?></td>
+				<td><?php echo isset($item['amount'])?$item['amount']:"";?> 元</td>
+				<td><?php echo isset($item['time'])?$item['time']:"";?></td>
+				<td><?php echo AccountLog::getWithdrawStatus($item['status']);?></td>
+				<td>
+					<?php if($item['status']==0){?>
+					<a href="javascript:delModel({link:'<?php echo IUrl::creatUrl("/ucenter/withdraw_del/id/".$item['id']."");?>'});">取消</a>
+					<?php }?>
+				</td>
+			</tr>
+			<?php }?>
 		</tbody>
 	</table>
 </section>
 
+<?php echo $queryWithdrawList->getPageBar();?>
 
-<script>
-//选择头像
-function select_ico(){
-	<?php $callback = urlencode(IUrl::creatUrl('/ucenter/user_ico_upload'))?>
-	art.dialog.open('<?php echo IUrl::creatUrl("/block/photo_upload?callback=".$callback."");?>',
-	{
-		'id':'user_ico',
-		'title':'设置头像',
-		'ok':function(iframeWin, topWin)
-		{
-			iframeWin.document.forms[0].submit();
-			return false;
-		}
-	});
-}
-
-//头像上传回调函数
-function callback_user_ico(content){
-	var content = eval(content);
-	if(content.isError == true){
-		alert(content.message);
-	}else{
-		$('#user_ico_img').prop('src',content.data);
-	}
-	art.dialog({id:'user_ico'}).close();
-}
-
-// 个人中心转存
-$(function(){
-	$('#btn_zhuan').click(function(){
-		$(this).attr('disabled',true);
-		var jiangjin = $('#jiangjin').val();
-		var user_id = "<?php echo isset($user['user_id'])?$user['user_id']:"";?>";
-
-		$.get('<?php echo IUrl::creatUrl("/ucenter/savebonus");?>',{jin:jiangjin,user_id:user_id},function(result){
-			if (result.code == 10001) {
-				alert(result.message);return false;
-			}
-			if (result.code == 10002) {
-				alert(result.message);return false;
-			}
-			if (result.code == 200) {
-				alert(result.message);
-			}
-			$('#bonus').html(result.data.bonus);
-			$('#consumption').html(result.data.consumption);
-			$('#balance').html(result.data.balance);
-		},'JSON');
-		$(this).attr('disabled',false);
-	})
-
-})
-
-</script>
+<header class="uc_head">
+	<h3>申请提现</h3>
+</header>
+<section class="user_form">
+	<form action='<?php echo IUrl::creatUrl("/ucenter/withdraw_act");?>' method='post' name='withdraw'>
+		<dl>
+			<dt>收款人姓名：</dt>
+			<dd>
+				<input type="text" class="input_text" name='name' pattern='required' alt='请填写真实的收款人姓名' />
+				<span><i class='red'>*</i> 填写收款人真实的姓名</span>
+			</dd>
+		</dl>
+		<dl>
+			<dt>提现金额：</dt>
+			<dd>
+				<input type="text" class="input_text" name='amount' pattern='float' alt='填写体现金额' />
+				<span><i class='red'>*</i> 要提现的金额，此数值不得大于当前的账户余额</span>
+			</dd>
+		</dl>
+		<dl>
+			<dt>备注：</dt>
+			<dd>
+				<textarea name='note' class="input_textarea" pattern='required' alt='填写一些必要的提现信息'></textarea><br />
+				<span><i class='red'>*</i> 填写必要的提现信息，如开户银行，帐号等</span>
+			</dd>
+		</dl>
+		<dl>
+			<dt></dt>
+			<dd><input class="input_submit" type="submit" value="确定提交" /></dd>
+		</dl>
+	</form>
+</section>
 
 			</section>
 			<!-- 个人中心内容-功能栏 -->

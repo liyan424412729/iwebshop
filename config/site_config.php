@@ -1,11 +1,11 @@
 <?php return array (
   'email_type' => '1',
   'email_safe' => '',
-  'mail_address' => '',
-  'smtp' => '',
-  'smtp_user' => '',
-  'smtp_pwd' => '',
-  'smtp_port' => '',
+  'mail_address' => 'air977@126.com',
+  'smtp' => 'smtp.126.com',
+  'smtp_user' => 'air977@126.com',
+  'smtp_pwd' => 'niu520',
+  'smtp_port' => '25',
   'order_by' => 'new',
   'name' => 'iWebShop开源电子商务平台',
   'url' => 'http://www.aircheng.com',
@@ -25,4 +25,5 @@
   'commission' => '',
   'store_num_warning' => '1',
   'reg_option' => '0',
-);
+  'test_address' => '735982173@qq.com',
+)?>

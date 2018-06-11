@@ -112,7 +112,7 @@ $(function(){
 		var jiangjin = $('#jiangjin').val();
 		var user_id = "{$user['user_id']}";
 
-		$.get('{url:/member/savebonus}',{jin:jiangjin,user_id:user_id},function(result){
+		$.get('{url:/ucenter/savebonus}',{jin:jiangjin,user_id:user_id},function(result){
 			if (result.code == 10001) {
 				alert(result.message);return false;
 			}
