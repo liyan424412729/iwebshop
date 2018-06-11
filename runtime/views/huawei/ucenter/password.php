@@ -234,140 +234,38 @@
 		<div class="ucenter_content_bar">
 			<section class="ucenter_main">
 				
-<?php if($msgNum>0){?>
-<div class="prompt">
-	<strong>温馨提示：</strong> 您有<span class="red"><?php echo isset($msgNum)?$msgNum:"";?></span> 条站内未读短信息，<a href="<?php echo IUrl::creatUrl("/ucenter/message");?>">现在去看看</a>
-</div>
-<?php }?>
-
-<!-- <header class="uc_head_red">
-	<time>上一次登录时间：<?php echo ISafe::get('last_login');?></time>
-	<h3>您好，<?php echo isset($this->user['username'])?$this->user['username']:"";?> 欢迎回来!</h3>
-</header> -->
-
-<section class="uc_info">
-	<?php $user_ico = $this->user['head_ico']?>
-	<div class="user_ico">
-		<img id="user_ico_img" onclick="select_ico()" src="<?php echo IUrl::creatUrl("".$user_ico."");?>" onerror="this.src='<?php echo $this->getWebSkinPath()."image/user_ico.gif";?>'">
-		<!-- <span onclick="select_ico()">修改头像</span> -->
-	</div>
-	<div class="user_info">
-		<h2><?php echo isset($this->user['username'])?$this->user['username']:"";?>，欢迎您</h2>
-		<ul class="user_baseinfo">
-			<li>总积分：<a href="<?php echo IUrl::creatUrl("/ucenter/integral");?>"><strong><?php echo isset($user['point'])?$user['point']:"";?></strong> 分</a></li>
-			<li>交易总数量：<a href="<?php echo IUrl::creatUrl("/ucenter/order");?>"><strong><?php echo isset($statistics['num'])?$statistics['num']:"";?></strong> 笔</a></li>
-			<li>总消费额：<strong>￥<?php echo isset($statistics['amount'])?$statistics['amount']:"";?></strong></li>
-		</ul>
-		<ul class="user_stat">
-			<!-- <li>奖金钱包：<strong>￥<?php echo isset($user['balance'])?$user['balance']:"";?></strong></li> -->
-			<li>奖金钱包：
-				<strong>￥<span id="bonus"><?php echo isset($user['bonus'])?$user['bonus']:"";?></span>
-				<input type="" id="jiangjin" value="">
-				<button id="btn_zhuan">转存</button>
-				<input type="" name="">
-				<button>分投</button>
-			    </strong>
-			</li>
-			<!-- <li>消费钱包（余额）：<strong>￥<?php echo isset($user['balance'])?$user['balance']:"";?></strong></li> -->
-			<li>代金券：<strong><?php echo isset($propData['prop_num'])?$propData['prop_num']:"";?></strong> 张</li>
-			<li>经验值：<strong><?php echo isset($user['exp'])?$user['exp']:"";?></strong></li>
-		</ul>
-		<ul class="user_stat">
-			<li>消费钱包：<strong>￥<span id="consumption"><?php echo isset($user['consumption'])?$user['consumption']:"";?></span></strong></strong></li>
-			<li>待付款订单：(<strong><?php echo statistics::countUserWaitPay($this->user['user_id']);?></strong>)</li>
-			<li>待确认收货：(<strong><a href="<?php echo IUrl::creatUrl("/ucenter/order");?>"><?php echo statistics::countUserWaitCommit($this->user['user_id']);?></a></strong>)</li>
-		</ul>
-		<ul class="user_stat">
-			<li>提现钱包（余额）：<strong>￥<span id="balance"><?php echo isset($user['balance'])?$user['balance']:"";?></span></strong></li>
-		</ul>
-	</div>
-</section>
-
-<header class="uc_head mt30">
-	<h3>我的订单</h3>
-	<a href="<?php echo IUrl::creatUrl("/ucenter/order");?>" class="more">更多 ></a>
+<header class="uc_head">
+	<h3>密码管理</h3>
 </header>
-<section class="uc_table">
-	<table>
-		<thead>
-			<tr>
-				<th>订单编号</th><th>下单日期</th><th>收货人</th><th>支付方式</th><th>总金额</th><th>订单状态</th>
-			</tr>
-		</thead>
-		<tbody>
-		<?php foreach($items=Api::run('getOrderListByUserid',array('#user_id#',$user['user_id'])) as $key => $item){?>
-		<tr>
-			<td><a href="<?php echo IUrl::creatUrl("/ucenter/order_detail/id/".$item['id']."");?>"><?php echo isset($item['order_no'])?$item['order_no']:"";?></a></td>
-			<td><?php echo isset($item['create_time'])?$item['create_time']:"";?></td>
-			<td><?php echo isset($item['accept_name'])?$item['accept_name']:"";?></td>
-			<td><?php echo isset($this->payments[$item['pay_type']]['name'])?$this->payments[$item['pay_type']]['name']:"";?></td>
-			<td>￥<?php echo ($item['order_amount']);?></td>
-			<td>
-				<?php $orderStatus = Order_Class::getOrderStatus($item)?>
-				<b class="<?php if($orderStatus >= 6){?>green<?php }else{?>orange<?php }?>"><?php echo Order_Class::orderStatusText($orderStatus);?></b>
-			</td>
-		</tr>
-		<?php }?>
-		</tbody>
-	</table>
+<section class="user_form">
+	<form action='<?php echo IUrl::creatUrl("/ucenter/password_edit");?>' method='post'>
+		<dl>
+			<dt>原有密码：</dt>
+			<dd>
+				<input class="input_text" name='fpassword' type="password" pattern="required" alt="请输入原有密码">
+				<span>原密码</span>
+			</dd>
+		</dl>
+		<dl>
+			<dt>设置密码：</dt>
+			<dd>
+				<input class="input_text" type="password" name='password' pattern="^\S{6,32}$" bind='repassword' alt='密码由英文字母、数字组成，长度6-32位'>
+				<span>密码由英文字母、数字组成，长度6-32位</span>
+			</dd>
+		</dl>
+		<dl>
+			<dt>确认密码：</dt>
+			<dd>
+				<input class="input_text" type="password" name='repassword' pattern="^\S{6,32}$" bind='password' alt='重复上面所填写的密码'>
+				<span>重复上面所填写的密码</span>
+			</dd>
+		</dl>
+		<dl>
+			<dt></dt>
+			<dd><input class="input_submit" type="submit" value="修改密码" /></dd>
+		</dl>
+	</form>
 </section>
-
-
-<script>
-//选择头像
-function select_ico(){
-	<?php $callback = urlencode(IUrl::creatUrl('/ucenter/user_ico_upload'))?>
-	art.dialog.open('<?php echo IUrl::creatUrl("/block/photo_upload?callback=".$callback."");?>',
-	{
-		'id':'user_ico',
-		'title':'设置头像',
-		'ok':function(iframeWin, topWin)
-		{
-			iframeWin.document.forms[0].submit();
-			return false;
-		}
-	});
-}
-
-//头像上传回调函数
-function callback_user_ico(content){
-	var content = eval(content);
-	if(content.isError == true){
-		alert(content.message);
-	}else{
-		$('#user_ico_img').prop('src',content.data);
-	}
-	art.dialog({id:'user_ico'}).close();
-}
-
-// 个人中心转存
-$(function(){
-	$('#btn_zhuan').click(function(){
-		$(this).attr('disabled',true);
-		var jiangjin = $('#jiangjin').val();
-		var user_id = "<?php echo isset($user['user_id'])?$user['user_id']:"";?>";
-
-		$.get('<?php echo IUrl::creatUrl("/member/savebonus");?>',{jin:jiangjin,user_id:user_id},function(result){
-			if (result.code == 10001) {
-				alert(result.message);return false;
-			}
-			if (result.code == 10002) {
-				alert(result.message);return false;
-			}
-			if (result.code == 200) {
-				alert(result.message);
-			}
-			$('#bonus').html(result.data.bonus);
-			$('#consumption').html(result.data.consumption);
-			$('#balance').html(result.data.balance);
-		},'JSON');
-		$(this).attr('disabled',false);
-	})
-
-})
-
-</script>
-
 			</section>
 			<!-- 个人中心内容-功能栏 -->
 			<aside class="ucenter_bar">
