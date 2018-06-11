@@ -261,7 +261,7 @@
 		<ul class="user_stat">
 			<!-- <li>奖金钱包：<strong>￥<?php echo isset($user['balance'])?$user['balance']:"";?></strong></li> -->
 			<li>奖金钱包：
-				<strong>￥<span><?php echo isset($user['bonus'])?$user['bonus']:"";?></span>
+				<strong>￥<span id="bonus"><?php echo isset($user['bonus'])?$user['bonus']:"";?></span>
 				<input type="" id="jiangjin" value="">
 				<button id="btn_zhuan">转存</button>
 				<input type="" name="">
@@ -273,12 +273,12 @@
 			<li>经验值：<strong><?php echo isset($user['exp'])?$user['exp']:"";?></strong></li>
 		</ul>
 		<ul class="user_stat">
-			<li>消费钱包：<strong>￥<span><?php echo isset($user['consumption'])?$user['consumption']:"";?></span></strong></strong></li>
+			<li>消费钱包：<strong>￥<span id="consumption"><?php echo isset($user['consumption'])?$user['consumption']:"";?></span></strong></strong></li>
 			<li>待付款订单：(<strong><?php echo statistics::countUserWaitPay($this->user['user_id']);?></strong>)</li>
 			<li>待确认收货：(<strong><a href="<?php echo IUrl::creatUrl("/ucenter/order");?>"><?php echo statistics::countUserWaitCommit($this->user['user_id']);?></a></strong>)</li>
 		</ul>
 		<ul class="user_stat">
-			<li>提现钱包（余额）：<strong>￥<?php echo isset($user['balance'])?$user['balance']:"";?></strong></li>
+			<li>提现钱包（余额）：<strong>￥<span id="balance"><?php echo isset($user['balance'])?$user['balance']:"";?></span></strong></li>
 		</ul>
 	</div>
 </section>
@@ -343,12 +343,25 @@ function callback_user_ico(content){
 // 个人中心转存
 $(function(){
 	$('#btn_zhuan').click(function(){
+		$(this).attr('disabled',true);
 		var jiangjin = $('#jiangjin').val();
 		var user_id = "<?php echo isset($user['user_id'])?$user['user_id']:"";?>";
 
 		$.get('<?php echo IUrl::creatUrl("/member/savebonus");?>',{jin:jiangjin,user_id:user_id},function(result){
-			console.log(result);
-		});
+			if (result.code == 10001) {
+				alert(result.message);return false;
+			}
+			if (result.code == 10002) {
+				alert(result.message);return false;
+			}
+			if (result.code == 200) {
+				alert(result.message);
+			}
+			$('#bonus').html(result.data.bonus);
+			$('#consumption').html(result.data.consumption);
+			$('#balance').html(result.data.balance);
+		},'JSON');
+		$(this).attr('disabled',false);
 	})
 
 })

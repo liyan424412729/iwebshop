@@ -937,21 +937,33 @@ class Member extends IController implements adminAuthorization
 
 			$consumption = $jin * 0.4;
 			$balance = $jin * 0.6;
-			$bonus = $user_bonus['bonus'] - $jin;
+			$bonus = $user_info['bonus'] - $jin;
 
 			$data = array(
 				'consumption' => $user_info['consumption'] + $consumption,
 				'balance'     => $user_info['balance'] + $balance,
 				'bonus'       => $bonus
 			);
-			$member->setData($data);
-			$member->update('user_id='.$id);
 
-			$arr = [
-				'code' => 200,
-				'message' => 'aaa',
-				'data' => $jin
-			];
+			// 更新钱包数据
+			$member->setData($data);
+			if($member->update('user_id='.$id)){
+				$new_info = $member->getObj('user_id='.$id);
+
+				$arr = [
+					'code' => 200,
+					'message' => '转存成功',
+					'data' => $new_info
+				];
+
+			}else{
+				$arr = [
+					'code' => 10002,
+					'message' => '转存失败',
+					'data' => ''
+				];
+			}
+
 		}
 
 		echo json_encode($arr);
