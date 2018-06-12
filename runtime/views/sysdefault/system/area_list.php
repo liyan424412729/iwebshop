@@ -60,56 +60,169 @@
 		</div>
 
 		<div id="admin_right">
-			<div class="headbar">
-	<div class="position"><span>会员</span><span>></span><span>用户组管理</span><span>></span><span>会员组列表</span></div>
+			<script type="text/javascript" charset="UTF-8" src="/runtime/_systemjs/artTemplate/artTemplate.js"></script><script type="text/javascript" charset="UTF-8" src="/runtime/_systemjs/artTemplate/artTemplate-plugin.js"></script>
+<div class="headbar">
+	<div class="position"><span>系统</span><span>></span><span>地域管理</span><span>></span><span>地区列表</span></div>
 	<div class="operating">
-		<a href="javascript:;" onclick="event_link('<?php echo IUrl::creatUrl("/member/group_edit");?>');"><button class="operating_btn" type="button"><span class="addition">添加用户组</span></button></a>
-		<a href="javascript:void(0)" onclick="selectAll('check[]')"><button class="operating_btn" type="button"><span class="sel_all">全选</span></button></a>
-		<a href="javascript:void(0)" onclick="delModel({form:'group_list',msg:'确定要删除选中的记录吗？'})"><button class="operating_btn" type="button"><span class="delete">批量删除</span></button></a>
+		<a href="javascript:;"><button class="operating_btn" type="button" onclick="addArea(0,0);"><span class="addition">添加地区</span></button></a>
 	</div>
 </div>
-<form action="<?php echo IUrl::creatUrl("/member/group_del");?>" method="post" name="group_list" onsubmit="return checkboxCheck('check[]','尚未选中任何记录！')">
 <div class="content">
-	<table id="list_table" class="list_table">
-
+	<table class="list_table">
 		<colgroup>
-			<col width="30px" />
-			<col width="110px" />
-			<col width="80px" />
-			<col width="80px" />
-			<col width="80px" />
+			<col width="580px" />
 			<col width="120px" />
+			<col />
 		</colgroup>
 
 		<thead>
 			<tr>
-				<th>选择</th>
-				<th>会员组</th>
-				<th>最少积分</th>
-				<th>最多积分</th>
+				<th>名称</th>
+				<th>排序</th>
 				<th>操作</th>
 			</tr>
 		</thead>
-
-		<tbody>
-			<?php $query = new IQuery("user_group");$items = $query->find(); foreach($items as $key => $item){?>
-			<tr>
-				<td><input name="check[]" type="checkbox" value="<?php echo isset($item['id'])?$item['id']:"";?>" /></td>
-				<td><?php echo isset($item['group_name'])?$item['group_name']:"";?></td>
-				<!-- <td><?php echo isset($item['discount'])?$item['discount']:"";?></td> -->
-				<td><?php echo isset($item['minexp'])?$item['minexp']:"";?></td>
-				<td><?php echo isset($item['maxexp'])?$item['maxexp']:"";?></td>
-				<td>
-					<a href="<?php echo IUrl::creatUrl("/member/group_edit/gid/".$item['id']."");?>"><img class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/icon_edit.gif";?>" alt="修改" /></a>
-					<?php $tmpId=$item['id'];?>
-					<a href="javascript:void(0)" onclick="delModel({link:'<?php echo IUrl::creatUrl("/member/group_del/check/".$tmpId."");?>'})"><img class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/icon_del.gif";?>" alt="删除" title="删除" /></a>
-				</td>
-			</tr>
-			<?php }?>
-		</tbody>
+		<tbody id="area_box"></tbody>
 	</table>
 </div>
-</form>
+
+<!--地域模板 开始-->
+<script type='text/html' id='areaRowTemplate'>
+<tr id="area_<%=item['area_id']%>" name="parent_<%=item['parent_id']%>">
+	<td <%if(level > 0){%>style="padding-left:<%=level*30%>px"<%}%>>
+		<a href="javascript:toggleArea(<%=item['area_id']%>,<%=level+1%>);"><img id="ctrl_<%=item['area_id']%>" name="box_<%=item['parent_id']%>" src="<?php echo $this->getWebSkinPath()."images/admin/open.gif";?>" is_open="no" is_cache="no" /></a>
+		<input type="text" value="<%=item['area_name']%>" name="area_name" class="middle" style="width:150px" onblur="updateArea(<%=item['area_id']%>,this);" />
+	</td>
+	<td><input type="text" value="<%=item['sort']%>" name="area_sort" class="middle" style="width:80px" onblur="updateArea(<%=item['area_id']%>,this);" /></td>
+	<td>
+		<a href="javascript:addArea(<%=item['area_id']%>,<%=level+1%>);"><img class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/icon_add.gif";?>" alt="添加" /></a>
+		<a href="javascript:delArea(<%=item['area_id']%>);"><img class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/icon_del.gif";?>"  alt="删除" /></a>
+	</td>
+</tr>
+</script>
+<!--地域模板 结束-->
+
+<script type='text/javascript'>
+//DOM加载完毕后
+$(function()
+{
+	<?php $query = new IQuery("areas");$query->order = "sort asc";$query->where = "parent_id = 0";$items = $query->find();?>
+	var firstData = <?php echo JSON::encode($items);?>;
+	for(var item in firstData)
+	{
+		$('#area_box').append(template.render('areaRowTemplate',{'item':firstData[item],'level':0}));
+	}
+});
+
+//切换地区
+function toggleArea(area_id,level)
+{
+	var is_cache = $('#ctrl_'+area_id).attr('is_cache');
+	var is_open  = $('#ctrl_'+area_id).attr('is_open');
+
+	//缓存存在
+	if(is_cache == 'yes')
+	{
+		$('[name="parent_'+area_id+'"]').toggle();
+	}
+	else
+	{
+		$.getJSON('<?php echo IUrl::creatUrl("/block/area_child");?>',{"aid":area_id},function(jsonData){
+			for(var item in jsonData)
+			{
+				$('#area_'+area_id).after(template.render('areaRowTemplate',{'item':jsonData[item],'level':level}));
+			}
+		});
+		$('#ctrl_'+area_id).attr('is_cache','yes');
+	}
+
+	//是否已经展开
+	if(is_open == 'yes')
+	{
+		$('#ctrl_'+area_id).attr('src','<?php echo $this->getWebSkinPath()."images/admin/open.gif";?>');
+		$('#ctrl_'+area_id).attr('is_open','no');
+
+		//递归子分类
+		$("img[name='box_"+area_id+"'][is_open='yes']").each(function()
+		{
+			var idValue = $(this).attr('id').replace("ctrl_","");
+			toggleArea(idValue);
+		});
+	}
+	else
+	{
+		$('#ctrl_'+area_id).attr('src','<?php echo $this->getWebSkinPath()."images/admin/close.gif";?>');
+		$('#ctrl_'+area_id).attr('is_open','yes');
+	}
+}
+
+//添加地区
+function addArea(area_id,level)
+{
+	art.dialog.prompt('添加新地域',function(area_name){
+		if(!area_name)
+		{
+			alert('请填写地域名称');
+			return;
+		}
+		$.getJSON("<?php echo IUrl::creatUrl("/system/area_update");?>",{"parent_id":area_id,"area_name":area_name},function(result){
+			if(result.isSuccess == true)
+			{
+				if(area_id == 0)
+				{
+					window.location.reload();
+					return;
+				}
+
+				var is_open  = $('#ctrl_'+area_id).attr('is_open');
+				if(is_open == 'yes')
+				{
+					$('#area_'+area_id).after(template.render('areaRowTemplate',{'item':result.data,'level':level}));
+				}
+				else
+				{
+					toggleArea(area_id,level);
+				}
+			}
+		});
+	});
+}
+
+//删除地区
+function delArea(area_id)
+{
+	art.dialog.confirm('确定要删除么？',function(){
+		$.get('<?php echo IUrl::creatUrl("/system/area_del");?>',{'id':area_id},function(result){$('#area_'+area_id).remove();})
+	});
+}
+
+//更新地域数据
+function updateArea(area_id,obj)
+{
+	if($.trim(obj.value) == '')
+	{
+		alert('地域信息不能为空');
+		return;
+	}
+
+	var sendData = {"area_id":area_id};
+	switch(obj.name)
+	{
+		case "area_sort":
+		{
+			sendData.area_sort = obj.value;
+		}
+		break;
+
+		default:
+		{
+			sendData.area_name = obj.value;
+		}
+		break;
+	}
+	$.getJSON('<?php echo IUrl::creatUrl("/system/area_update");?>',sendData,function(result){});
+}
+</script>
 
 		</div>
 	</div>

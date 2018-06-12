@@ -61,54 +61,53 @@
 
 		<div id="admin_right">
 			<div class="headbar">
-	<div class="position"><span>会员</span><span>></span><span>用户组管理</span><span>></span><span>会员组列表</span></div>
+	<div class="position">订单<span>></span><span>单据管理</span><span>></span><span>退款单列表</span></div>
 	<div class="operating">
-		<a href="javascript:;" onclick="event_link('<?php echo IUrl::creatUrl("/member/group_edit");?>');"><button class="operating_btn" type="button"><span class="addition">添加用户组</span></button></a>
-		<a href="javascript:void(0)" onclick="selectAll('check[]')"><button class="operating_btn" type="button"><span class="sel_all">全选</span></button></a>
-		<a href="javascript:void(0)" onclick="delModel({form:'group_list',msg:'确定要删除选中的记录吗？'})"><button class="operating_btn" type="button"><span class="delete">批量删除</span></button></a>
+		<a href="javascript:void(0)" onclick="selectAll('id[]')"><button class="operating_btn" type="button"><span class="sel_all">全选</span></button></a>
+		<a href="javascript:void(0)" onclick="delModel()"><button class="operating_btn" type="button"><span class="delete">批量删除</span></button></a>
+		<a href="javascript:void(0)"><button class="operating_btn" type="button" onclick="location.href='<?php echo IUrl::creatUrl("/order/refundment_recycle_list");?>'"><span class="recycle">回收站</span></button></a>
 	</div>
 </div>
-<form action="<?php echo IUrl::creatUrl("/member/group_del");?>" method="post" name="group_list" onsubmit="return checkboxCheck('check[]','尚未选中任何记录！')">
+<form name="orderForm" action="<?php echo IUrl::creatUrl("/order/refundment_del");?>" method="post">
 <div class="content">
-	<table id="list_table" class="list_table">
-
+	<table class="list_table">
 		<colgroup>
 			<col width="30px" />
-			<col width="110px" />
+			<col width="30px" />
+			<col width="180px" />
 			<col width="80px" />
-			<col width="80px" />
-			<col width="80px" />
-			<col width="120px" />
+			<col />
 		</colgroup>
 
 		<thead>
 			<tr>
 				<th>选择</th>
-				<th>会员组</th>
-				<th>最少积分</th>
-				<th>最多积分</th>
-				<th>操作</th>
+				<th></th>
+				<th>订单号</th>
+				<th>金额</th>
+				<th>用户名</th>
+				<th>支付状态</th>
+				<th>完成时间</th>
 			</tr>
 		</thead>
 
 		<tbody>
-			<?php $query = new IQuery("user_group");$items = $query->find(); foreach($items as $key => $item){?>
+			<?php $page= (isset($_GET['page'])&&(intval($_GET['page'])>0))?intval($_GET['page']):1;?>
+			<?php $query = new IQuery("refundment_doc as c");$query->join = "left join user as u on u.id = c.user_id";$query->fields = "c.*,u.username";$query->where = "c.if_del = 0 and c.pay_status !=  0";$query->page = "$page";$query->order = "c.id desc";$items = $query->find(); foreach($items as $key => $item){?>
 			<tr>
-				<td><input name="check[]" type="checkbox" value="<?php echo isset($item['id'])?$item['id']:"";?>" /></td>
-				<td><?php echo isset($item['group_name'])?$item['group_name']:"";?></td>
-				<!-- <td><?php echo isset($item['discount'])?$item['discount']:"";?></td> -->
-				<td><?php echo isset($item['minexp'])?$item['minexp']:"";?></td>
-				<td><?php echo isset($item['maxexp'])?$item['maxexp']:"";?></td>
-				<td>
-					<a href="<?php echo IUrl::creatUrl("/member/group_edit/gid/".$item['id']."");?>"><img class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/icon_edit.gif";?>" alt="修改" /></a>
-					<?php $tmpId=$item['id'];?>
-					<a href="javascript:void(0)" onclick="delModel({link:'<?php echo IUrl::creatUrl("/member/group_del/check/".$tmpId."");?>'})"><img class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/icon_del.gif";?>" alt="删除" title="删除" /></a>
-				</td>
+				<td><input name="id[]" type="checkbox" value="<?php echo isset($item['id'])?$item['id']:"";?>" /></td>
+				<td><a href="<?php echo IUrl::creatUrl("/order/refundment_show/id/".$item['id']."");?>"><img class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/icon_check.gif";?>" title="查看" /></a></td>
+				<td><?php echo isset($item['order_no'])?$item['order_no']:"";?></td>
+				<td><?php echo isset($item['amount'])?$item['amount']:"";?></td>
+				<td><?php echo $item['username']=='' ? '游客' : $item['username'];?></td>
+				<td><?php echo Order_Class::refundmentText($item['pay_status']);?></td>
+				<td><?php echo isset($item['dispose_time'])?$item['dispose_time']:"";?></td>
 			</tr>
 			<?php }?>
 		</tbody>
 	</table>
 </div>
+<?php echo $query->getPageBar();?>
 </form>
 
 		</div>

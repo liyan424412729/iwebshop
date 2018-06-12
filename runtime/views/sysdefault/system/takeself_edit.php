@@ -60,56 +60,84 @@
 		</div>
 
 		<div id="admin_right">
-			<div class="headbar">
-	<div class="position"><span>会员</span><span>></span><span>用户组管理</span><span>></span><span>会员组列表</span></div>
-	<div class="operating">
-		<a href="javascript:;" onclick="event_link('<?php echo IUrl::creatUrl("/member/group_edit");?>');"><button class="operating_btn" type="button"><span class="addition">添加用户组</span></button></a>
-		<a href="javascript:void(0)" onclick="selectAll('check[]')"><button class="operating_btn" type="button"><span class="sel_all">全选</span></button></a>
-		<a href="javascript:void(0)" onclick="delModel({form:'group_list',msg:'确定要删除选中的记录吗？'})"><button class="operating_btn" type="button"><span class="delete">批量删除</span></button></a>
+			<script type="text/javascript" charset="UTF-8" src="/runtime/_systemjs/artTemplate/artTemplate.js"></script><script type="text/javascript" charset="UTF-8" src="/runtime/_systemjs/artTemplate/artTemplate-plugin.js"></script>
+<script type="text/javascript" charset="UTF-8" src="/runtime/_systemjs/areaSelect/areaSelect.js"></script>
+<div class="headbar">
+	<div class="position"><span>系统</span><span>></span><span>自提点管理</span><span>></span><span>自提点管理编辑</span></div>
+</div>
+<div class="content_box">
+	<div class="content form_content">
+		<form action='<?php echo IUrl::creatUrl("/system/takeself_update");?>' method='post' name='takeself'>
+			<input type='hidden' name='id' value=""/>
+			<table class="form_table">
+				<col width="150px" />
+				<col />
+				<tr>
+					<th>名称：</th>
+					<td>
+						<input type='text' class='normal' name='name' value='<?php echo isset($this->takeselfRow['name'])?$this->takeselfRow['name']:"";?>' pattern='required' alt="填写名称" />
+						<label>*自提点名称（必填）</label>
+					</td>
+				</tr>
+				<tr>
+					<th>地区：</th>
+					<td>
+						<select name="province" child="city,area" class="auto"></select>
+						<select name="city" child="area" class="auto"></select>
+						<select name="area" class="auto"></select>
+					</td>
+				</tr>
+				<tr>
+					<th>地址：</th>
+					<td>
+						<input type='text' class='normal' name='address' value='<?php echo isset($this->takeselfRow['address'])?$this->takeselfRow['address']:"";?>' pattern='required' alt="填写名称" />
+						<label>*具体地址（必填）</label>
+					</td>
+				</tr>
+				<tr>
+					<th>固定电话：</th>
+					<td>
+						<input type='text' class='normal' name='phone' value='<?php echo isset($this->takeselfRow['phone'])?$this->takeselfRow['phone']:"";?>' pattern='required' alt="填写名称" />
+						<label>*自提点固定电话（必填）</label>
+					</td>
+				</tr>
+				<tr>
+					<th>手机：</th>
+					<td>
+						<input type='text' class='normal' name='mobile' value='<?php echo isset($this->takeselfRow['mobile'])?$this->takeselfRow['mobile']:"";?>' pattern='required' alt="填写名称" />
+						<label>*自提点负责人手机（必填）</label>
+					</td>
+				</tr>
+				<tr>
+					<th>排序：</th>
+					<td>
+						<input type='text' class='normal' name='sort' value='<?php echo isset($this->takeselfRow['sort'])?$this->takeselfRow['sort']:"";?>' pattern='' alt="填写名称" />
+						<label>数据排序,数字越小越靠前</label>
+					</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td>
+						<button class='submit' type='submit'><span>确 定</span></button>
+					</td>
+				</tr>
+			</table>
+		</form>
 	</div>
 </div>
-<form action="<?php echo IUrl::creatUrl("/member/group_del");?>" method="post" name="group_list" onsubmit="return checkboxCheck('check[]','尚未选中任何记录！')">
-<div class="content">
-	<table id="list_table" class="list_table">
 
-		<colgroup>
-			<col width="30px" />
-			<col width="110px" />
-			<col width="80px" />
-			<col width="80px" />
-			<col width="80px" />
-			<col width="120px" />
-		</colgroup>
+<script type='text/javascript'>
+//DOM加载完毕
+$(function(){
+	//修改模式
+	var formObj = new Form('takeself');
+	formObj.init(<?php echo JSON::encode($this->takeselfRow);?>);
 
-		<thead>
-			<tr>
-				<th>选择</th>
-				<th>会员组</th>
-				<th>最少积分</th>
-				<th>最多积分</th>
-				<th>操作</th>
-			</tr>
-		</thead>
-
-		<tbody>
-			<?php $query = new IQuery("user_group");$items = $query->find(); foreach($items as $key => $item){?>
-			<tr>
-				<td><input name="check[]" type="checkbox" value="<?php echo isset($item['id'])?$item['id']:"";?>" /></td>
-				<td><?php echo isset($item['group_name'])?$item['group_name']:"";?></td>
-				<!-- <td><?php echo isset($item['discount'])?$item['discount']:"";?></td> -->
-				<td><?php echo isset($item['minexp'])?$item['minexp']:"";?></td>
-				<td><?php echo isset($item['maxexp'])?$item['maxexp']:"";?></td>
-				<td>
-					<a href="<?php echo IUrl::creatUrl("/member/group_edit/gid/".$item['id']."");?>"><img class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/icon_edit.gif";?>" alt="修改" /></a>
-					<?php $tmpId=$item['id'];?>
-					<a href="javascript:void(0)" onclick="delModel({link:'<?php echo IUrl::creatUrl("/member/group_del/check/".$tmpId."");?>'})"><img class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/icon_del.gif";?>" alt="删除" title="删除" /></a>
-				</td>
-			</tr>
-			<?php }?>
-		</tbody>
-	</table>
-</div>
-</form>
+	//地区联动插件
+	var areaInstance = new areaSelect('province');
+	areaInstance.init(<?php echo JSON::encode($this->takeselfRow);?>);
+});
+</script>
 
 		</div>
 	</div>

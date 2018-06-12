@@ -61,55 +61,86 @@
 
 		<div id="admin_right">
 			<div class="headbar">
-	<div class="position"><span>会员</span><span>></span><span>用户组管理</span><span>></span><span>会员组列表</span></div>
-	<div class="operating">
-		<a href="javascript:;" onclick="event_link('<?php echo IUrl::creatUrl("/member/group_edit");?>');"><button class="operating_btn" type="button"><span class="addition">添加用户组</span></button></a>
-		<a href="javascript:void(0)" onclick="selectAll('check[]')"><button class="operating_btn" type="button"><span class="sel_all">全选</span></button></a>
-		<a href="javascript:void(0)" onclick="delModel({form:'group_list',msg:'确定要删除选中的记录吗？'})"><button class="operating_btn" type="button"><span class="delete">批量删除</span></button></a>
+	<div class="position"><span>会员</span><span>></span><span>提现管理</span><span>></span><span>提现申请</span></div>
+</div>
+<div class="content_box">
+	<div class="content">
+		<div class='red_box'>先修改提现状态，确认扣款成功后，再通知财务人员给申请提现用户打款</div>
+		<form action='<?php echo IUrl::creatUrl("/member/withdraw_status");?>' method='post' name='withdraw_detail'>
+			<table class="form_table">
+				<input type='hidden' name='id' value='<?php echo isset($this->withdrawRow['id'])?$this->withdrawRow['id']:"";?>' />
+				<col width="150px" />
+				<col />
+				<tr>
+					<th>会员名称：</th>
+					<td><?php echo isset($this->userRow['username'])?$this->userRow['username']:"";?></td>
+				</tr>
+				<tr>
+					<th>真实姓名：</th>
+					<td><?php echo isset($this->userRow['true_name'])?$this->userRow['true_name']:"";?></td>
+				</tr>
+				<tr>
+					<th>当前余额：</th>
+					<td><?php echo isset($this->userRow['balance'])?$this->userRow['balance']:"";?></td>
+				</tr>
+				<tr>
+					<th>收款人姓名：</th>
+					<td><?php echo isset($this->withdrawRow['name'])?$this->withdrawRow['name']:"";?></td>
+				</tr>
+				<tr>
+					<th>提现金额：</th>
+					<td><?php echo isset($this->withdrawRow['amount'])?$this->withdrawRow['amount']:"";?></td>
+				</tr>
+				<tr>
+					<th>申请时间：</th>
+					<td><?php echo isset($this->withdrawRow['time'])?$this->withdrawRow['time']:"";?></td>
+				</tr>
+				<tr>
+					<th>备注：</th>
+					<td><?php echo isset($this->withdrawRow['note'])?$this->withdrawRow['note']:"";?></td>
+				</tr>
+				<tr>
+					<th>状态：</th>
+					<td><?php echo AccountLog::getWithdrawStatus($this->withdrawRow['status']);?></td>
+				</tr>
+
+				<?php if($this->withdrawRow['status']==0){?>
+				<tr>
+					<th>修改状态：</th>
+					<td>
+						<label class='attr'><input type='radio' name='status' value='-1' /><?php echo AccountLog::getWithdrawStatus(-1);?></label>
+						<label class='attr'><input type='radio' name='status' value='2' /><?php echo AccountLog::getWithdrawStatus(2);?></label>
+						<label>当选择 “成功” 状态后，用户的余额会自动被扣除，请确保用户余额被扣除成功后，您的财务人员再通过线下转账汇款等方式进行汇款操作</label>
+					</td>
+				</tr>
+				<?php }?>
+				<tr>
+					<th>回复用户：</th>
+					<td>
+						<textarea class='textarea' name='re_note' <?php if($this->withdrawRow['status']!=0){?>disabled='disabled'<?php }?>></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td>
+						<?php if($this->withdrawRow['status']==0){?>
+						<button class="submit" type="submit"><span>修 改</span></button>
+						<?php }?>
+						<button class="submit" type="button" onclick="event_link('<?php echo IUrl::creatUrl("/member/withdraw_list");?>');"><span>返回列表</span></button>
+					</td>
+				</tr>
+			</table>
+		</form>
 	</div>
 </div>
-<form action="<?php echo IUrl::creatUrl("/member/group_del");?>" method="post" name="group_list" onsubmit="return checkboxCheck('check[]','尚未选中任何记录！')">
-<div class="content">
-	<table id="list_table" class="list_table">
 
-		<colgroup>
-			<col width="30px" />
-			<col width="110px" />
-			<col width="80px" />
-			<col width="80px" />
-			<col width="80px" />
-			<col width="120px" />
-		</colgroup>
-
-		<thead>
-			<tr>
-				<th>选择</th>
-				<th>会员组</th>
-				<th>最少积分</th>
-				<th>最多积分</th>
-				<th>操作</th>
-			</tr>
-		</thead>
-
-		<tbody>
-			<?php $query = new IQuery("user_group");$items = $query->find(); foreach($items as $key => $item){?>
-			<tr>
-				<td><input name="check[]" type="checkbox" value="<?php echo isset($item['id'])?$item['id']:"";?>" /></td>
-				<td><?php echo isset($item['group_name'])?$item['group_name']:"";?></td>
-				<!-- <td><?php echo isset($item['discount'])?$item['discount']:"";?></td> -->
-				<td><?php echo isset($item['minexp'])?$item['minexp']:"";?></td>
-				<td><?php echo isset($item['maxexp'])?$item['maxexp']:"";?></td>
-				<td>
-					<a href="<?php echo IUrl::creatUrl("/member/group_edit/gid/".$item['id']."");?>"><img class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/icon_edit.gif";?>" alt="修改" /></a>
-					<?php $tmpId=$item['id'];?>
-					<a href="javascript:void(0)" onclick="delModel({link:'<?php echo IUrl::creatUrl("/member/group_del/check/".$tmpId."");?>'})"><img class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/icon_del.gif";?>" alt="删除" title="删除" /></a>
-				</td>
-			</tr>
-			<?php }?>
-		</tbody>
-	</table>
-</div>
-</form>
+<script type='text/javascript'>
+	var formObj = new Form('withdraw_detail');
+	formObj.init({
+		'status':'<?php echo isset($this->withdrawRow['status'])?$this->withdrawRow['status']:"";?>',
+		're_note':'<?php echo isset($this->withdrawRow['re_note'])?$this->withdrawRow['re_note']:"";?>'
+	});
+</script>
 
 		</div>
 	</div>

@@ -217,9 +217,9 @@ class allpay extends paymentPlugin
 	public function configParam()
 	{
 		$result = array(
-			'merID'  => '商户MerchantID',
-			'merKey' => '商户KEY',
-			'acqID'  => '商户AcquireID',
+			'merID'  => '2088102175764052',
+			'merKey' => '/mOVb8pCcYalNZEPTkXIbw==',
+			'acqID'  => 'nybflm6945@sandbox.com',
 		);
 		return $result;
 	}
