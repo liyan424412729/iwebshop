@@ -26,3 +26,127 @@ errorTime: 2018-06-12 14:45:28
 #5 IWEB_PATH/index.php(5): IApplication->run()
 </ERROR_BLOCK>
 
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 17:34:03
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 17:34:06
+#0 IWEB_PATH/controllers/simple.php(288): CountSum->__construct(1)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 17:34:10
+#0 IWEB_PATH/controllers/simple.php(388): CountSum->__construct(1)
+#1 : Simple->cart3()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart3)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Missing argument 1 for IController::__construct(), called in E:\phpstudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 17:34:14
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612173410132244)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Missing argument 2 for IController::__construct(), called in E:\phpstudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 17:34:14
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612173410132244)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: app
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 40
+errorCode: 8
+errorTime: 2018-06-12 17:34:14
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612173410132244)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: controllerId
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 41
+errorCode: 8
+errorTime: 2018-06-12 17:34:14
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612173410132244)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 17:35:23
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
