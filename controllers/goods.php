@@ -328,6 +328,8 @@ class Goods extends IController implements adminAuthorization
 
 		$this->search      = $search;
 		$this->goodsHandle = $goodsHandle;
+		// echo "<pre>";
+		// print_r($this->goodsHandle = $goodsHandle->find());
 		$this->redirect("goods_list");
 	}
 

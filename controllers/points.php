@@ -4,7 +4,7 @@
  * @class Point
  * @note  后台
  */
-class Point extends IController implements adminAuthorization
+class Points extends IController implements adminAuthorization
 {
 	public $checkRight  = 'all';
     public $layout = 'admin';
@@ -55,11 +55,6 @@ class Point extends IController implements adminAuthorization
 	*/
 	function point_list(){
 
-		$obj_point = new IModel('point_sum');
-		$point_arr = $obj_point->query();
-
-
-
 		// foreach ($point_arr as $key => $value) {
 		// 	if ($value['end_time'] == '0000-00-00 00:00:00') {
 		// 		$point_arr[$key]['end_time'] = date('Y-m-d H:i:s');
@@ -69,13 +64,19 @@ class Point extends IController implements adminAuthorization
 
 		// $starttime = '2018-06-06 00:00:00';
 		// $endtime   = '2018-06-06 23:59:59';
-		$point_log = new IModel('point_log');
-		$arr = $point_log->getObj("`datetime` > '".$starttime."' and `datetime` < '".$endtime."'",'sum(`value`)');
+		// $point_log = new IModel('point_sum');
+		// $arr = $point_log->getObj("`datetime` > '".$starttime."' and `datetime` < '".$endtime."'",'sum(`value`)');
+		//拼接sql
+		$pointHandle = new IQuery('point_sum as po');
+		// $pointHandle->order    = "po.sum_id desc";
+		// $pointHandle->fields   = "po.*,po.sum_id,po.sum_sum,po.sum_point,po.start_time,po.end_time";
+		$this->pointHandle = $pointHandle;
+		// echo "<pre>";
+  //   print_r($this->pointHandle->find());
+		$this->redirect("point_list");
+
 		
 
-		echo "<pre>";
-    print_r($point_arr);
-
-		// $this->redirect('point_list');
+		//$this->redirect('point_list');
 	}
 }

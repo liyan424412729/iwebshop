@@ -27,7 +27,9 @@ class Simple extends IController
 		//如果已经登录，就跳到ucenter页面
 		if($this->user)
 		{
+
 			$this->redirect("/ucenter/index");
+
 		}
 		else
 		{
@@ -65,6 +67,7 @@ class Simple extends IController
     {
     	//调用_userInfo登录插件
 		$result = plugin::trigger('userLoginAct',$_POST);
+
 		if(is_array($result))
 		{
 			//自定义跳转页面
