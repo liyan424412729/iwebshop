@@ -317,7 +317,7 @@ class Site extends IController
 		//使用商品id获得商品信息
 		$tb_goods = new IModel('goods');
 		$goods_info = $tb_goods->getObj('id='.$goods_id." AND is_del=0");
-
+		
 		if(!$goods_info)
 		{
 			IError::show(403,"这件商品不存在");
