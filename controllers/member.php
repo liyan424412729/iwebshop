@@ -196,6 +196,9 @@ class Member extends IController implements adminAuthorization
 		$this->data['where'] = $where;
 		$tb_user_group = new IModel('user_group');
 		$data_group = $tb_user_group->query();
+
+		// echo "<pre>";
+    // print_r($data_group);die;
 		$group      = array();
 		foreach($data_group as $value)
 		{
@@ -290,7 +293,7 @@ class Member extends IController implements adminAuthorization
 				$this->data['group'] = array(
 					'group_id'	=>	$info['id'],
 					'group_name'=>	$info['group_name'],
-					'discount'	=>	$info['discount'],
+					// 'discount'	=>	$info['discount'],
 					'minexp'	=>	$info['minexp'],
 					'maxexp'	=>	$info['maxexp']
 				);
@@ -314,25 +317,25 @@ class Member extends IController implements adminAuthorization
 		$group_id = IFilter::act(IReq::get('group_id'),'int');
 		$maxexp   = IFilter::act(IReq::get('maxexp'),'int');
 		$minexp   = IFilter::act(IReq::get('minexp'),'int');
-		$discount = IFilter::act(IReq::get('discount'),'float');
+		// $discount = IFilter::act(IReq::get('discount'),'float');
 		$group_name = IFilter::act(IReq::get('group_name'));
 
 		$group = array(
 			'maxexp' => $maxexp,
 			'minexp' => $minexp,
-			'discount' => $discount,
+			// 'discount' => $discount,
 			'group_name' => $group_name
 		);
 
-		if($discount > 100)
-		{
-			$errorMsg = '折扣率不能大于100';
-		}
+		// if($discount > 100)
+		// {
+		// 	$errorMsg = '折扣率不能大于100';
+		// }
 
-		if($maxexp <= $minexp)
-		{
-			$errorMsg = '最大经验值必须大于最小经验值';
-		}
+		// if($maxexp <= $minexp)
+		// {
+		// 	$errorMsg = '最大经验值必须大于最小经验值';
+		// }
 
 		if(isset($errorMsg) && $errorMsg)
 		{

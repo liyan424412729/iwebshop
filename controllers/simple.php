@@ -27,7 +27,9 @@ class Simple extends IController
 		//如果已经登录，就跳到ucenter页面
 		if($this->user)
 		{
+
 			$this->redirect("/ucenter/index");
+
 		}
 		else
 		{

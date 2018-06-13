@@ -14,9 +14,34 @@ class Ucenter extends IController implements userAuthorization
 	}
     public function index()
     {
+
+        // 判断会员等级
+        $member = new IModel('member');
+        $num = $member->getObj('user_id='.$this->user['user_id'],'point'); 
+        $point = $num['point'];
+        if($point >= 200 && $point< 500){
+            $group_id = 1;
+        }
+        if($point >= 500 && $point< 2000){
+            $group_id = 2;
+        }
+        if($point >= 2000 && $point< 5000){
+            $group_id = 3;
+        }
+        if($point >= 5000 && $point< 1000){
+            $group_id = 4;
+        }
+        if($point >= 10000){
+            $group_id = 5;
+        }
+        // 修改会员等级
+        $data = array('group_id'=>$group_id);
+        $member->setData($data);
+        $member->update('user_id='.$this->user['user_id']);
+
     	//获取用户基本信息
 		$user = Api::run('getMemberInfo',$this->user['user_id']);
-
+        
 		//获取用户各项统计数据
 		$statistics = Api::run('getMemberTongJi',$this->user['user_id']);
 
@@ -839,6 +864,7 @@ class Ucenter extends IController implements userAuthorization
 			'order_no' => str_replace("_",",",$return['attach']),
 		);
 		$is_success = $logObj->write($config);
+
 		if(!$is_success)
 		{
 			$orderObj->rollback();
@@ -867,7 +893,11 @@ class Ucenter extends IController implements userAuthorization
 
 		//支付成功结果
 		plugin::trigger('setCallback','/ucenter/order');
+
+
+
 		$this->redirect('/site/success/message/'.urlencode("支付成功"));
+
     }
 
     //我的代金券
@@ -894,13 +924,15 @@ class Ucenter extends IController implements userAuthorization
     /*
     * 奖金转存 接口
     * @param decimal 用户奖金
-    * return 返回
+    * @10001奖金数不正确 10002转存失败 200转存成功
+    * @return 返回
     */
     public function savebonus(){
 
         $jin = IFilter::act(IReq::get('jin'));
         $id  = IFilter::act(IReq::get('user_id'));
 
+        // 判断用户为空
         if (empty($id)) die('请登录');
         $member = new IModel('member');
         $user_info = $member->getObj('user_id='.$id);
@@ -908,14 +940,14 @@ class Ucenter extends IController implements userAuthorization
         if (!is_numeric($jin) || empty($jin) || $jin <= 0 || $jin>$user_info['bonus']) {
             $arr = [
                 'code' => 10001,
-                'message' => '请输入正确的数',
+                'message' => '奖金数不正确',
                 'data' => ''
             ];
         }else{
-
-            $consumption = $jin * 0.4;
-            $balance = $jin * 0.6;
-            $bonus = $user_info['bonus'] - $jin;
+            
+            $consumption = $jin * 0.4;  // 用户消费钱包
+            $balance = $jin * 0.6;      //用户余额钱包
+            $bonus = $user_info['bonus'] - $jin;    //用户奖金钱包
 
             $data = array(
                 'consumption' => $user_info['consumption'] + $consumption,
@@ -927,13 +959,11 @@ class Ucenter extends IController implements userAuthorization
             $member->setData($data);
             if($member->update('user_id='.$id)){
                 $new_info = $member->getObj('user_id='.$id);
-
                 $arr = [
                     'code' => 200,
                     'message' => '转存成功',
                     'data' => $new_info
                 ];
-
             }else{
                 $arr = [
                     'code' => 10002,

@@ -4,7 +4,7 @@
  * @class Point
  * @note  后台
  */
-class Point extends IController implements adminAuthorization
+class Points extends IController implements adminAuthorization
 {
 	public $checkRight  = 'all';
     public $layout = 'admin';

@@ -18,6 +18,7 @@
 	</div>
 	<div class="user_info">
 		<h2>{$this->user['username']}，欢迎您</h2>
+		<h3>会员等级：{$user['group_name']}</h3>
 		<ul class="user_baseinfo">
 			<li>总积分：<a href="{url:/ucenter/integral}"><strong>{$user['point']}</strong> 分</a></li>
 			<li>交易总数量：<a href="{url:/ucenter/order}"><strong>{$statistics['num']}</strong> 笔</a></li>
@@ -27,7 +28,7 @@
 			<!-- <li>奖金钱包：<strong>￥{$user['balance']}</strong></li> -->
 			<li>奖金钱包：
 				<strong>￥<span id="bonus">{$user['bonus']}</span>
-				<input type="" id="jiangjin" value="">
+				<!-- <input type="" id="jiangjin" value=""> -->
 				<button id="btn_zhuan">转存</button>
 				<input type="" name="">
 				<button>分投</button>
@@ -108,10 +109,15 @@ function callback_user_ico(content){
 // 个人中心转存
 $(function(){
 	$('#btn_zhuan').click(function(){
-		$(this).attr('disabled',true);
-		var jiangjin = $('#jiangjin').val();
+		var jiangjin = $('#bonus').html();
+		// 判断奖金是否为0
+		if (jiangjin <= 0) {
+			alert('没有奖金');return;
+		}
+		// 获取当前用户ID
 		var user_id = "{$user['user_id']}";
 
+		// 通过Ajax传值进行转存修改
 		$.get('{url:/ucenter/savebonus}',{jin:jiangjin,user_id:user_id},function(result){
 			if (result.code == 10001) {
 				alert(result.message);return false;
