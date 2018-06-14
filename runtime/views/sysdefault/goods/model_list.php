@@ -60,57 +60,51 @@
 		</div>
 
 		<div id="admin_right">
-			<script type="text/javascript" charset="UTF-8" src="/runtime/_systemjs/editor/kindeditor-min.js"></script><script type="text/javascript">window.KindEditor.options.uploadJson = "/index.php?controller=pic&action=upload_json";window.KindEditor.options.fileManagerJson = "/index.php?controller=pic&action=file_manager_json";</script>
-<div class="headbar">
-	<div class="position"><span>积分</span><span>></span><span>积分管理</span><span>></span><span>积分添加</span></div>
-</div>
-<div class="content_box">
-	<div class="content form_content">
-		<form action="<?php echo IUrl::creatUrl("/points/point_add");?>" method="post">
-			<table class="form_table" cellpadding="0" cellspacing="0">
-				<colgroup>
-					<col width="150px" />
-					<col />
-				</colgroup>
+			<div class="headbar">
+	<div class="position"><span>商品</span><span>></span><span>模型管理</span><span>></span><span>模型列表</span></div>
 
-				<tr>
-					<th>期数：</th>
-					<td>
-						<input class="normal" name="sum_num" type="text" value="" pattern="required" alt="期数不能为空"/><label>* 必选项</label>
-					</td>
-				</tr>
-				<tr>
-					<th>目标积分：</th>
-					<td><input class="normal" name="sum_point" pattern="required" type="text" value="" alt="积分不能为空" /><label>* 必选项</label>
-					</td>
-				</tr>
-				<tr>
-					<th>结束时间：</th>
-					<td><input class="normal" name="end_time" type="date" value="" alt="请选择结束时间" /><label>* 必选项</label>
-					</td>
-				</tr>
-				<tr>
-					<th>是否显示：</th>
-					<td>
-						<label class='attr'><input name="is_show" type="radio" value="1" checked="checked" /> 是 </label>
-						<label class='attr'><input name="is_show" type="radio" value="0" /> 否 </label>
-					</td>
-				</tr>
-				<tr>
-					<td></td><td><button class="submit" type="submit"><span>确 定</span></button></td>
-				</tr>
-			</table>
-		</form>
+	<div class="operating">
+		<a href="javascript:;"><button class="operating_btn" type="button" onclick="window.location='<?php echo IUrl::creatUrl("/goods/model_edit");?>'"><span class="addition">添加模型</span></button></a>
+		<a href="javascript:void(0)"><button class="operating_btn" type="button"  onclick="selectAll('id[]')"><span class="sel_all">全选</span></button></a>
+		<a href="javascript:void(0)"><button class="operating_btn" type="button" onclick="delModel()"><span class="delete">批量删除</span></button></a>
 	</div>
 </div>
 
-<script type="text/javascript">
-// $(function()
-// {
-// 	var formObj = new Form();
-// 	formObj.init(<?php echo JSON::encode($this->categoryRow);?>);
-// })
-</script>
+<div class="content">
+	<form name="ModelForm" action="<?php echo IUrl::creatUrl("/goods/model_del");?>" method="post">
+		<table class="list_table" cellpadding="0" cellspacing="0">
+			<colgroup>
+				<col width="40px" />
+				<col width="220px" />
+				<col width="105px" />
+			</colgroup>
+
+			<thead>
+				<tr>
+					<th>选择</th>
+					<th>模型名称</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<?php $page= (isset($_GET['page'])&&(intval($_GET['page'])>0))?intval($_GET['page']):1;?>
+				<?php $query = new IQuery("model");$query->order = "id desc";$query->page = "$page";$items = $query->find(); foreach($items as $key => $item){?>
+				<tr>
+					<td><input name="id[]" type="checkbox" value="<?php echo isset($item['id'])?$item['id']:"";?>" /></td>
+					<td><?php echo isset($item['name'])?$item['name']:"";?></td>
+					<td>
+						<a href="<?php echo IUrl::creatUrl("/goods/model_edit/id/".$item['id']."");?>"><img class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/icon_edit.gif";?>" alt="编辑" /></a>
+						<a href="javascript:delModel({link:'<?php echo IUrl::creatUrl("/goods/model_del/id/".$item['id']."");?>'})"><img class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/icon_del.gif";?>" alt="删除" /></a>
+					</td>
+				</tr>
+				<?php }?>
+			</tbody>
+		</table>
+	</form>
+</div>
+<?php echo $query->getPageBar();?>
+
 		</div>
 	</div>
 

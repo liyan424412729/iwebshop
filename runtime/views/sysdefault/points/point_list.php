@@ -61,10 +61,10 @@
 
 		<div id="admin_right">
 			<div class="headbar">
-	<div class="position"><span>商品</span><span>></span><span>商品分类管理</span><span>></span><span>分类列表</span></div>
+	<div class="position"><span>积分</span><span>></span><span>积分管理</span><span>></span><span>积分列表</span></div>
 	<div class="operating">
-		<a href="javascript:;"><button class="operating_btn" type="button" onclick="window.location='<?php echo IUrl::creatUrl("/point/point_add");?>'"><span class="addition">添加积分</span></button></a>
-		<a href="javascript:;"><button class="operating_btn" type="button" title="批量设置" alt="批量设置" name="_goodsCategoryButton"><span class="remove">批量设置</span></button></a>
+		<a href="javascript:;"><button class="operating_btn" type="button" onclick="window.location='<?php echo IUrl::creatUrl("/points/point_add");?>'"><span class="addition">添加积分</span></button></a>
+		<!-- <a href="javascript:;"><button class="operating_btn" type="button" title="批量设置" alt="批量设置" name="_goodsCategoryButton"><span class="remove">批量设置</span></button></a> -->
 		<?php plugin::trigger('goodsCategoryWidget',array("name" => "parent_id","callback" => "setCat"))?>
 	</div>
 </div>
@@ -75,9 +75,9 @@
 		<colgroup>
 			<col width="120px" />
 			<col width="120px" />
+			<col width="150px" />
+			<col width="150px" />
 			<col width="120px" />
-			<col width="140px" />
-			<col width="140px" />
 			<col width="120px" />
 			<col width="120px" />
 		</colgroup>
@@ -85,11 +85,11 @@
 		<thead>
 			<tr>
 				<th>期数</th>
-				<th>总积分</th>
-				<th>剩余积分</th>
+				<th>目标积分</th>
 				<th>开始时间</th>
 				<th>结束时间</th>
 				<th>状态</th>
+				<th>是否完成</th>
 				<th>操作</th>
 			</tr>
 		</thead>
@@ -98,7 +98,6 @@
 					<!-- <td><input name="id[]" type="checkbox" value="<?php echo isset($item['sum_id'])?$item['sum_id']:"";?>" /></td> -->
 					<td><?php echo isset($item['sum_num'])?$item['sum_num']:"";?></td>
 					<td><?php echo isset($item['sum_point'])?$item['sum_point']:"";?></td>
-					<td>000</td>
 					<td><?php echo isset($item['start_time'])?$item['start_time']:"";?></td>
 					<td>
 						<?php if($item['end_time'] == '0000-00-00 00:00:00'){?>
@@ -116,7 +115,11 @@
 						已结束
 						<?php }?>
 					</td>
-					<td>cao</td>
+					<td>已完成</td>
+					<td>
+						<a href="">【查看】</a>&nbsp;||&nbsp;
+						<a href="">【删除】</a>
+					</td>
 				</tr>
 		<?php }?>
 	</table>

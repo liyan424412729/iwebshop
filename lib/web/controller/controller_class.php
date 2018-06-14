@@ -21,6 +21,8 @@ class IController extends IControllerBase
 	public $layout;                                    //布局方案名称
 	public $defaultActions = array();                  //默认action对应关系,array(ID => 类名或对象引用)
 	public $error          = array();                  //错误信息内容
+	
+	public static $point_arr = array();				   //
 
 	protected $app;                                    //隶属于APP的对象
 	protected $ctrlId;                                 //控制器ID标识符
@@ -29,6 +31,7 @@ class IController extends IControllerBase
 	private $action;                                   //当前action对象
 	private $defaultAction       = 'index';            //默认执行的action动作
 	private $renderData          = array();            //渲染的数据
+	
 
 	/**
 	 * @brief 构造函数
@@ -39,7 +42,42 @@ class IController extends IControllerBase
 	{
 		$this->app    = $app;
 		$this->ctrlId = $controllerId;
+		$this->getpoint();
 	}
+
+	/**
+	 * @brief 查询期数
+	 * @return array 正在进行的一期
+	 */
+	public function getpoint(){
+		$point_obj = new IModel('point_sum');
+		$sum_point = $point_obj->getObj('sum_status=1','sum_id,sum_point,end_time');
+		// 如果有正在进行的期数 进行判断修改
+		if ($sum_point) {
+			self::$point_arr = $sum_point;
+			$time = strtotime($sum_point['end_time']);	
+			if (time() > $time) {
+				$data = array('sum_status'=>2);
+				$point_obj->setData($data);
+				$point_obj->update('sum_id='.$sum_point['sum_id']);
+			}
+		}else{
+			// 活动结束，可以访问的地址
+			$arr = array('systemadmin','goods','member','order','market','system','tools','points','simple');
+			$url = $_SERVER['REQUEST_URI'];
+			if ($url == '/') {
+				$controllers = 'site';
+			}else{
+				$dizhi = $_SERVER['REQUEST_URI'];
+		   		$con = substr($dizhi,strpos($dizhi,'=')+1);
+				$controllers = substr($con,0,strpos($con,'&'));
+			}
+			if (!in_array($controllers, $arr) && $controllers) {
+				echo "<h1 style='text-align:center;margin-top:200px;font-size:50px;color:red;'>网站正在维护中....</h1>";die;
+			}		
+		}
+	}
+
 
 	/**
 	 * @brief 生成验证码

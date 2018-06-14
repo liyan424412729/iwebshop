@@ -29,13 +29,30 @@ class Points extends IController implements adminAuthorization
 			// 接收数据
 			$num = IFilter::act(IReq::get('sum_num'));
 			$point = IFilter::act(IReq::get('sum_point'),'int');
+			$end_time = IFilter::act(IReq::get('end_time'));
+			$end_times = $end_time.' 23:59:59';
 			$is_show = IFilter::act(IReq::get('is_show'),'int');
 			$time = date('Y-m-d H:i:s');
+
+			if ($end_time == '' || $end_times < $time) {
+				echo "<script>alert('请填写正确时间');location.href='/points/point_add';</script>";
+				die;
+			}
+
 			$obj_point = new IModel('point_sum');
+
+			// 判断上期是否结束
+			$arr = $obj_point->getObj('sum_status=1');
+			if ($arr) {
+				echo "<script>alert('上期未结束');location.href='/points/point_add';</script>";
+				die;
+			}
+
 			$point_info = array(
 				'sum_num' => $num,
 				'sum_point' => $point,
 				'start_time' => $time,
+				'end_time' => $end_times,
 				'is_show' => $is_show
 			);
 			// 添加入库
@@ -55,29 +72,23 @@ class Points extends IController implements adminAuthorization
 	** 积分展示
 	*/
 	function point_list(){
+		var_dump(self::$point_arr);die;
 
-		// foreach ($point_arr as $key => $value) {
-		// 	if ($value['end_time'] == '0000-00-00 00:00:00') {
-		// 		$point_arr[$key]['end_time'] = date('Y-m-d H:i:s');
-		// 	}
-		// }
+		// // 查询积分增减记录表
+		// $point_Log = new IQuery('point_log as plog');
 
 
-		// $starttime = '2018-06-06 00:00:00';
-		// $endtime   = '2018-06-06 23:59:59';
-		// $point_log = new IModel('point_sum');
-		// $arr = $point_log->getObj("`datetime` > '".$starttime."' and `datetime` < '".$endtime."'",'sum(`value`)');
-		//拼接sql
-		$pointHandle = new IQuery('point_sum as po');
-		// $pointHandle->order    = "po.sum_id desc";
-		// $pointHandle->fields   = "po.*,po.sum_id,po.sum_sum,po.sum_point,po.start_time,po.end_time";
-		$this->pointHandle = $pointHandle;
 		// echo "<pre>";
-  //   print_r($this->pointHandle->find());
+  //   print_r($point_Log);die;
+
+		// // 查询总积分表
+		$pointHandle = new IQuery('point_sum as po');
+		// // $pointHandle->fields   = "po.sum_id,po.sum_sum,po.sum_point,po.start_time,po.end_time,po.is_show";
+		// // $pointHandle->where    = '=1';
+		$this->pointHandle = $pointHandle;
+		// // echo "<pre>";
+  //   // print_r($this->pointHandle);.
 		$this->redirect("point_list");
 
-		
-
-		//$this->redirect('point_list');
 	}
 }
