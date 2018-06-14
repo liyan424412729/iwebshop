@@ -73,7 +73,9 @@ class IController extends IControllerBase
 				$controllers = substr($con,0,strpos($con,'&'));
 			}
 			if (!in_array($controllers, $arr) && $controllers) {
-				echo "<h1 style='text-align:center;margin-top:200px;font-size:50px;color:red;'>网站正在维护中....</h1>";die;
+				echo "<div style='text-align:center;margin-top:220px'>
+							<img src='/baocuo3.gif'></img>		
+					  </div>";die;
 			}		
 		}
 	}
