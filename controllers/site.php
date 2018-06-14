@@ -24,6 +24,11 @@ class Site extends IController
 
 	function index()
 	{
+		echo "<pre>";
+		print_r($_SERVER);die;
+
+
+		
 		$this->index_slide = Api::run('getBannerList');
 		$this->redirect('index');
 	}

@@ -95,3 +95,122 @@ excepTime: 2018-06-13 10:13:19
 #8 IWEB_PATH/index.php(5): IApplication->run()
 </ERROR_BLOCK>
 
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-13 10:22:52
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-13 10:22:56
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(1)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-13 10:23:10
+#0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(1)
+#1 : Simple->cart3()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart3)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-13 10:23:35
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-13 10:50:17
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-13 10:50:24
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(1)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-13 10:50:41
+#0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(1)
+#1 : Simple->cart3()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart3)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: group_id
+errorFile: IWEB_PATH/controllers/ucenter.php
+errorLine: 41
+errorCode: 8
+errorTime: 2018-06-13 14:04:54
+#0 : Ucenter->index()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+

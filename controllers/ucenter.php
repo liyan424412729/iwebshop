@@ -15,10 +15,14 @@ class Ucenter extends IController implements userAuthorization
     public function index()
     {
 
+        //查看积分池
         // 判断会员等级
         $member = new IModel('member');
         $num = $member->getObj('user_id='.$this->user['user_id'],'point'); 
         $point = $num['point'];
+        if($point < 200){
+            $group_id = 6;
+        }
         if($point >= 200 && $point< 500){
             $group_id = 1;
         }
