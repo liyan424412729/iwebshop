@@ -196,6 +196,9 @@ class Member extends IController implements adminAuthorization
 		$this->data['where'] = $where;
 		$tb_user_group = new IModel('user_group');
 		$data_group = $tb_user_group->query();
+
+		// echo "<pre>";
+    // print_r($data_group);die;
 		$group      = array();
 		foreach($data_group as $value)
 		{
@@ -290,7 +293,7 @@ class Member extends IController implements adminAuthorization
 				$this->data['group'] = array(
 					'group_id'	=>	$info['id'],
 					'group_name'=>	$info['group_name'],
-					'discount'	=>	$info['discount'],
+					// 'discount'	=>	$info['discount'],
 					'minexp'	=>	$info['minexp'],
 					'maxexp'	=>	$info['maxexp']
 				);
@@ -314,25 +317,25 @@ class Member extends IController implements adminAuthorization
 		$group_id = IFilter::act(IReq::get('group_id'),'int');
 		$maxexp   = IFilter::act(IReq::get('maxexp'),'int');
 		$minexp   = IFilter::act(IReq::get('minexp'),'int');
-		$discount = IFilter::act(IReq::get('discount'),'float');
+		// $discount = IFilter::act(IReq::get('discount'),'float');
 		$group_name = IFilter::act(IReq::get('group_name'));
 
 		$group = array(
 			'maxexp' => $maxexp,
 			'minexp' => $minexp,
-			'discount' => $discount,
+			// 'discount' => $discount,
 			'group_name' => $group_name
 		);
 
-		if($discount > 100)
-		{
-			$errorMsg = '折扣率不能大于100';
-		}
+		// if($discount > 100)
+		// {
+		// 	$errorMsg = '折扣率不能大于100';
+		// }
 
-		if($maxexp <= $minexp)
-		{
-			$errorMsg = '最大经验值必须大于最小经验值';
-		}
+		// if($maxexp <= $minexp)
+		// {
+		// 	$errorMsg = '最大经验值必须大于最小经验值';
+		// }
 
 		if(isset($errorMsg) && $errorMsg)
 		{
@@ -912,63 +915,6 @@ class Member extends IController implements adminAuthorization
     	die('<script type="text/javascript">parent.searchSellerCallback("'.$sellerIds.'");</script>');
     }
 
-
-    /*
-	* 奖金转存 接口
-	* @param decimal 用户奖金
-	* return 返回
-    */
-	public function savebonus(){
-
-		$jin = IFilter::act(IReq::get('jin'));
-		$id  = IFilter::act(IReq::get('user_id'));
-
-		if (empty($id)) die('请登录');
-		$member = new IModel('member');
-		$user_info = $member->getObj('user_id='.$id);
-
-		if (!is_numeric($jin) || empty($jin) || $jin <= 0 || $jin>$user_info['bonus']) {
-			$arr = [
-				'code' => 10001,
-				'message' => '请输入正确的数',
-				'data' => ''
-			];
-		}else{
-
-			$consumption = $jin * 0.4;
-			$balance = $jin * 0.6;
-			$bonus = $user_info['bonus'] - $jin;
-
-			$data = array(
-				'consumption' => $user_info['consumption'] + $consumption,
-				'balance'     => $user_info['balance'] + $balance,
-				'bonus'       => $bonus
-			);
-
-			// 更新钱包数据
-			$member->setData($data);
-			if($member->update('user_id='.$id)){
-				$new_info = $member->getObj('user_id='.$id);
-
-				$arr = [
-					'code' => 200,
-					'message' => '转存成功',
-					'data' => $new_info
-				];
-
-			}else{
-				$arr = [
-					'code' => 10002,
-					'message' => '转存失败',
-					'data' => ''
-				];
-			}
-
-		}
-
-		echo json_encode($arr);
-		
-	}
 
 
 

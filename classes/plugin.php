@@ -90,6 +90,7 @@ class plugin extends IInterceptorBase
 	public static function trigger($event)
 	{
 		$params = func_get_args();
+
 		array_shift($params);
 
 		$result = array();

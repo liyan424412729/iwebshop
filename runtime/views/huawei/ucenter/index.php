@@ -253,6 +253,7 @@
 	</div>
 	<div class="user_info">
 		<h2><?php echo isset($this->user['username'])?$this->user['username']:"";?>，欢迎您</h2>
+		<h3>会员等级：<?php echo isset($user['group_name'])?$user['group_name']:"";?></h3>
 		<ul class="user_baseinfo">
 			<li>总积分：<a href="<?php echo IUrl::creatUrl("/ucenter/integral");?>"><strong><?php echo isset($user['point'])?$user['point']:"";?></strong> 分</a></li>
 			<li>交易总数量：<a href="<?php echo IUrl::creatUrl("/ucenter/order");?>"><strong><?php echo isset($statistics['num'])?$statistics['num']:"";?></strong> 笔</a></li>
@@ -262,7 +263,7 @@
 			<!-- <li>奖金钱包：<strong>￥<?php echo isset($user['balance'])?$user['balance']:"";?></strong></li> -->
 			<li>奖金钱包：
 				<strong>￥<span id="bonus"><?php echo isset($user['bonus'])?$user['bonus']:"";?></span>
-				<input type="" id="jiangjin" value="">
+				<!-- <input type="" id="jiangjin" value=""> -->
 				<button id="btn_zhuan">转存</button>
 				<input type="" name="">
 				<button>分投</button>
@@ -343,11 +344,16 @@ function callback_user_ico(content){
 // 个人中心转存
 $(function(){
 	$('#btn_zhuan').click(function(){
-		$(this).attr('disabled',true);
-		var jiangjin = $('#jiangjin').val();
+		var jiangjin = $('#bonus').html();
+		// 判断奖金是否为0
+		if (jiangjin <= 0) {
+			alert('没有奖金');return;
+		}
+		// 获取当前用户ID
 		var user_id = "<?php echo isset($user['user_id'])?$user['user_id']:"";?>";
 
-		$.get('<?php echo IUrl::creatUrl("/member/savebonus");?>',{jin:jiangjin,user_id:user_id},function(result){
+		// 通过Ajax传值进行转存修改
+		$.get('<?php echo IUrl::creatUrl("/ucenter/savebonus");?>',{jin:jiangjin,user_id:user_id},function(result){
 			if (result.code == 10001) {
 				alert(result.message);return false;
 			}

@@ -74,14 +74,14 @@
 				<tr>
 					<th>用户组：</th><td><input class="normal" name="group_name" type="text" value="<?php echo isset($group['group_name'])?$group['group_name']:"";?>" pattern="required" alt="名称不能为空" /><label>* 用户组名称</label></td>
 				</tr>
-				<tr>
+				<!-- <tr>
 					<th>折扣率：</th><td><input class="normal" name="discount" type="text" value="<?php echo isset($group['discount'])?$group['discount']:"";?>" pattern="float" alt="格式不正确（请输入数字，允许包含小数）" />%<label>折扣率，例如：如果输入90，表示该会员组可以以商品原价的90%购买（允许包含小数）。</label></td>
+				</tr> -->
+				<tr>
+					<th>最少积分：</th><td><input class="small" name="minexp" onblur="check_exp();" type="text" value="<?php echo isset($group['minexp'])?$group['minexp']:"";?>" pattern="int" alt="请填写一个整数值" /><label>进入此会员组的经验值下限</label></td>
 				</tr>
 				<tr>
-					<th>最小经验：</th><td><input class="small" name="minexp" onblur="check_exp();" type="text" value="<?php echo isset($group['minexp'])?$group['minexp']:"";?>" pattern="int" alt="请填写一个整数值" /><label>进入此会员组的经验值下限</label></td>
-				</tr>
-				<tr>
-					<th>最大经验：</th>
+					<th>最大积分：</th>
 					<td>
 						<input class="small" name="maxexp" onblur="check_exp();" type="text" value="<?php echo isset($group['maxexp'])?$group['maxexp']:"";?>" pattern="int" alt="请填写一个整数值" />
 						<label>进入此会员组的经验值上限</label>

@@ -1,0 +1,810 @@
+<ERROR_BLOCK>
+errorInfo: Undefined variable: starttime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 71
+errorCode: 8
+errorTime: 2018-06-08 11:06:04
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: endtime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 71
+errorCode: 8
+errorTime: 2018-06-08 11:06:04
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: starttime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 11:15:57
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: endtime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 11:15:57
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:16:17
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:16:17
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:16:17
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:16:17
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:16:17
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:16:17
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:16:17
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: starttime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 11:16:17
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: endtime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 11:16:17
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:16:35
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:16:35
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:16:35
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:16:35
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:16:35
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:16:35
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:16:35
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: starttime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 11:16:35
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: endtime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 11:16:35
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:17:04
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:17:04
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:17:04
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:17:04
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:17:04
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:17:04
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Illegal string offset 'end_time'
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 64
+errorCode: 2
+errorTime: 2018-06-08 11:17:04
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: starttime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 11:17:04
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: endtime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 11:17:04
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: starttime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 11:18:55
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: endtime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 11:18:55
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: readfile(): php_network_getaddresses: getaddrinfo failed: ��֪������������ 
+errorFile: IWEB_PATH/controllers/pic.php
+errorLine: 157
+errorCode: 2
+errorTime: 2018-06-08 11:56:31
+#0 IWEB_PATH/controllers/pic.php(157): readfile(http://www.aircheng.com/images/defaultBanner/b1.jpg)
+#1 : Pic->thumb()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(thumb)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: readfile(http://www.aircheng.com/images/defaultBanner/b1.jpg): failed to open stream: php_network_getaddresses: getaddrinfo failed: ��֪������������ 
+errorFile: IWEB_PATH/controllers/pic.php
+errorLine: 157
+errorCode: 2
+errorTime: 2018-06-08 11:56:31
+#0 IWEB_PATH/controllers/pic.php(157): readfile(http://www.aircheng.com/images/defaultBanner/b1.jpg)
+#1 : Pic->thumb()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(thumb)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: readfile(): php_network_getaddresses: getaddrinfo failed: ��֪������������ 
+errorFile: IWEB_PATH/controllers/pic.php
+errorLine: 157
+errorCode: 2
+errorTime: 2018-06-08 11:56:31
+#0 IWEB_PATH/controllers/pic.php(157): readfile(http://www.aircheng.com/images/defaultBanner/b2.jpg)
+#1 : Pic->thumb()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(thumb)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: readfile(http://www.aircheng.com/images/defaultBanner/b2.jpg): failed to open stream: php_network_getaddresses: getaddrinfo failed: ��֪������������ 
+errorFile: IWEB_PATH/controllers/pic.php
+errorLine: 157
+errorCode: 2
+errorTime: 2018-06-08 11:56:31
+#0 IWEB_PATH/controllers/pic.php(157): readfile(http://www.aircheng.com/images/defaultBanner/b2.jpg)
+#1 : Pic->thumb()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(thumb)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: readfile(): php_network_getaddresses: getaddrinfo failed: ��֪������������ 
+errorFile: IWEB_PATH/controllers/pic.php
+errorLine: 157
+errorCode: 2
+errorTime: 2018-06-08 11:56:31
+#0 IWEB_PATH/controllers/pic.php(157): readfile(http://www.aircheng.com/images/defaultBanner/b3.jpg)
+#1 : Pic->thumb()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(thumb)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: readfile(http://www.aircheng.com/images/defaultBanner/b3.jpg): failed to open stream: php_network_getaddresses: getaddrinfo failed: ��֪������������ 
+errorFile: IWEB_PATH/controllers/pic.php
+errorLine: 157
+errorCode: 2
+errorTime: 2018-06-08 11:56:31
+#0 IWEB_PATH/controllers/pic.php(157): readfile(http://www.aircheng.com/images/defaultBanner/b3.jpg)
+#1 : Pic->thumb()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(thumb)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: readfile(): php_network_getaddresses: getaddrinfo failed: ��֪������������ 
+errorFile: IWEB_PATH/controllers/pic.php
+errorLine: 157
+errorCode: 2
+errorTime: 2018-06-08 11:56:31
+#0 IWEB_PATH/controllers/pic.php(157): readfile(http://www.aircheng.com/images/defaultBanner/b4.jpg)
+#1 : Pic->thumb()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(thumb)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: readfile(http://www.aircheng.com/images/defaultBanner/b4.jpg): failed to open stream: php_network_getaddresses: getaddrinfo failed: ��֪������������ 
+errorFile: IWEB_PATH/controllers/pic.php
+errorLine: 157
+errorCode: 2
+errorTime: 2018-06-08 11:56:31
+#0 IWEB_PATH/controllers/pic.php(157): readfile(http://www.aircheng.com/images/defaultBanner/b4.jpg)
+#1 : Pic->thumb()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(thumb)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: starttime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 11:56:57
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: endtime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 11:56:57
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: readfile(): php_network_getaddresses: getaddrinfo failed: ��֪������������ 
+errorFile: IWEB_PATH/controllers/pic.php
+errorLine: 157
+errorCode: 2
+errorTime: 2018-06-08 11:58:05
+#0 IWEB_PATH/controllers/pic.php(157): readfile(http://www.aircheng.com/images/defaultBanner/b4.jpg)
+#1 : Pic->thumb()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(thumb)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: readfile(http://www.aircheng.com/images/defaultBanner/b4.jpg): failed to open stream: php_network_getaddresses: getaddrinfo failed: ��֪������������ 
+errorFile: IWEB_PATH/controllers/pic.php
+errorLine: 157
+errorCode: 2
+errorTime: 2018-06-08 11:58:05
+#0 IWEB_PATH/controllers/pic.php(157): readfile(http://www.aircheng.com/images/defaultBanner/b4.jpg)
+#1 : Pic->thumb()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(thumb)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: readfile(): php_network_getaddresses: getaddrinfo failed: ��֪������������ 
+errorFile: IWEB_PATH/controllers/pic.php
+errorLine: 157
+errorCode: 2
+errorTime: 2018-06-08 11:58:05
+#0 IWEB_PATH/controllers/pic.php(157): readfile(http://www.aircheng.com/images/defaultBanner/b3.jpg)
+#1 : Pic->thumb()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(thumb)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: readfile(http://www.aircheng.com/images/defaultBanner/b3.jpg): failed to open stream: php_network_getaddresses: getaddrinfo failed: ��֪������������ 
+errorFile: IWEB_PATH/controllers/pic.php
+errorLine: 157
+errorCode: 2
+errorTime: 2018-06-08 11:58:05
+#0 IWEB_PATH/controllers/pic.php(157): readfile(http://www.aircheng.com/images/defaultBanner/b3.jpg)
+#1 : Pic->thumb()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(thumb)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: readfile(): php_network_getaddresses: getaddrinfo failed: ��֪������������ 
+errorFile: IWEB_PATH/controllers/pic.php
+errorLine: 157
+errorCode: 2
+errorTime: 2018-06-08 11:58:05
+#0 IWEB_PATH/controllers/pic.php(157): readfile(http://www.aircheng.com/images/defaultBanner/b2.jpg)
+#1 : Pic->thumb()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(thumb)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: readfile(http://www.aircheng.com/images/defaultBanner/b2.jpg): failed to open stream: php_network_getaddresses: getaddrinfo failed: ��֪������������ 
+errorFile: IWEB_PATH/controllers/pic.php
+errorLine: 157
+errorCode: 2
+errorTime: 2018-06-08 11:58:05
+#0 IWEB_PATH/controllers/pic.php(157): readfile(http://www.aircheng.com/images/defaultBanner/b2.jpg)
+#1 : Pic->thumb()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(thumb)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: readfile(): php_network_getaddresses: getaddrinfo failed: ��֪������������ 
+errorFile: IWEB_PATH/controllers/pic.php
+errorLine: 157
+errorCode: 2
+errorTime: 2018-06-08 11:58:05
+#0 IWEB_PATH/controllers/pic.php(157): readfile(http://www.aircheng.com/images/defaultBanner/b1.jpg)
+#1 : Pic->thumb()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(thumb)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: readfile(http://www.aircheng.com/images/defaultBanner/b1.jpg): failed to open stream: php_network_getaddresses: getaddrinfo failed: ��֪������������ 
+errorFile: IWEB_PATH/controllers/pic.php
+errorLine: 157
+errorCode: 2
+errorTime: 2018-06-08 11:58:05
+#0 IWEB_PATH/controllers/pic.php(157): readfile(http://www.aircheng.com/images/defaultBanner/b1.jpg)
+#1 : Pic->thumb()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(thumb)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+<<<<<<< HEAD
+errorInfo: Undefined variable: user_info
+errorFile: IWEB_PATH/controllers/member.php
+errorLine: 947
+errorCode: 8
+errorTime: 2018-06-08 18:53:03
+#0 : Member->savebonus()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(savebonus)
+=======
+errorInfo: Undefined variable: starttime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 15:57:38
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+>>>>>>> master
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+<<<<<<< HEAD
+errorInfo: Undefined variable: user_bonus
+errorFile: IWEB_PATH/controllers/member.php
+errorLine: 939
+errorCode: 8
+errorTime: 2018-06-08 18:58:20
+#0 : Member->savebonus()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(savebonus)
+=======
+errorInfo: Undefined variable: endtime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 15:57:38
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: starttime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 15:57:46
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: endtime
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 73
+errorCode: 8
+errorTime: 2018-06-08 15:57:46
+#0 : Point->point_list()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+>>>>>>> master
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+

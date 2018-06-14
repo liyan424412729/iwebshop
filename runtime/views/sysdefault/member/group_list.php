@@ -85,9 +85,8 @@
 			<tr>
 				<th>选择</th>
 				<th>会员组</th>
-				<th>折扣率</th>
-				<th>最小经验</th>
-				<th>最大经验</th>
+				<th>最少积分</th>
+				<th>最多积分</th>
 				<th>操作</th>
 			</tr>
 		</thead>
@@ -97,7 +96,7 @@
 			<tr>
 				<td><input name="check[]" type="checkbox" value="<?php echo isset($item['id'])?$item['id']:"";?>" /></td>
 				<td><?php echo isset($item['group_name'])?$item['group_name']:"";?></td>
-				<td><?php echo isset($item['discount'])?$item['discount']:"";?></td>
+				<!-- <td><?php echo isset($item['discount'])?$item['discount']:"";?></td> -->
 				<td><?php echo isset($item['minexp'])?$item['minexp']:"";?></td>
 				<td><?php echo isset($item['maxexp'])?$item['maxexp']:"";?></td>
 				<td>

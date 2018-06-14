@@ -76,7 +76,8 @@
 			<col width="120px" />
 			<col width="120px" />
 			<col width="120px" />
-			<col width="120px" />
+			<col width="140px" />
+			<col width="140px" />
 			<col width="120px" />
 			<col width="120px" />
 		</colgroup>
@@ -88,25 +89,36 @@
 				<th>剩余积分</th>
 				<th>开始时间</th>
 				<th>结束时间</th>
+				<th>状态</th>
 				<th>操作</th>
 			</tr>
 		</thead>
-
-		<tbody>
-			<?php foreach($items=$category as $key => $item){?>
-			<tr id="<?php echo isset($item['id'])?$item['id']:"";?>" parent=<?php echo isset($item['parent_id'])?$item['parent_id']:"";?>>
-				<td><input type='checkbox' name='cat_id[]' value='<?php echo isset($item['id'])?$item['id']:"";?>' /></td>
-				<td><img style='margin-left:<?php echo $item['floor']*20;?>px' class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/close.gif";?>" onclick="displayData(this);" alt="关闭" /><?php echo isset($item['name'])?$item['name']:"";?></td>
-				<td><input class="tiny" id="s<?php echo isset($item['id'])?$item['id']:"";?>" size="2" type="text" onblur="toSort(<?php echo isset($item['id'])?$item['id']:"";?>);" value="<?php echo isset($item['sort'])?$item['sort']:"";?>" /></td>
-				<td><?php if($item['visibility']=='1'){?><span class="green">是</span><?php }else{?><span class="brown">否</span><?php }?></td>
-				<td>
-					<a href="<?php echo IUrl::creatUrl("/goods/category_edit/pid/".$item['id']."");?>"><img class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/icon_add.gif";?>" alt="添加下级分类" title="添加下级分类" /></a>
-					<a href="<?php echo IUrl::creatUrl("/goods/category_edit/cid/".$item['id']."");?>"><img class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/icon_edit.gif";?>" alt="修改" title="修改" /></a>
-					<a href="javascript:void(0)" onclick="delModel({link:'<?php echo IUrl::creatUrl("/goods/category_del/cid/".$item['id']."");?>'})"><img class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/icon_del.gif";?>" alt="删除" title="删除" /></a>
-				</td>
-			</tr>
-			<?php }?>
-		</tbody>
+		<?php foreach($items=$this->pointHandle->find() as $key => $item){?>
+				<tr>
+					<!-- <td><input name="id[]" type="checkbox" value="<?php echo isset($item['sum_id'])?$item['sum_id']:"";?>" /></td> -->
+					<td><?php echo isset($item['sum_num'])?$item['sum_num']:"";?></td>
+					<td><?php echo isset($item['sum_point'])?$item['sum_point']:"";?></td>
+					<td>000</td>
+					<td><?php echo isset($item['start_time'])?$item['start_time']:"";?></td>
+					<td>
+						<?php if($item['end_time'] == '0000-00-00 00:00:00'){?>
+						未结束
+						<?php }else{?>
+						<?php echo isset($item['end_time'])?$item['end_time']:"";?>
+						<?php }?>
+					</td>
+					<td>
+						<?php if($item['sum_status'] == 0){?>
+						未开始
+						<?php }elseif($item['sum_status'] == 1){?>
+						正在进行中
+						<?php }else{$tiem['sum_status'] == 2?>
+						已结束
+						<?php }?>
+					</td>
+					<td>cao</td>
+				</tr>
+		<?php }?>
 	</table>
 </div>
 </form>

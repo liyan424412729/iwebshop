@@ -1,4 +1,5 @@
 <ERROR_BLOCK>
+<<<<<<< HEAD
 errorInfo: Undefined index: discount
 errorFile: IWEB_PATH/controllers/member.php
 errorLine: 293
@@ -8,16 +9,374 @@ errorTime: 2018-06-12 14:45:23
 #1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
 #2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
 #3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(group_edit)
+=======
+errorInfo: Undefined variable: _SESSION
+errorFile: IWEB_PATH/controllers/simple.php
+errorLine: 28
+errorCode: 8
+errorTime: 2018-06-12 09:58:04
+#0 : Simple->login()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(login)
 #4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
 #5 IWEB_PATH/index.php(5): IApplication->run()
 </ERROR_BLOCK>
 
 <ERROR_BLOCK>
+errorInfo: Undefined variable: _SESSION
+errorFile: IWEB_PATH/controllers/simple.php
+errorLine: 34
+errorCode: 8
+errorTime: 2018-06-12 09:58:23
+#0 : Simple->login()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(login)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: _SESSION
+errorFile: IWEB_PATH/controllers/simple.php
+errorLine: 34
+errorCode: 8
+errorTime: 2018-06-12 09:59:35
+#0 : Simple->login()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(login)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: onCreateApp
+errorFile: IWEB_PATH/classes/plugin.php
+errorLine: 97
+errorCode: 8
+errorTime: 2018-06-12 10:27:36
+#0 IWEB_PATH/classes/plugin.php(212): plugin::trigger(onCreateApp)
+#1 : plugin::onCreateApp()
+#2 IWEB_PATH/lib/core/interceptor_class.php(114): call_user_func()
+#3 IWEB_PATH/lib/core/application_class.php(93): IInterceptor::run(onCreateApp)
+#4 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: onBeforeCreateController
+errorFile: IWEB_PATH/classes/plugin.php
+errorLine: 97
+errorCode: 8
+errorTime: 2018-06-12 10:27:36
+#0 IWEB_PATH/classes/plugin.php(215): plugin::trigger(onBeforeCreateController,simple)
+#1 : plugin::onBeforeCreateController(simple)
+#2 IWEB_PATH/lib/core/interceptor_class.php(114): call_user_func(simple)
+#3 IWEB_PATH/lib/core/webapplication_class.php(72): IInterceptor::run(onBeforeCreateController,simple)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: onBeforeCreateController@simple
+errorFile: IWEB_PATH/classes/plugin.php
+errorLine: 97
+errorCode: 8
+errorTime: 2018-06-12 10:27:36
+#0 IWEB_PATH/classes/plugin.php(215): plugin::trigger(onBeforeCreateController@simple)
+#1 : plugin::onBeforeCreateController(simple)
+#2 IWEB_PATH/lib/core/interceptor_class.php(114): call_user_func(simple)
+#3 IWEB_PATH/lib/core/webapplication_class.php(72): IInterceptor::run(onBeforeCreateController,simple)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: onCreateController@simple
+errorFile: IWEB_PATH/classes/plugin.php
+errorLine: 97
+errorCode: 8
+errorTime: 2018-06-12 10:27:36
+#0 IWEB_PATH/classes/plugin.php(216): plugin::trigger(onCreateController@simple)
+#1 : plugin::onCreateController()
+#2 IWEB_PATH/lib/core/interceptor_class.php(114): call_user_func()
+#3 IWEB_PATH/lib/core/webapplication_class.php(74): IInterceptor::run(onCreateController)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: onBeforeCreateAction@simple
+errorFile: IWEB_PATH/classes/plugin.php
+errorLine: 97
+errorCode: 8
+errorTime: 2018-06-12 10:27:36
+#0 IWEB_PATH/classes/plugin.php(219): plugin::trigger(onBeforeCreateAction@simple)
+#1 : plugin::onBeforeCreateAction(login_act)
+#2 IWEB_PATH/lib/core/interceptor_class.php(114): call_user_func(login_act)
+#3 IWEB_PATH/lib/web/controller/controller_class.php(112): IInterceptor::run(onBeforeCreateAction,login_act)
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(login_act)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: onBeforeCreateAction@simple@login_act
+errorFile: IWEB_PATH/classes/plugin.php
+errorLine: 97
+errorCode: 8
+errorTime: 2018-06-12 10:27:36
+#0 IWEB_PATH/classes/plugin.php(219): plugin::trigger(onBeforeCreateAction@simple@login_act)
+#1 : plugin::onBeforeCreateAction(login_act)
+#2 IWEB_PATH/lib/core/interceptor_class.php(114): call_user_func(login_act)
+#3 IWEB_PATH/lib/web/controller/controller_class.php(112): IInterceptor::run(onBeforeCreateAction,login_act)
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(login_act)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: onCreateAction
+errorFile: IWEB_PATH/classes/plugin.php
+errorLine: 97
+errorCode: 8
+errorTime: 2018-06-12 10:27:36
+#0 IWEB_PATH/classes/plugin.php(220): plugin::trigger(onCreateAction)
+#1 : plugin::onCreateAction()
+#2 IWEB_PATH/lib/core/interceptor_class.php(114): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(114): IInterceptor::run(onCreateAction)
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(login_act)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: onCreateAction@simple
+errorFile: IWEB_PATH/classes/plugin.php
+errorLine: 97
+errorCode: 8
+errorTime: 2018-06-12 10:27:36
+#0 IWEB_PATH/classes/plugin.php(220): plugin::trigger(onCreateAction@simple)
+#1 : plugin::onCreateAction()
+#2 IWEB_PATH/lib/core/interceptor_class.php(114): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(114): IInterceptor::run(onCreateAction)
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(login_act)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: onCreateAction@simple@login_act
+errorFile: IWEB_PATH/classes/plugin.php
+errorLine: 97
+errorCode: 8
+errorTime: 2018-06-12 10:27:36
+#0 IWEB_PATH/classes/plugin.php(220): plugin::trigger(onCreateAction@simple@login_act)
+#1 : plugin::onCreateAction()
+#2 IWEB_PATH/lib/core/interceptor_class.php(114): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(114): IInterceptor::run(onCreateAction)
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(login_act)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: onPhpShutDown
+errorFile: IWEB_PATH/classes/plugin.php
+errorLine: 97
+errorCode: 8
+errorTime: 2018-06-12 10:27:36
+#0 IWEB_PATH/classes/plugin.php(226): plugin::trigger(onPhpShutDown)
+#1 : plugin::onPhpShutDown()
+#2 IWEB_PATH/lib/core/interceptor_class.php(114): call_user_func()
+#3 IWEB_PATH/lib/core/interceptor_class.php(158): IInterceptor::run(onPhpShutDown)
+#4 : IInterceptor::shutDown()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 13:50:33
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: sum_id
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 42
+errorCode: 8
+errorTime: 2018-06-12 14:46:30
+#0 : Point->point_add()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+>>>>>>> nzf
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+<<<<<<< HEAD
+=======
+errorInfo: Undefined variable: tiem
+errorFile: IWEB_PATH/runtime/views/sysdefault/point/point_list.php
+errorLine: 115
+errorCode: 8
+errorTime: 2018-06-12 14:46:33
+#0 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#1 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#2 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_list,)
+#3 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_list,)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(374): IViewAction->run()
+#5 IWEB_PATH/controllers/point.php(76): IController->redirect(point_list)
+#6 : Point->point_list()
+#7 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#8 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#9 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#10 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#11 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: tiem
+errorFile: IWEB_PATH/runtime/views/sysdefault/point/point_list.php
+errorLine: 115
+errorCode: 8
+errorTime: 2018-06-12 14:47:02
+#0 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#1 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#2 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_list,)
+#3 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_list,)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(374): IViewAction->run()
+#5 IWEB_PATH/controllers/point.php(76): IController->redirect(point_list)
+#6 : Point->point_list()
+#7 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#8 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#9 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#10 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#11 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: tiem
+errorFile: IWEB_PATH/runtime/views/sysdefault/point/point_list.php
+errorLine: 115
+errorCode: 8
+errorTime: 2018-06-12 14:47:18
+#0 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#1 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#2 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_list,)
+#3 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_list,)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(374): IViewAction->run()
+#5 IWEB_PATH/controllers/point.php(76): IController->redirect(point_list)
+#6 : Point->point_list()
+#7 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#8 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#9 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#10 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#11 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: tiem
+errorFile: IWEB_PATH/runtime/views/sysdefault/point/point_list.php
+errorLine: 115
+errorCode: 8
+errorTime: 2018-06-12 14:47:19
+#0 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#1 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#2 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_list,)
+#3 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_list,)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(374): IViewAction->run()
+#5 IWEB_PATH/controllers/point.php(76): IController->redirect(point_list)
+#6 : Point->point_list()
+#7 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#8 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#9 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#10 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#11 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: tiem
+errorFile: IWEB_PATH/runtime/views/sysdefault/point/point_list.php
+errorLine: 115
+errorCode: 8
+errorTime: 2018-06-12 14:47:21
+#0 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#1 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#2 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_list,)
+#3 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_list,)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(374): IViewAction->run()
+#5 IWEB_PATH/controllers/point.php(76): IController->redirect(point_list)
+#6 : Point->point_list()
+#7 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#8 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#9 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#10 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#11 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: tiem
+errorFile: IWEB_PATH/runtime/views/sysdefault/point/point_list.php
+errorLine: 115
+errorCode: 8
+errorTime: 2018-06-12 14:47:26
+#0 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#1 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#2 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_list,)
+#3 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_list,)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(374): IViewAction->run()
+#5 IWEB_PATH/controllers/point.php(76): IController->redirect(point_list)
+#6 : Point->point_list()
+#7 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#8 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#9 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#10 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#11 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: tiem
+errorFile: IWEB_PATH/runtime/views/sysdefault/point/point_list.php
+errorLine: 115
+errorCode: 8
+errorTime: 2018-06-12 14:47:30
+#0 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#1 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#2 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_list,)
+#3 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_list,)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(374): IViewAction->run()
+#5 IWEB_PATH/controllers/point.php(76): IController->redirect(point_list)
+#6 : Point->point_list()
+#7 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#8 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#9 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#10 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#11 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+>>>>>>> nzf
 errorInfo: Undefined index: discount
 errorFile: IWEB_PATH/controllers/member.php
 errorLine: 293
 errorCode: 8
+<<<<<<< HEAD
 errorTime: 2018-06-12 14:45:28
+=======
+errorTime: 2018-06-12 14:52:09
+>>>>>>> nzf
 #0 : Member->group_edit()
 #1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
 #2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
@@ -27,11 +386,30 @@ errorTime: 2018-06-12 14:45:28
 </ERROR_BLOCK>
 
 <ERROR_BLOCK>
+<<<<<<< HEAD
+=======
+excepInfo: UPDATE iwebshop_user_group SET  `maxexp` = '499' , `minexp` = '200' , `discount` = '0' , `group_name` = '一星会员'  WHERE id=1
+ -- Unknown column 'discount' in 'field list'
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 166
+excepCode: 1000
+excepTime: 2018-06-12 14:52:16
+#0 IWEB_PATH/lib/web/model/model_class.php(104): IDB->query(UPDATE iwebshop_user_group SET  `maxexp` = '499' , `minexp` = '200' , `discount` = '0' , `group_name` = '一星会员'  WHERE id=1)
+#1 IWEB_PATH/controllers/member.php(352): IModel->update(id=1)
+#2 : Member->group_save()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(group_save)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
 errorInfo: Undefined index: discount
 errorFile: IWEB_PATH/classes/countsum.php
 errorLine: 47
 errorCode: 8
-errorTime: 2018-06-12 17:34:03
+errorTime: 2018-06-12 15:00:18
 #0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
 #1 : Site->products()
 #2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
@@ -46,8 +424,48 @@ errorInfo: Undefined index: discount
 errorFile: IWEB_PATH/classes/countsum.php
 errorLine: 47
 errorCode: 8
+errorTime: 2018-06-12 15:27:25
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+>>>>>>> nzf
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+<<<<<<< HEAD
+errorTime: 2018-06-12 17:34:03
+=======
+errorTime: 2018-06-12 15:54:52
+>>>>>>> nzf
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+<<<<<<< HEAD
 errorTime: 2018-06-12 17:34:06
 #0 IWEB_PATH/controllers/simple.php(288): CountSum->__construct(1)
+=======
+errorTime: 2018-06-12 15:57:03
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(2)
+>>>>>>> nzf
 #1 : Simple->cart2()
 #2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
 #3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
@@ -61,8 +479,13 @@ errorInfo: Undefined index: discount
 errorFile: IWEB_PATH/classes/countsum.php
 errorLine: 47
 errorCode: 8
+<<<<<<< HEAD
 errorTime: 2018-06-12 17:34:10
 #0 IWEB_PATH/controllers/simple.php(388): CountSum->__construct(1)
+=======
+errorTime: 2018-06-12 15:57:11
+#0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(2)
+>>>>>>> nzf
 #1 : Simple->cart3()
 #2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
 #3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
@@ -72,6 +495,7 @@ errorTime: 2018-06-12 17:34:10
 </ERROR_BLOCK>
 
 <ERROR_BLOCK>
+<<<<<<< HEAD
 errorInfo: Missing argument 1 for IController::__construct(), called in E:\phpstudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
 errorFile: IWEB_PATH/lib/web/controller/controller_class.php
 errorLine: 38
@@ -79,6 +503,15 @@ errorCode: 2
 errorTime: 2018-06-12 17:34:14
 #0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
 #1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612173410132244)
+=======
+errorInfo: Missing argument 1 for IController::__construct(), called in D:\phpStudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 16:01:00
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612155711126834)
+>>>>>>> nzf
 #2 : Ucenter->payment_balance()
 #3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
 #4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
@@ -88,6 +521,7 @@ errorTime: 2018-06-12 17:34:14
 </ERROR_BLOCK>
 
 <ERROR_BLOCK>
+<<<<<<< HEAD
 errorInfo: Missing argument 2 for IController::__construct(), called in E:\phpstudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
 errorFile: IWEB_PATH/lib/web/controller/controller_class.php
 errorLine: 38
@@ -95,6 +529,15 @@ errorCode: 2
 errorTime: 2018-06-12 17:34:14
 #0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
 #1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612173410132244)
+=======
+errorInfo: Missing argument 2 for IController::__construct(), called in D:\phpStudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 16:01:00
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612155711126834)
+>>>>>>> nzf
 #2 : Ucenter->payment_balance()
 #3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
 #4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
@@ -108,9 +551,15 @@ errorInfo: Undefined variable: app
 errorFile: IWEB_PATH/lib/web/controller/controller_class.php
 errorLine: 40
 errorCode: 8
+<<<<<<< HEAD
 errorTime: 2018-06-12 17:34:14
 #0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
 #1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612173410132244)
+=======
+errorTime: 2018-06-12 16:01:00
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612155711126834)
+>>>>>>> nzf
 #2 : Ucenter->payment_balance()
 #3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
 #4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
@@ -124,9 +573,15 @@ errorInfo: Undefined variable: controllerId
 errorFile: IWEB_PATH/lib/web/controller/controller_class.php
 errorLine: 41
 errorCode: 8
+<<<<<<< HEAD
 errorTime: 2018-06-12 17:34:14
 #0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
 #1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612173410132244)
+=======
+errorTime: 2018-06-12 16:01:00
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612155711126834)
+>>>>>>> nzf
 #2 : Ucenter->payment_balance()
 #3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
 #4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
@@ -140,7 +595,2248 @@ errorInfo: Undefined index: discount
 errorFile: IWEB_PATH/classes/countsum.php
 errorLine: 47
 errorCode: 8
+<<<<<<< HEAD
 errorTime: 2018-06-12 17:35:23
+=======
+errorTime: 2018-06-12 16:09:51
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(2)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 16:09:58
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 16:10:07
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(2)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 16:10:16
+#0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(2)
+#1 : Simple->cart3()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart3)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 16:16:02
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(2)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 16:16:05
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 16:16:17
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(2)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 16:16:21
+#0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(2)
+#1 : Simple->cart3()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart3)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Missing argument 1 for IController::__construct(), called in D:\phpStudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 16:17:21
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612161622286218)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Missing argument 2 for IController::__construct(), called in D:\phpStudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 16:17:21
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612161622286218)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: app
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 40
+errorCode: 8
+errorTime: 2018-06-12 16:17:21
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612161622286218)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: controllerId
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 41
+errorCode: 8
+errorTime: 2018-06-12 16:17:21
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612161622286218)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 16:18:47
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 16:18:52
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(2)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 16:18:55
+#0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(2)
+#1 : Simple->cart3()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart3)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Missing argument 1 for IController::__construct(), called in D:\phpStudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 16:19:01
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612161855446179)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Missing argument 2 for IController::__construct(), called in D:\phpStudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 16:19:01
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612161855446179)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: app
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 40
+errorCode: 8
+errorTime: 2018-06-12 16:19:01
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612161855446179)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: controllerId
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 41
+errorCode: 8
+errorTime: 2018-06-12 16:19:01
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612161855446179)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 16:20:05
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 16:20:23
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(2)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 16:20:27
+#0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(2)
+#1 : Simple->cart3()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart3)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Missing argument 1 for IController::__construct(), called in D:\phpStudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 16:20:31
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612162027170916)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Missing argument 2 for IController::__construct(), called in D:\phpStudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 16:20:31
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612162027170916)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: app
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 40
+errorCode: 8
+errorTime: 2018-06-12 16:20:31
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612162027170916)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: controllerId
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 41
+errorCode: 8
+errorTime: 2018-06-12 16:20:31
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(854): Order_Class::updateOrderStatus(20180612162027170916)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: group_id
+errorFile: IWEB_PATH/controllers/ucenter.php
+errorLine: 39
+errorCode: 8
+errorTime: 2018-06-12 17:15:07
+#0 : Ucenter->index()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: user
+errorFile: IWEB_PATH/controllers/ucenter.php
+errorLine: 19
+errorCode: 8
+errorTime: 2018-06-12 17:15:57
+#0 : Ucenter->index()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: user
+errorFile: IWEB_PATH/controllers/ucenter.php
+errorLine: 22
+errorCode: 8
+errorTime: 2018-06-12 17:15:57
+#0 : Ucenter->index()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: user
+errorFile: IWEB_PATH/controllers/ucenter.php
+errorLine: 25
+errorCode: 8
+errorTime: 2018-06-12 17:15:57
+#0 : Ucenter->index()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: user
+errorFile: IWEB_PATH/controllers/ucenter.php
+errorLine: 28
+errorCode: 8
+errorTime: 2018-06-12 17:15:57
+#0 : Ucenter->index()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: user
+errorFile: IWEB_PATH/controllers/ucenter.php
+errorLine: 31
+errorCode: 8
+errorTime: 2018-06-12 17:15:57
+#0 : Ucenter->index()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: group_id
+errorFile: IWEB_PATH/controllers/ucenter.php
+errorLine: 36
+errorCode: 8
+errorTime: 2018-06-12 17:15:57
+#0 : Ucenter->index()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: SELECT user_id= FROM iwebshop_member WHERE point limit 1
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM iwebshop_member WHERE point limit 1' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 17:18:48
+#0 IWEB_PATH/lib/web/model/model_class.php(210): IDB->query(SELECT user_id= FROM iwebshop_member WHERE point limit 1)
+#1 IWEB_PATH/lib/web/model/model_class.php(151): IModel->query(point,user_id=,,1)
+#2 IWEB_PATH/controllers/ucenter.php(20): IModel->getObj(point,user_id=,2)
+#3 : Ucenter->index()
+#4 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#5 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#6 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#7 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#8 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined offset: 0
+errorFile: IWEB_PATH/controllers/ucenter.php
+errorLine: 21
+errorCode: 8
+errorTime: 2018-06-12 17:22:16
+#0 : Ucenter->index()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: group_id
+errorFile: IWEB_PATH/controllers/ucenter.php
+errorLine: 38
+errorCode: 8
+errorTime: 2018-06-12 17:22:16
+#0 : Ucenter->index()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined offset: 0
+errorFile: IWEB_PATH/controllers/ucenter.php
+errorLine: 21
+errorCode: 8
+errorTime: 2018-06-12 17:23:12
+#0 : Ucenter->index()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: group_id
+errorFile: IWEB_PATH/controllers/ucenter.php
+errorLine: 38
+errorCode: 8
+errorTime: 2018-06-12 17:23:12
+#0 : Ucenter->index()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 17:28:45
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 17:29:02
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(2)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 17:29:11
+#0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(2)
+#1 : Simple->cart3()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart3)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Missing argument 1 for IController::__construct(), called in D:\phpStudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 17:29:16
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612172911496661)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Missing argument 2 for IController::__construct(), called in D:\phpStudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 17:29:16
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612172911496661)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: app
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 40
+errorCode: 8
+errorTime: 2018-06-12 17:29:16
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612172911496661)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: controllerId
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 41
+errorCode: 8
+errorTime: 2018-06-12 17:29:16
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612172911496661)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 17:37:05
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 17:47:23
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 17:51:23
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(2)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 17:57:13
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 17:57:21
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 17:57:34
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(4)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 17:57:42
+#0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(4)
+#1 : Simple->cart3()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart3)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Missing argument 1 for IController::__construct(), called in D:\phpStudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 17:57:46
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612175742263064)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Missing argument 2 for IController::__construct(), called in D:\phpStudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 17:57:46
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612175742263064)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: app
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 40
+errorCode: 8
+errorTime: 2018-06-12 17:57:46
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612175742263064)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: controllerId
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 41
+errorCode: 8
+errorTime: 2018-06-12 17:57:46
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612175742263064)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: tiem
+errorFile: IWEB_PATH/runtime/views/sysdefault/point/point_list.php
+errorLine: 115
+errorCode: 8
+errorTime: 2018-06-12 18:01:45
+#0 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#1 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#2 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_list,)
+#3 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_list,)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(374): IViewAction->run()
+#5 IWEB_PATH/controllers/point.php(76): IController->redirect(point_list)
+#6 : Point->point_list()
+#7 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#8 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#9 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#10 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#11 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: tiem
+errorFile: IWEB_PATH/runtime/views/sysdefault/point/point_list.php
+errorLine: 115
+errorCode: 8
+errorTime: 2018-06-12 18:01:47
+#0 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#1 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#2 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_list,)
+#3 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_list,)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(374): IViewAction->run()
+#5 IWEB_PATH/controllers/point.php(76): IController->redirect(point_list)
+#6 : Point->point_list()
+#7 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#8 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#9 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#10 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#11 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: sum_id
+errorFile: IWEB_PATH/controllers/point.php
+errorLine: 42
+errorCode: 8
+errorTime: 2018-06-12 18:02:11
+#0 : Point->point_add()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: tiem
+errorFile: IWEB_PATH/runtime/views/sysdefault/point/point_list.php
+errorLine: 115
+errorCode: 8
+errorTime: 2018-06-12 18:02:11
+#0 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#1 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_list.php)
+#2 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_list,)
+#3 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_list,)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(374): IViewAction->run()
+#5 IWEB_PATH/controllers/point.php(76): IController->redirect(point_list)
+#6 : Point->point_list()
+#7 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#8 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#9 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#10 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#11 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:03:37
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:03:41
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(1)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:03:46
+#0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(1)
+#1 : Simple->cart3()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart3)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Missing argument 1 for IController::__construct(), called in D:\phpStudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 18:03:51
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612180347220877)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Missing argument 2 for IController::__construct(), called in D:\phpStudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 18:03:51
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612180347220877)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: app
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 40
+errorCode: 8
+errorTime: 2018-06-12 18:03:51
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612180347220877)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: controllerId
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 41
+errorCode: 8
+errorTime: 2018-06-12 18:03:51
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612180347220877)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:05:00
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:05:05
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(1)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:05:11
+#0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(1)
+#1 : Simple->cart3()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart3)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:06:40
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:06:47
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:06:57
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(1)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:07:03
+#0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(1)
+#1 : Simple->cart3()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart3)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: group_id
+errorFile: IWEB_PATH/controllers/ucenter.php
+errorLine: 38
+errorCode: 8
+errorTime: 2018-06-12 18:07:44
+#0 : Ucenter->index()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:08:56
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:09:12
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:09:16
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(1)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:09:20
+#0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(1)
+#1 : Simple->cart3()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart3)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:31:28
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:34:30
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:39:03
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and is_del = 0' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 18:42:14
+#0 IWEB_PATH/lib/core/query_class.php(170): IDB->query(select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     )
+#1 IWEB_PATH/runtime/views/sysdefault/point/point_add.php(39): IQuery->find()
+#2 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#3 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_add,)
+#5 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_add,)
+#6 IWEB_PATH/lib/web/controller/controller_class.php(115): IViewAction->run()
+#7 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#8 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and is_del = 0' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 18:42:17
+#0 IWEB_PATH/lib/core/query_class.php(170): IDB->query(select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     )
+#1 IWEB_PATH/runtime/views/sysdefault/point/point_add.php(39): IQuery->find()
+#2 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#3 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_add,)
+#5 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_add,)
+#6 IWEB_PATH/lib/web/controller/controller_class.php(115): IViewAction->run()
+#7 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#8 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and is_del = 0' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 18:42:17
+#0 IWEB_PATH/lib/core/query_class.php(170): IDB->query(select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     )
+#1 IWEB_PATH/runtime/views/sysdefault/point/point_add.php(39): IQuery->find()
+#2 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#3 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_add,)
+#5 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_add,)
+#6 IWEB_PATH/lib/web/controller/controller_class.php(115): IViewAction->run()
+#7 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#8 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and is_del = 0' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 18:42:18
+#0 IWEB_PATH/lib/core/query_class.php(170): IDB->query(select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     )
+#1 IWEB_PATH/runtime/views/sysdefault/point/point_add.php(39): IQuery->find()
+#2 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#3 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_add,)
+#5 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_add,)
+#6 IWEB_PATH/lib/web/controller/controller_class.php(115): IViewAction->run()
+#7 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#8 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and is_del = 0' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 18:42:19
+#0 IWEB_PATH/lib/core/query_class.php(170): IDB->query(select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     )
+#1 IWEB_PATH/runtime/views/sysdefault/point/point_add.php(39): IQuery->find()
+#2 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#3 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_add,)
+#5 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_add,)
+#6 IWEB_PATH/lib/web/controller/controller_class.php(115): IViewAction->run()
+#7 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#8 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and is_del = 0' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 18:42:23
+#0 IWEB_PATH/lib/core/query_class.php(170): IDB->query(select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     )
+#1 IWEB_PATH/runtime/views/sysdefault/point/point_add.php(39): IQuery->find()
+#2 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#3 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_add,)
+#5 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_add,)
+#6 IWEB_PATH/lib/web/controller/controller_class.php(115): IViewAction->run()
+#7 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#8 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:42:47
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and is_del = 0' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 18:43:07
+#0 IWEB_PATH/lib/core/query_class.php(170): IDB->query(select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     )
+#1 IWEB_PATH/runtime/views/sysdefault/point/point_add.php(39): IQuery->find()
+#2 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#3 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_add,)
+#5 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_add,)
+#6 IWEB_PATH/lib/web/controller/controller_class.php(115): IViewAction->run()
+#7 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#8 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and is_del = 0' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 18:43:11
+#0 IWEB_PATH/lib/core/query_class.php(170): IDB->query(select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     )
+#1 IWEB_PATH/runtime/views/sysdefault/point/point_add.php(39): IQuery->find()
+#2 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#3 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_add,)
+#5 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_add,)
+#6 IWEB_PATH/lib/web/controller/controller_class.php(115): IViewAction->run()
+#7 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#8 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and is_del = 0' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 18:43:38
+#0 IWEB_PATH/lib/core/query_class.php(170): IDB->query(select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     )
+#1 IWEB_PATH/runtime/views/sysdefault/point/point_add.php(39): IQuery->find()
+#2 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#3 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_add,)
+#5 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_add,)
+#6 IWEB_PATH/lib/web/controller/controller_class.php(115): IViewAction->run()
+#7 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#8 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and is_del = 0' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 18:43:44
+#0 IWEB_PATH/lib/core/query_class.php(170): IDB->query(select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     )
+#1 IWEB_PATH/runtime/views/sysdefault/point/point_add.php(39): IQuery->find()
+#2 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#3 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_add,)
+#5 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_add,)
+#6 IWEB_PATH/lib/web/controller/controller_class.php(115): IViewAction->run()
+#7 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#8 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and is_del = 0' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 18:44:18
+#0 IWEB_PATH/lib/core/query_class.php(170): IDB->query(select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     )
+#1 IWEB_PATH/runtime/views/sysdefault/point/point_add.php(39): IQuery->find()
+#2 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#3 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_add,)
+#5 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_add,)
+#6 IWEB_PATH/lib/web/controller/controller_class.php(115): IViewAction->run()
+#7 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#8 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and is_del = 0' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 18:44:20
+#0 IWEB_PATH/lib/core/query_class.php(170): IDB->query(select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     )
+#1 IWEB_PATH/runtime/views/sysdefault/point/point_add.php(39): IQuery->find()
+#2 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#3 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_add,)
+#5 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_add,)
+#6 IWEB_PATH/lib/web/controller/controller_class.php(115): IViewAction->run()
+#7 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#8 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and is_del = 0' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 18:44:20
+#0 IWEB_PATH/lib/core/query_class.php(170): IDB->query(select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     )
+#1 IWEB_PATH/runtime/views/sysdefault/point/point_add.php(39): IQuery->find()
+#2 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#3 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_add,)
+#5 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_add,)
+#6 IWEB_PATH/lib/web/controller/controller_class.php(115): IViewAction->run()
+#7 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#8 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and is_del = 0' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 18:44:20
+#0 IWEB_PATH/lib/core/query_class.php(170): IDB->query(select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     )
+#1 IWEB_PATH/runtime/views/sysdefault/point/point_add.php(39): IQuery->find()
+#2 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#3 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_add,)
+#5 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_add,)
+#6 IWEB_PATH/lib/web/controller/controller_class.php(115): IViewAction->run()
+#7 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#8 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and is_del = 0' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 18:44:23
+#0 IWEB_PATH/lib/core/query_class.php(170): IDB->query(select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     )
+#1 IWEB_PATH/runtime/views/sysdefault/point/point_add.php(39): IQuery->find()
+#2 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#3 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_add,)
+#5 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_add,)
+#6 IWEB_PATH/lib/web/controller/controller_class.php(115): IViewAction->run()
+#7 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#8 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:45:26
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:45:33
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:45:38
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(1)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:45:53
+#0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(1)
+#1 : Simple->cart3()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart3)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Missing argument 1 for IController::__construct(), called in D:\phpStudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 18:45:57
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612184553416406)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Missing argument 2 for IController::__construct(), called in D:\phpStudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 18:45:57
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612184553416406)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: app
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 40
+errorCode: 8
+errorTime: 2018-06-12 18:45:57
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612184553416406)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: controllerId
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 41
+errorCode: 8
+errorTime: 2018-06-12 18:45:57
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612184553416406)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and is_del = 0' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 18:46:56
+#0 IWEB_PATH/lib/core/query_class.php(170): IDB->query(select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     )
+#1 IWEB_PATH/runtime/views/sysdefault/point/point_add.php(39): IQuery->find()
+#2 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#3 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_add,)
+#5 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_add,)
+#6 IWEB_PATH/lib/web/controller/controller_class.php(115): IViewAction->run()
+#7 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#8 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and is_del = 0' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 18:46:58
+#0 IWEB_PATH/lib/core/query_class.php(170): IDB->query(select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     )
+#1 IWEB_PATH/runtime/views/sysdefault/point/point_add.php(39): IQuery->find()
+#2 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#3 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_add,)
+#5 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_add,)
+#6 IWEB_PATH/lib/web/controller/controller_class.php(115): IViewAction->run()
+#7 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#8 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and is_del = 0' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 18:46:59
+#0 IWEB_PATH/lib/core/query_class.php(170): IDB->query(select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     )
+#1 IWEB_PATH/runtime/views/sysdefault/point/point_add.php(39): IQuery->find()
+#2 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#3 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_add,)
+#5 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_add,)
+#6 IWEB_PATH/lib/web/controller/controller_class.php(115): IViewAction->run()
+#7 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#8 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:48:04
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:48:10
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(1)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:48:14
+#0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(1)
+#1 : Simple->cart3()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart3)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Missing argument 1 for IController::__construct(), called in D:\phpStudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 18:48:19
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612184814507592)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Missing argument 2 for IController::__construct(), called in D:\phpStudy\PHPTutorial\WWW\iwebshop\classes\order_class.php on line 162 and defined
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 38
+errorCode: 2
+errorTime: 2018-06-12 18:48:19
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612184814507592)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: app
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 40
+errorCode: 8
+errorTime: 2018-06-12 18:48:19
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612184814507592)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: controllerId
+errorFile: IWEB_PATH/lib/web/controller/controller_class.php
+errorLine: 41
+errorCode: 8
+errorTime: 2018-06-12 18:48:19
+#0 IWEB_PATH/classes/order_class.php(162): IController->__construct()
+#1 IWEB_PATH/controllers/ucenter.php(880): Order_Class::updateOrderStatus(20180612184814507592)
+#2 : Ucenter->payment_balance()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(payment_balance)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and is_del = 0' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 148
+excepCode: 1000
+excepTime: 2018-06-12 18:48:40
+#0 IWEB_PATH/lib/core/query_class.php(170): IDB->query(select * from iwebshop_quick_naviga  where admin_id =  and is_del = 0     )
+#1 IWEB_PATH/runtime/views/sysdefault/point/point_add.php(39): IQuery->find()
+#2 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#3 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/point/point_add.php)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/point/point_add,)
+#5 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/point/point_add,)
+#6 IWEB_PATH/lib/web/controller/controller_class.php(115): IViewAction->run()
+#7 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#8 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#9 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:48:46
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:48:50
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(1)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:48:54
+#0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(1)
+#1 : Simple->cart3()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart3)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: sum_id
+errorFile: IWEB_PATH/controllers/points.php
+errorLine: 42
+errorCode: 8
+errorTime: 2018-06-12 18:58:48
+#0 : Points->point_add()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_add)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: tiem
+errorFile: IWEB_PATH/runtime/views/sysdefault/points/point_list.php
+errorLine: 115
+errorCode: 8
+errorTime: 2018-06-12 18:58:49
+#0 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/points/point_list.php)
+#1 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/points/point_list.php)
+#2 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/points/point_list,)
+#3 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/points/point_list,)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(374): IViewAction->run()
+#5 IWEB_PATH/controllers/points.php(76): IController->redirect(point_list)
+#6 : Points->point_list()
+#7 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#8 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#9 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#10 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#11 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:59:26
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:59:42
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 18:59:47
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 19:00:02
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(1)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 19:00:08
+#0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(1)
+#1 : Simple->cart3()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart3)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 19:03:15
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 19:03:21
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(1)
+#1 : Simple->cart2()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart2)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 19:03:30
+#0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(1)
+#1 : Simple->cart3()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart3)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: tiem
+errorFile: IWEB_PATH/runtime/views/sysdefault/points/point_list.php
+errorLine: 115
+errorCode: 8
+errorTime: 2018-06-12 19:12:44
+#0 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/points/point_list.php)
+#1 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/points/point_list.php)
+#2 IWEB_PATH/lib/web/controller/controller_class.php(167): IControllerBase->renderView(IWEB_PATH/views/sysdefault/points/point_list,)
+#3 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/points/point_list,)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(374): IViewAction->run()
+#5 IWEB_PATH/controllers/points.php(76): IController->redirect(point_list)
+#6 : Points->point_list()
+#7 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#8 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#9 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#10 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#11 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 19:28:20
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 19:45:13
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 19:47:16
+#0 IWEB_PATH/controllers/simple.php(229): CountSum->__construct()
+#1 : Simple->cart()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 19:47:19
+#0 IWEB_PATH/controllers/simple.php(254): CountSum->__construct()
+#1 : Simple->promotionRuleAjax()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(promotionRuleAjax)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 19:47:37
+#0 IWEB_PATH/controllers/simple.php(229): CountSum->__construct()
+#1 : Simple->cart()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(cart)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 19:47:38
+#0 IWEB_PATH/controllers/simple.php(254): CountSum->__construct()
+#1 : Simple->promotionRuleAjax()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(promotionRuleAjax)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 19:50:41
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 19:51:03
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 19:52:19
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 19:52:28
+#0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-12 19:52:33
+>>>>>>> nzf
 #0 IWEB_PATH/controllers/site.php(424): CountSum->__construct()
 #1 : Site->products()
 #2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
