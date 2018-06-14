@@ -72,7 +72,7 @@ class Points extends IController implements adminAuthorization
 	** 积分展示
 	*/
 	function point_list(){
-		var_dump(self::$point_arr);die;
+		// var_dump(self::$point_arr);die;
 
 		// // 查询积分增减记录表
 		// $point_Log = new IQuery('point_log as plog');

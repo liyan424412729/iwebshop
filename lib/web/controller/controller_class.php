@@ -51,13 +51,23 @@ class IController extends IControllerBase
 	 */
 	public function getpoint(){
 		$point_obj = new IModel('point_sum');
-		$sum_point = $point_obj->getObj('sum_status=1','sum_id,sum_point,end_time');
+		$sum_point = $point_obj->getObj('sum_status=1','sum_id,start_time,sum_point,end_time');
 		// 如果有正在进行的期数 进行判断修改
 		if ($sum_point) {
 			self::$point_arr = $sum_point;
-			$time = strtotime($sum_point['end_time']);	
-			if (time() > $time) {
-				$data = array('sum_status'=>2);
+
+			$success_point_obj = new IModel('point_log');
+			$where = "datetime >= '".$sum_point['start_time']."' and datetime <= '".$sum_point['end_time']."'";
+			$success_point_sum = $success_point_obj->getObj($where,'sum(`value`) as numbers');
+			
+			$time = strtotime($sum_point['end_time']);
+			$numbers = $success_point_sum['numbers'];
+			if (time() > $time || $numbers >= $sum_point['sum_point']) {
+				$data = array(
+					'sum_status'=>2,
+					'end_time'=>date("Y-m-d H:i:s"),
+					'user_points'=>$numbers
+				);
 				$point_obj->setData($data);
 				$point_obj->update('sum_id='.$sum_point['sum_id']);
 			}
@@ -73,10 +83,15 @@ class IController extends IControllerBase
 				$controllers = substr($con,0,strpos($con,'&'));
 			}
 			if (!in_array($controllers, $arr) && $controllers) {
+<<<<<<< HEAD
 				echo "<div style='text-align:center;margin-top:220px'>
 							<img src='/baocuo3.gif'></img>		
 					  </div>";die;
 			}		
+=======
+				echo "<div style='text-align:center;margin-top:220px'><img src='/baocuo3.gif'></img></div>";die;
+			}			
+>>>>>>> nzf
 		}
 	}
 
