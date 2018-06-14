@@ -218,14 +218,14 @@
 											<%}%>
 										</td>
 										<%}%>
-										<td><input class="tiny" name="_store_nums[<%=i%>]" type="text" pattern="int" value="<%=item['store_nums']?item['store_nums']:100%>" /></td>
-										<td><input class="tiny" name="_market_price[<%=i%>]" type="text" pattern="float" value="<%=item['market_price']%>" /></td>
+										<td><input class="tiny" name="_store_nums[<%=i%>]" type="text" pattern="int" alt="请填写库存" value="<%=item['store_nums']?item['store_nums']:100%>" /></td>
+										<td><input class="tiny" name="_market_price[<%=i%>]" type="text" pattern="float" alt="市场价格必填" value="<%=item['market_price']%>" /></td>
 										<td>
 											<input type='hidden' name="_groupPrice[<%=i%>]" value="<%=item['groupPrice']%>" />
-											<input class="tiny" name="_sell_price[<%=i%>]" type="text" pattern="float" value="<%=item['sell_price']%>" />
+											<input class="tiny" name="_sell_price[<%=i%>]" type="text" pattern="float" alt="销售价格必填" value="<%=item['sell_price']%>" />
 											<button class="btn" type="button" onclick="memberPrice(this);"><span class="add <%if(item['groupPrice']){%>orange<%}%>">会员组价格</span></button>
 										</td>
-										<td><input class="tiny" name="_cost_price[<%=i%>]" type="text" pattern="float" value="<%=item['cost_price']%>" /></td>
+										<td><input class="tiny" name="_cost_price[<%=i%>]" type="text" pattern="float" alt="成本价格必填" value="<%=item['cost_price']%>" /></td>
 										<td><input class="tiny" name="_weight[<%=i%>]" type="text" pattern="float" empty value="<%=item['weight']%>" /></td>
 										<%if(isProduct == true){%>
 										<td><a href="javascript:void(0)" onclick="delProduct(this);"><img class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/icon_del.gif";?>" alt="删除" /></a></td>
@@ -461,6 +461,18 @@ function delProduct(_self)
 //提交表单前的检查
 function checkForm()
 {
+	// 检查是否设置分类
+	var cate = $('#__categoryBox').html();
+	if (cate == '') {
+		alert('请添加分类');return false;
+	}
+
+	// 检查是否添加图片
+	var img_no = $('#thumbnails').html();
+	if (img_no == '') {
+		alert('请添加图片');return false;
+	}
+
 	//整理商品图片
 	var goodsPhoto = [];
 	$('#thumbnails img[name="picThumb"]').each(function(){

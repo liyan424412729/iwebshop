@@ -14,7 +14,17 @@
 				<tr>
 					<th>期数：</th>
 					<td>
-						<input class="normal" name="sum_num" type="text" value="" pattern="required" alt="期数不能为空" /><label>* 必选项</label>
+						<input class="normal" name="sum_num" type="text" value="" pattern="required" alt="期数不能为空"/><label>* 必选项</label>
+					</td>
+				</tr>
+				<tr>
+					<th>目标积分：</th>
+					<td><input class="normal" name="sum_point" pattern="required" type="text" value="" alt="积分不能为空" /><label>* 必选项</label>
+					</td>
+				</tr>
+				<tr>
+					<th>结束时间：</th>
+					<td><input class="normal" name="end_time" type="date" value="" alt="请选择结束时间" /><label>* 必选项</label>
 					</td>
 				</tr>
 				<tr>
@@ -23,9 +33,6 @@
 						<label class='attr'><input name="is_show" type="radio" value="1" checked="checked" /> 是 </label>
 						<label class='attr'><input name="is_show" type="radio" value="0" /> 否 </label>
 					</td>
-				</tr>
-				<tr>
-					<th>目标积分：</th><td><input class="normal" name="sum_point" pattern="required" type="text" value="" alt="积分不能为空" /><label>* 必选项</label></td>
 				</tr>
 				<tr>
 					<td></td><td><button class="submit" type="submit"><span>确 定</span></button></td>

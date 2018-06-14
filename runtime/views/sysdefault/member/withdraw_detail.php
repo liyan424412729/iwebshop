@@ -60,57 +60,88 @@
 		</div>
 
 		<div id="admin_right">
-			<script type="text/javascript" charset="UTF-8" src="/runtime/_systemjs/editor/kindeditor-min.js"></script><script type="text/javascript">window.KindEditor.options.uploadJson = "/index.php?controller=pic&action=upload_json";window.KindEditor.options.fileManagerJson = "/index.php?controller=pic&action=file_manager_json";</script>
-<div class="headbar">
-	<div class="position"><span>积分</span><span>></span><span>积分管理</span><span>></span><span>积分添加</span></div>
+			<div class="headbar">
+	<div class="position"><span>会员</span><span>></span><span>提现管理</span><span>></span><span>提现申请</span></div>
 </div>
 <div class="content_box">
-	<div class="content form_content">
-		<form action="<?php echo IUrl::creatUrl("/points/point_add");?>" method="post">
-			<table class="form_table" cellpadding="0" cellspacing="0">
-				<colgroup>
-					<col width="150px" />
-					<col />
-				</colgroup>
+	<div class="content">
+		<div class='red_box'>先修改提现状态，确认扣款成功后，再通知财务人员给申请提现用户打款</div>
+		<form action='<?php echo IUrl::creatUrl("/member/withdraw_status");?>' method='post' name='withdraw_detail'>
+			<table class="form_table">
+				<input type='hidden' name='id' value='<?php echo isset($this->withdrawRow['id'])?$this->withdrawRow['id']:"";?>' />
+				<col width="150px" />
+				<col />
+				<tr>
+					<th>会员名称：</th>
+					<td><?php echo isset($this->userRow['username'])?$this->userRow['username']:"";?></td>
+				</tr>
+				<tr>
+					<th>真实姓名：</th>
+					<td><?php echo isset($this->userRow['true_name'])?$this->userRow['true_name']:"";?></td>
+				</tr>
+				<tr>
+					<th>当前余额：</th>
+					<td><?php echo isset($this->userRow['balance'])?$this->userRow['balance']:"";?></td>
+				</tr>
+				<tr>
+					<th>收款人姓名：</th>
+					<td><?php echo isset($this->withdrawRow['name'])?$this->withdrawRow['name']:"";?></td>
+				</tr>
+				<tr>
+					<th>提现金额：</th>
+					<td><?php echo isset($this->withdrawRow['amount'])?$this->withdrawRow['amount']:"";?></td>
+				</tr>
+				<tr>
+					<th>申请时间：</th>
+					<td><?php echo isset($this->withdrawRow['time'])?$this->withdrawRow['time']:"";?></td>
+				</tr>
+				<tr>
+					<th>备注：</th>
+					<td><?php echo isset($this->withdrawRow['note'])?$this->withdrawRow['note']:"";?></td>
+				</tr>
+				<tr>
+					<th>状态：</th>
+					<td><?php echo AccountLog::getWithdrawStatus($this->withdrawRow['status']);?></td>
+				</tr>
 
+				<?php if($this->withdrawRow['status']==0){?>
 				<tr>
-					<th>期数：</th>
+					<th>修改状态：</th>
 					<td>
-						<input class="normal" name="sum_num" type="text" value="" pattern="required" alt="期数不能为空"/><label>* 必选项</label>
+						<label class='attr'><input type='radio' name='status' value='-1' /><?php echo AccountLog::getWithdrawStatus(-1);?></label>
+						<label class='attr'><input type='radio' name='status' value='2' /><?php echo AccountLog::getWithdrawStatus(2);?></label>
+						<label>当选择 “成功” 状态后，用户的余额会自动被扣除，请确保用户余额被扣除成功后，您的财务人员再通过线下转账汇款等方式进行汇款操作</label>
 					</td>
 				</tr>
+				<?php }?>
 				<tr>
-					<th>目标积分：</th>
-					<td><input class="normal" name="sum_point" pattern="required" type="text" value="" alt="积分不能为空" /><label>* 必选项</label>
-					</td>
-				</tr>
-				<tr>
-					<th>结束时间：</th>
-					<td><input class="normal" name="end_time" type="date" value="" alt="请选择结束时间" /><label>* 必选项</label>
-					</td>
-				</tr>
-				<tr>
-					<th>是否显示：</th>
+					<th>回复用户：</th>
 					<td>
-						<label class='attr'><input name="is_show" type="radio" value="1" checked="checked" /> 是 </label>
-						<label class='attr'><input name="is_show" type="radio" value="0" /> 否 </label>
+						<textarea class='textarea' name='re_note' <?php if($this->withdrawRow['status']!=0){?>disabled='disabled'<?php }?>></textarea>
 					</td>
 				</tr>
 				<tr>
-					<td></td><td><button class="submit" type="submit"><span>确 定</span></button></td>
+					<th></th>
+					<td>
+						<?php if($this->withdrawRow['status']==0){?>
+						<button class="submit" type="submit"><span>修 改</span></button>
+						<?php }?>
+						<button class="submit" type="button" onclick="event_link('<?php echo IUrl::creatUrl("/member/withdraw_list");?>');"><span>返回列表</span></button>
+					</td>
 				</tr>
 			</table>
 		</form>
 	</div>
 </div>
 
-<script type="text/javascript">
-// $(function()
-// {
-// 	var formObj = new Form();
-// 	formObj.init(<?php echo JSON::encode($this->categoryRow);?>);
-// })
+<script type='text/javascript'>
+	var formObj = new Form('withdraw_detail');
+	formObj.init({
+		'status':'<?php echo isset($this->withdrawRow['status'])?$this->withdrawRow['status']:"";?>',
+		're_note':'<?php echo isset($this->withdrawRow['re_note'])?$this->withdrawRow['re_note']:"";?>'
+	});
 </script>
+
 		</div>
 	</div>
 

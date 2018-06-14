@@ -60,57 +60,110 @@
 		</div>
 
 		<div id="admin_right">
-			<script type="text/javascript" charset="UTF-8" src="/runtime/_systemjs/editor/kindeditor-min.js"></script><script type="text/javascript">window.KindEditor.options.uploadJson = "/index.php?controller=pic&action=upload_json";window.KindEditor.options.fileManagerJson = "/index.php?controller=pic&action=file_manager_json";</script>
-<div class="headbar">
-	<div class="position"><span>积分</span><span>></span><span>积分管理</span><span>></span><span>积分添加</span></div>
-</div>
-<div class="content_box">
-	<div class="content form_content">
-		<form action="<?php echo IUrl::creatUrl("/points/point_add");?>" method="post">
-			<table class="form_table" cellpadding="0" cellspacing="0">
-				<colgroup>
-					<col width="150px" />
-					<col />
-				</colgroup>
-
-				<tr>
-					<th>期数：</th>
-					<td>
-						<input class="normal" name="sum_num" type="text" value="" pattern="required" alt="期数不能为空"/><label>* 必选项</label>
-					</td>
-				</tr>
-				<tr>
-					<th>目标积分：</th>
-					<td><input class="normal" name="sum_point" pattern="required" type="text" value="" alt="积分不能为空" /><label>* 必选项</label>
-					</td>
-				</tr>
-				<tr>
-					<th>结束时间：</th>
-					<td><input class="normal" name="end_time" type="date" value="" alt="请选择结束时间" /><label>* 必选项</label>
-					</td>
-				</tr>
-				<tr>
-					<th>是否显示：</th>
-					<td>
-						<label class='attr'><input name="is_show" type="radio" value="1" checked="checked" /> 是 </label>
-						<label class='attr'><input name="is_show" type="radio" value="0" /> 否 </label>
-					</td>
-				</tr>
-				<tr>
-					<td></td><td><button class="submit" type="submit"><span>确 定</span></button></td>
-				</tr>
-			</table>
-		</form>
+			<div class="headbar">
+	<div class="position"><span>工具</span><span>></span><span>关键词管理</span><span>></span><span>关键词列表</span></div>
+	<div class="operating">
+		<a href="javascript:void(0)" onclick="event_link('<?php echo IUrl::creatUrl("/tools/keyword_edit");?>');"><button class="operating_btn" type="button"><span class="addition">添加关键词</span></button></a>
+		<a href="javascript:void(0)" onclick="selectAll('id[]');"><button class="operating_btn" type="button"><span class="sel_all">全选</span></button></a>
+		<a href="javascript:void(0)" onclick="delModel();"><button class="operating_btn" type="button"><span class="delete">批量删除</span></button></a>
+		<a href="javascript:void(0)" onclick="window.document.forms[0].action='<?php echo IUrl::creatUrl("/tools/keyword_account");?>';delModel({msg:'是否批量同步？'});"><button class="operating_btn" type="button"><span class="refresh">批量同步</span></button></a>
 	</div>
 </div>
+<div class="content">
+	<form action="<?php echo IUrl::creatUrl("/tools/keyword_del");?>" method="post">
+		<table class="list_table">
+			<colgroup>
+				<col width="40px" />
+				<col width="250px" />
+				<col width="120px" />
+				<col width="100px" />
+				<col />
+			</colgroup>
 
-<script type="text/javascript">
-// $(function()
-// {
-// 	var formObj = new Form();
-// 	formObj.init(<?php echo JSON::encode($this->categoryRow);?>);
-// })
+			<thead>
+				<tr>
+					<th>选择</th>
+					<th>关键词</th>
+					<th>关联商品数量</th>
+					<th>是否热门</th>
+					<th>排序</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<?php $page= (isset($_GET['page'])&&(intval($_GET['page'])>0))?intval($_GET['page']):1;?>
+				<?php $query = new IQuery("keyword");$query->page = "$page";$query->order = "`order` asc";$items = $query->find(); foreach($items as $key => $item){?>
+				<tr>
+					<td><input type="checkbox" name="id[]" value="<?php echo isset($item['word'])?$item['word']:"";?>" /></td>
+					<td><?php echo isset($item['word'])?$item['word']:"";?></td>
+					<td><?php echo isset($item['goods_nums'])?$item['goods_nums']:"";?></td>
+					<td>
+						<?php if($item['hot']==1){?>
+						<a class='red2' href='javascript:void(0);' onclick='set_hot("<?php echo isset($item['word'])?$item['word']:"";?>",this);'>是</a>
+						<?php }else{?>
+						<a class='blue' href='javascript:void(0);' onclick='set_hot("<?php echo isset($item['word'])?$item['word']:"";?>",this);'>否</a>
+						<?php }?>
+					</td>
+					<td>
+						<input type='text' maxlength='6' onblur='set_order("<?php echo isset($item['word'])?$item['word']:"";?>",this,"<?php echo isset($item['order'])?$item['order']:"";?>");' class='tiny' value='<?php echo isset($item['order'])?$item['order']:"";?>' />
+					</td>
+				</tr>
+				<?php }?>
+			</tbody>
+		</table>
+	</form>
+</div>
+<?php echo $query->getPageBar();?>
+
+<script type='text/javascript'>
+//设置热门关键词
+function set_hot(word,obj)
+{
+	var rd = Math.random();
+	$.getJSON('<?php echo IUrl::creatUrl("/tools/keyword_hot/hot/1");?>',{id:word,rd:rd},function(content){
+		if(content.isError ==  false)
+		{
+			if(content.hot == 1)
+			{
+				obj.innerHTML = '是';
+				$(obj).removeClass('blue');
+				$(obj).addClass('red2');
+			}
+			else
+			{
+				obj.innerHTML = '否';
+				$(obj).removeClass('red2');
+				$(obj).addClass('blue');
+			}
+		}
+		else
+		{
+			alert(content.message);
+		}
+	});
+}
+
+//设置排序
+function set_order(word,obj,default_val)
+{
+	var order = $(obj).val();
+	if(isNaN(order))
+	{
+		alert('排序必须是一个数字');
+		$(obj).val(default_val);
+	}
+	else
+	{
+		$.getJSON('<?php echo IUrl::creatUrl("/tools/keyword_order");?>',{id:word,order:order},function(content){
+			if(content.isError == true)
+			{
+				alert(content.message);
+			}
+		});
+	}
+}
 </script>
+
 		</div>
 	</div>
 

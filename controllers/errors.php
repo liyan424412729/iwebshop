@@ -31,4 +31,9 @@ class Errors extends IController
 		$data = '您无权限操作此功能';
 		$this->redirect('/block/error/?msg='.urlencode($data));
 	}
+
+	public function error40004(){
+		echo 'errrrrrrrr';
+	}
+
 }
