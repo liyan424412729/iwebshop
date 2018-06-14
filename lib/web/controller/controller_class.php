@@ -82,9 +82,13 @@ class IController extends IControllerBase
 		   		$con = substr($dizhi,strpos($dizhi,'=')+1);
 				$controllers = substr($con,0,strpos($con,'&'));
 			}
-			if (!in_array($controllers, $arr) && $controllers) {
-				echo "<div style='text-align:center;margin-top:220px'><img src='/baocuo3.gif'></img></div>";die;
-			}			
+				if (!in_array($controllers, $arr) && $controllers) {
+
+					echo "<div style='text-align:center;margin-top:220px'>
+								<img src='/baocuo3.gif'>2222</img>		
+						  </div>";die;
+				}			
+
 		}
 	}
 

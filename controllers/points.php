@@ -15,6 +15,7 @@ class Points extends IController implements adminAuthorization
 
 	}
 
+
 	/**
 	 * @point 积分添加
 	 */
