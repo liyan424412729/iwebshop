@@ -13,6 +13,7 @@
 		<colgroup>
 			<col width="120px" />
 			<col width="120px" />
+			<col width="120px" />
 			<col width="150px" />
 			<col width="150px" />
 			<col width="120px" />
@@ -24,6 +25,7 @@
 			<tr>
 				<th>期数</th>
 				<th>目标积分</th>
+				<th>完成积分</th>
 				<th>开始时间</th>
 				<th>结束时间</th>
 				<th>状态</th>
@@ -36,6 +38,13 @@
 					<!-- <td><input name="id[]" type="checkbox" value="{$item['sum_id']}" /></td> -->
 					<td>{$item['sum_num']}</td>
 					<td>{$item['sum_point']}</td>
+					<td>
+						{if:$item['sum_status'] == 2}
+						{$item['user_points']}
+						{else:}
+						<font color="red">[活动结束后显示]</font>
+						{/if}
+					</td>
 					<td>{$item['start_time']}</td>
 					<td>
 						{if:$item['end_time'] == '0000-00-00 00:00:00'}
@@ -48,12 +57,18 @@
 						{if:$item['sum_status'] == 0}
 						未开始
 						{elseif:$item['sum_status'] == 1}
-						正在进行中
+						<font color="red"><b>正在进行中...</b></font>
 						{else:$tiem['sum_status'] == 2}
 						已结束
 						{/if}
 					</td>
-					<td>已完成</td>
+					<td>
+						{if:$item['user_points'] >= $item['sum_point']}
+						<font color="green"><b>本期完成</b></font>
+						{else:}
+						<font color="red">未完成目标值</font>
+						{/if}
+					</td>
 					<td>
 						<a href="">【查看】</a>&nbsp;||&nbsp;
 						<a href="">【删除】</a>

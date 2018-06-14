@@ -75,6 +75,7 @@
 		<colgroup>
 			<col width="120px" />
 			<col width="120px" />
+			<col width="120px" />
 			<col width="150px" />
 			<col width="150px" />
 			<col width="120px" />
@@ -86,6 +87,7 @@
 			<tr>
 				<th>期数</th>
 				<th>目标积分</th>
+				<th>完成积分</th>
 				<th>开始时间</th>
 				<th>结束时间</th>
 				<th>状态</th>
@@ -98,6 +100,13 @@
 					<!-- <td><input name="id[]" type="checkbox" value="<?php echo isset($item['sum_id'])?$item['sum_id']:"";?>" /></td> -->
 					<td><?php echo isset($item['sum_num'])?$item['sum_num']:"";?></td>
 					<td><?php echo isset($item['sum_point'])?$item['sum_point']:"";?></td>
+					<td>
+						<?php if($item['sum_status'] == 2){?>
+						<?php echo isset($item['user_points'])?$item['user_points']:"";?>
+						<?php }else{?>
+						<font color="red">[活动结束后显示]</font>
+						<?php }?>
+					</td>
 					<td><?php echo isset($item['start_time'])?$item['start_time']:"";?></td>
 					<td>
 						<?php if($item['end_time'] == '0000-00-00 00:00:00'){?>
@@ -110,12 +119,18 @@
 						<?php if($item['sum_status'] == 0){?>
 						未开始
 						<?php }elseif($item['sum_status'] == 1){?>
-						正在进行中
+						<font color="red"><b>正在进行中...</b></font>
 						<?php }else{$tiem['sum_status'] == 2?>
 						已结束
 						<?php }?>
 					</td>
-					<td>已完成</td>
+					<td>
+						<?php if($item['user_points'] >= $item['sum_point']){?>
+						<font color="green"><b>本期完成</b></font>
+						<?php }else{?>
+						<font color="red">未完成目标值</font>
+						<?php }?>
+					</td>
 					<td>
 						<a href="">【查看】</a>&nbsp;||&nbsp;
 						<a href="">【删除】</a>
