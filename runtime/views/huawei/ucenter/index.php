@@ -255,30 +255,6 @@
 		<h2><?php echo isset($this->user['username'])?$this->user['username']:"";?>，欢迎您</h2>
 		<h3>会员等级：<?php echo isset($user['group_name'])?$user['group_name']:"";?></h3>
 		<h3>用户总积分：<?php echo isset($user['point'])?$user['point']:"";?></h3>
-		<!-- <ul class="user_baseinfo">
-			<li>总积分：<a href="<?php echo IUrl::creatUrl("/ucenter/integral");?>"><strong><?php echo isset($user['point'])?$user['point']:"";?></strong> 分</a></li>
-			<li>交易总数量：<a href="<?php echo IUrl::creatUrl("/ucenter/order");?>"><strong><?php echo isset($statistics['num'])?$statistics['num']:"";?></strong> 笔</a></li>
-			<li>总消费额：<strong>￥<?php echo isset($statistics['amount'])?$statistics['amount']:"";?></strong></li>
-		</ul>
-		<ul class="user_stat">
-			<li>奖金钱包：
-				<strong>￥<span id="bonus"><?php echo isset($user['bonus'])?$user['bonus']:"";?></span>
-				<button id="btn_zhuan">转存</button>
-				<input type="" name="">
-				<button>分投</button>
-			    </strong>
-			</li>
-			<li>代金券：<strong><?php echo isset($propData['prop_num'])?$propData['prop_num']:"";?></strong> 张</li>
-			<li>经验值：<strong><?php echo isset($user['exp'])?$user['exp']:"";?></strong></li>
-		</ul>
-		<ul class="user_stat">
-			<li>消费钱包：<strong>￥<span id="consumption"><?php echo isset($user['consumption'])?$user['consumption']:"";?></span></strong></strong></li>
-			<li>待付款订单：(<strong><?php echo statistics::countUserWaitPay($this->user['user_id']);?></strong>)</li>
-			<li>待确认收货：(<strong><a href="<?php echo IUrl::creatUrl("/ucenter/order");?>"><?php echo statistics::countUserWaitCommit($this->user['user_id']);?></a></strong>)</li>
-		</ul>
-		<ul class="user_stat">
-			<li>提现钱包（余额）：<strong>￥<span id="balance"><?php echo isset($user['balance'])?$user['balance']:"";?></span></strong></li>
-		</ul> -->
 	</div>
 </section>
 <style type="text/css">
@@ -442,13 +418,8 @@
 	      	</div>
 	    </div>
 	    <div class="wrapper-cont">
-<<<<<<< HEAD
-	    	<div>积分奖池</div>
-	    	<div>总的积分：10000</div>
-=======
 	    	<div>本期完成积分：<?php echo isset($arr['user_point'])?$arr['user_point']:"";?></div>
 	    	<div>本期总积分：<?php echo isset($arr['sum_point'])?$arr['sum_point']:"";?></div>
->>>>>>> nzf
 	    </div>
 	    
 	</div>
