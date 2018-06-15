@@ -91,4 +91,21 @@ class Points extends IController implements adminAuthorization
 		$this->redirect("point_list");
 
 	}
+
+
+	/*
+	** 积分列表删除
+	*/
+	public function point_del(){
+		$sum_id = (int)IReq::get('sum_id');
+		$this->redirect('point_list');
+		Util::showMessage("没有找到相关品牌分类！");
+		return;
+
+
+	}
+
+
+
+
 }

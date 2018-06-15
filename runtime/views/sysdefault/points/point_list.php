@@ -133,7 +133,7 @@
 					</td>
 					<td>
 						<a href="">【查看】</a>&nbsp;||&nbsp;
-						<a href="">【删除】</a>
+						<a href="<?php echo IUrl::creatUrl("/points/point_del/sum_id/".$item['sum_id']."");?>">【删除】</a>
 					</td>
 				</tr>
 		<?php }?>

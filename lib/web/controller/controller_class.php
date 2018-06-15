@@ -22,7 +22,7 @@ class IController extends IControllerBase
 	public $defaultActions = array();                  //默认action对应关系,array(ID => 类名或对象引用)
 	public $error          = array();                  //错误信息内容
 	
-	public static $point_arr = array();				   //
+	public static $point_arr = array();				   //定义一个空的静态变量
 
 	protected $app;                                    //隶属于APP的对象
 	protected $ctrlId;                                 //控制器ID标识符
@@ -73,7 +73,7 @@ class IController extends IControllerBase
 			}
 		}else{
 			// 活动结束，可以访问的地址
-			$arr = array('systemadmin','goods','member','order','market','system','tools','points','simple');
+			$arr = array('systemadmin','goods','member','order','market','system','tools','points','simple','brand');
 			$url = $_SERVER['REQUEST_URI'];
 			if ($url == '/') {
 				$controllers = 'site';
