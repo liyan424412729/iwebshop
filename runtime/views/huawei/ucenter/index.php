@@ -442,7 +442,7 @@
 	    </div>
 	    <div class="wrapper-cont">
 	    	<div>积分奖池</div>
-	    	<div>总的积分：</div>
+	    	<div>总的积分：10000</div>
 	    </div>
 	    
 	</div>
