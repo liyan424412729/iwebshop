@@ -67,6 +67,7 @@ class Ucenter extends IController implements userAuthorization
                 'user_point'     => $user_point,
                 'sum_point'      => $sum_point,
             );
+
         }
 
 		$this->setRenderData(array(
