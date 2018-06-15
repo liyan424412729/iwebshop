@@ -19,6 +19,7 @@
 	<div class="user_info">
 		<h2>{$this->user['username']}，欢迎您</h2>
 		<h3>会员等级：{$user['group_name']}</h3>
+		<h3>用户总积分：{$user['point']}</h3>
 		<!-- <ul class="user_baseinfo">
 			<li>总积分：<a href="{url:/ucenter/integral}"><strong>{$user['point']}</strong> 分</a></li>
 			<li>交易总数量：<a href="{url:/ucenter/order}"><strong>{$statistics['num']}</strong> 笔</a></li>
@@ -206,8 +207,8 @@
 	      	</div>
 	    </div>
 	    <div class="wrapper-cont">
-	    	<div>积分奖池</div>
-	    	<div>总的积分：10000</div>
+	    	<div>本期完成积分：{$arr['user_point']}</div>
+	    	<div>本期总积分：{$arr['sum_point']}</div>
 	    </div>
 	    
 	</div>
@@ -253,7 +254,7 @@
         function increment() {
           current++;
           $('#counter').html('已经完成'+current + '%积分');
-          if(current == 50) {
+          if(current == {$arr['success_point']}) {
             clearInterval(interval);
             $('#counter').css("animation-play-state","paused")
             $('.load-bar-inner').css("animation-play-state","paused")
@@ -291,13 +292,18 @@ function callback_user_ico(content){
 }
 
 // 个人中心转存
+
 $(function(){
+
 	$('#btn_zhuan').click(function(){
 		var jiangjin = $('#bonus').html();
 		// 判断奖金是否为0
 		if (jiangjin <= 0) {
 			alert('没有奖金');return;
 		}
+
+		$(this).attr('disabled',true);
+
 		// 获取当前用户ID
 		var user_id = "{$user['user_id']}";
 
@@ -311,10 +317,11 @@ $(function(){
 			}
 			if (result.code == 200) {
 				alert(result.message);
+				$('#bonus').html(result.data.bonus);
+				$('#consumption').html(result.data.consumption);
+				$('#balance').html(result.data.balance);
 			}
-			$('#bonus').html(result.data.bonus);
-			$('#consumption').html(result.data.consumption);
-			$('#balance').html(result.data.balance);
+			
 		},'JSON');
 		$(this).attr('disabled',false);
 	})

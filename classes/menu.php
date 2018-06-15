@@ -172,8 +172,8 @@ class Menu
 		// ),
        '积分' => array(
        		'积分管理' => array(
-       			'/points/point_add' => '添加积分',
        			'/points/point_list' => '积分列表',
+       			'/points/point_add' => '添加积分',
        		),
 		),
 

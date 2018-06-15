@@ -254,6 +254,7 @@
 	<div class="user_info">
 		<h2><?php echo isset($this->user['username'])?$this->user['username']:"";?>，欢迎您</h2>
 		<h3>会员等级：<?php echo isset($user['group_name'])?$user['group_name']:"";?></h3>
+		<h3>用户总积分：<?php echo isset($user['point'])?$user['point']:"";?></h3>
 		<!-- <ul class="user_baseinfo">
 			<li>总积分：<a href="<?php echo IUrl::creatUrl("/ucenter/integral");?>"><strong><?php echo isset($user['point'])?$user['point']:"";?></strong> 分</a></li>
 			<li>交易总数量：<a href="<?php echo IUrl::creatUrl("/ucenter/order");?>"><strong><?php echo isset($statistics['num'])?$statistics['num']:"";?></strong> 笔</a></li>
@@ -441,8 +442,13 @@
 	      	</div>
 	    </div>
 	    <div class="wrapper-cont">
+<<<<<<< HEAD
 	    	<div>积分奖池</div>
 	    	<div>总的积分：10000</div>
+=======
+	    	<div>本期完成积分：<?php echo isset($arr['user_point'])?$arr['user_point']:"";?></div>
+	    	<div>本期总积分：<?php echo isset($arr['sum_point'])?$arr['sum_point']:"";?></div>
+>>>>>>> nzf
 	    </div>
 	    
 	</div>
@@ -488,7 +494,7 @@
         function increment() {
           current++;
           $('#counter').html('已经完成'+current + '%积分');
-          if(current == 50) {
+          if(current == <?php echo isset($arr['success_point'])?$arr['success_point']:"";?>) {
             clearInterval(interval);
             $('#counter').css("animation-play-state","paused")
             $('.load-bar-inner').css("animation-play-state","paused")
@@ -526,13 +532,18 @@ function callback_user_ico(content){
 }
 
 // 个人中心转存
+
 $(function(){
+
 	$('#btn_zhuan').click(function(){
 		var jiangjin = $('#bonus').html();
 		// 判断奖金是否为0
 		if (jiangjin <= 0) {
 			alert('没有奖金');return;
 		}
+
+		$(this).attr('disabled',true);
+
 		// 获取当前用户ID
 		var user_id = "<?php echo isset($user['user_id'])?$user['user_id']:"";?>";
 
@@ -546,10 +557,11 @@ $(function(){
 			}
 			if (result.code == 200) {
 				alert(result.message);
+				$('#bonus').html(result.data.bonus);
+				$('#consumption').html(result.data.consumption);
+				$('#balance').html(result.data.balance);
 			}
-			$('#bonus').html(result.data.bonus);
-			$('#consumption').html(result.data.consumption);
-			$('#balance').html(result.data.balance);
+			
 		},'JSON');
 		$(this).attr('disabled',false);
 	})

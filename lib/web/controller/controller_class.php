@@ -22,7 +22,8 @@ class IController extends IControllerBase
 	public $defaultActions = array();                  //默认action对应关系,array(ID => 类名或对象引用)
 	public $error          = array();                  //错误信息内容
 	
-	public static $point_arr = array();				   //
+	public static $point_arr = array();				   //存储本期的积分信息
+	public static $user_points = array();			   //存储本期的所有积分
 
 	protected $app;                                    //隶属于APP的对象
 	protected $ctrlId;                                 //控制器ID标识符
@@ -54,14 +55,20 @@ class IController extends IControllerBase
 		$sum_point = $point_obj->getObj('sum_status=1','sum_id,start_time,sum_point,end_time');
 		// 如果有正在进行的期数 进行判断修改
 		if ($sum_point) {
+
+			// 总积分信息
 			self::$point_arr = $sum_point;
+
 
 			$success_point_obj = new IModel('point_log');
 			$where = "datetime >= '".$sum_point['start_time']."' and datetime <= '".$sum_point['end_time']."'";
+
+			// 当期完成的积分
 			$success_point_sum = $success_point_obj->getObj($where,'sum(`value`) as numbers');
-			
 			$time = strtotime($sum_point['end_time']);
 			$numbers = $success_point_sum['numbers'];
+			self::$user_points = $numbers;
+			
 			if (time() > $time || $numbers >= $sum_point['sum_point']) {
 				$data = array(
 					'sum_status'=>2,
@@ -73,7 +80,7 @@ class IController extends IControllerBase
 			}
 		}else{
 			// 活动结束，可以访问的地址
-			$arr = array('systemadmin','goods','member','order','market','system','tools','points','simple');
+			$arr = array('systemadmin','goods','member','order','market','system','tools','points','simple','brand');
 			$url = $_SERVER['REQUEST_URI'];
 			if ($url == '/') {
 				$controllers = 'site';

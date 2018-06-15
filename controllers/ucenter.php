@@ -15,7 +15,6 @@ class Ucenter extends IController implements userAuthorization
     public function index()
     {
 
-        //查看积分池
         // 判断会员等级
         $member = new IModel('member');
         $num = $member->getObj('user_id='.$this->user['user_id'],'point'); 
@@ -58,11 +57,24 @@ class Ucenter extends IController implements userAuthorization
 		$propIds = $propIds ? $propIds : 0;
 		$propData= Api::run('getPropTongJi',$propIds);
 
+        //查看积分池
+        $sum_point = self::$point_arr['sum_point'];
+        $user_point = self::$user_points;
+        if (!empty($sum_point) && !empty($user_point)) {
+            $success_point = $user_point / $sum_point * 100;
+            $arr = array(
+                'success_point'  => $success_point,
+                'user_point'     => $user_point,
+                'sum_point'      => $sum_point,
+            );
+        }
+
 		$this->setRenderData(array(
 			"user"       => $user,
 			"statistics" => $statistics,
 			"msgNum"     => $msgNum,
 			"propData"   => $propData,
+            "arr"        => $arr,
 		));
 
         $this->initPayment();
