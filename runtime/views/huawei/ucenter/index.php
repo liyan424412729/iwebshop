@@ -254,22 +254,20 @@
 	<div class="user_info">
 		<h2><?php echo isset($this->user['username'])?$this->user['username']:"";?>，欢迎您</h2>
 		<h3>会员等级：<?php echo isset($user['group_name'])?$user['group_name']:"";?></h3>
-		<ul class="user_baseinfo">
+		<h3>用户总积分：<?php echo isset($user['point'])?$user['point']:"";?></h3>
+		<!-- <ul class="user_baseinfo">
 			<li>总积分：<a href="<?php echo IUrl::creatUrl("/ucenter/integral");?>"><strong><?php echo isset($user['point'])?$user['point']:"";?></strong> 分</a></li>
 			<li>交易总数量：<a href="<?php echo IUrl::creatUrl("/ucenter/order");?>"><strong><?php echo isset($statistics['num'])?$statistics['num']:"";?></strong> 笔</a></li>
 			<li>总消费额：<strong>￥<?php echo isset($statistics['amount'])?$statistics['amount']:"";?></strong></li>
 		</ul>
 		<ul class="user_stat">
-			<!-- <li>奖金钱包：<strong>￥<?php echo isset($user['balance'])?$user['balance']:"";?></strong></li> -->
 			<li>奖金钱包：
 				<strong>￥<span id="bonus"><?php echo isset($user['bonus'])?$user['bonus']:"";?></span>
-				<!-- <input type="" id="jiangjin" value=""> -->
 				<button id="btn_zhuan">转存</button>
 				<input type="" name="">
 				<button>分投</button>
 			    </strong>
 			</li>
-			<!-- <li>消费钱包（余额）：<strong>￥<?php echo isset($user['balance'])?$user['balance']:"";?></strong></li> -->
 			<li>代金券：<strong><?php echo isset($propData['prop_num'])?$propData['prop_num']:"";?></strong> 张</li>
 			<li>经验值：<strong><?php echo isset($user['exp'])?$user['exp']:"";?></strong></li>
 		</ul>
@@ -280,10 +278,177 @@
 		</ul>
 		<ul class="user_stat">
 			<li>提现钱包（余额）：<strong>￥<span id="balance"><?php echo isset($user['balance'])?$user['balance']:"";?></span></strong></li>
-		</ul>
+		</ul> -->
 	</div>
 </section>
+<style type="text/css">
+	.uc_money{
+		width: 100%;
+		height:200px;
+	}
+	.uc_qianbao{
+		height: 50%;
 
+	}
+	.uc_qianbao ul li{
+		padding: 10px;
+		float: left;
+	}
+	.uc_qianbao ul{
+		margin: 20px;
+		float: left;
+	}
+	.li_zhuan{
+		padding: 0px!important;
+	}
+	.li_zhuan button{
+		border:none;
+		border-radius: 5px;
+		background:red;
+		padding: 5px!important;
+		color: #FFFFFF;
+	}
+	
+	.li_fent{
+		padding:0px 10px!important;
+	}
+	.li_fent button{
+		border:none;
+		border-radius: 5px;
+		background:red;
+		padding: 5px!important;
+		color: #FFFFFF;
+	}
+	.wrapper {
+		width: 350px;
+		margin: auto;
+	}
+
+	.wrapper p a {
+		color: #757575;
+		text-decoration: none;
+	}
+
+	.wrapper .load-bar {
+		width: 100%;
+		height: 20px;
+		border-radius: 30px;
+		background-color: #D9D9D9;
+		position: relative;
+		box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 2px 3px rgba(0, 0, 0, 0.2);
+	}
+
+	.wrapper .load-bar-inner {
+		height: 99%;
+		width: 0%;
+		border-radius: inherit;
+		position: relative;
+		background-color: red;
+		animation: loader 10s linear 1;
+		animation-fill-mode: forwards;
+	}
+
+	.wrapper #counter {
+		position: absolute;
+		padding: 8px 12px;
+		border-radius: 0.4em;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1), 0 2px 4px 1px rgba(0, 0, 0, 0.2), 0 1px 3px 1px rgba(0, 0, 0, 0.1);
+		left: -25px;
+		top: -35px;
+		font-size: 12px;
+		font-weight: bold;
+		width: 130px;
+		animation: counter 10s linear 1;
+		animation-fill-mode: forwards;
+	}
+
+	.wrapper #counter:after {
+		content: "";
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		background-color: #E7E6E3;
+		transform: rotate(45deg);
+		left: 15%;
+		margin-left: -4px;
+		bottom: -4px;
+		box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2), 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+		border-radius: 0 0 3px 0;
+	}
+
+	.wrapper h1 {
+		font-size: 28px;
+		padding: 20px 0 8px 0;
+	}
+
+	.wrapper p {
+		font-size: 13px;
+	}
+
+	@keyframes loader {
+		from {
+			width: 0%;
+		}
+		to {
+			width: 100%;
+		}
+	}
+
+	@keyframes counter {
+		from {
+			left: -25px;
+		}
+		to {
+			left: 323px;
+		}
+	}
+
+	.load-bar-inner {
+		height: 99%;
+		width: 0%;
+		border-radius: inherit;
+		position: relative;
+		background: #c2d7ac;
+		animation: loader 5s linear 1;
+		animation-fill-mode: forwards;
+	}
+	.wrapper-cont{
+		margin: 20px auto;
+		width: 38%;
+		display: flex;
+		justify-content: space-between;
+	}
+</style>
+<header class="uc_head mt30">
+	<h3>我的钱包</h3>
+</header>
+<section class="uc_money">
+	<div class="uc_qianbao">
+		<ul>
+			<li>消费钱包：<strong>￥<span id="consumption"><?php echo isset($user['consumption'])?$user['consumption']:"";?></span></strong></strong></li>
+			<li>奖金钱包：<strong>￥<span id="bonus"><?php echo isset($user['bonus'])?$user['bonus']:"";?></span></strong></li>
+			<li>提现钱包（余额）：<strong>￥<span id="balance"><?php echo isset($user['balance'])?$user['balance']:"";?></span></strong></li>
+			<li class="li_zhuan"><button id="btn_zhuan">转存</button></li>
+			<li class="li_fent">
+				<!-- <input type="" name=""> -->
+				<button class="fent">分投</button>
+			</li>
+		</ul>
+	</div>
+	<div class="uc_zongchi">
+		<div class="wrapper">
+	      	<div class="load-bar">
+	        	<div class="load-bar-inner" data-loading="0"><span id="counter"></span> </div>
+	      	</div>
+	    </div>
+	    <div class="wrapper-cont">
+	    	<div>本期完成积分：<?php echo isset($arr['user_point'])?$arr['user_point']:"";?></div>
+	    	<div>本期总积分：<?php echo isset($arr['sum_point'])?$arr['sum_point']:"";?></div>
+	    </div>
+	    
+	</div>
+
+</section>
 <header class="uc_head mt30">
 	<h3>我的订单</h3>
 	<a href="<?php echo IUrl::creatUrl("/ucenter/order");?>" class="more">更多 ></a>
@@ -315,6 +480,26 @@
 
 
 <script>
+
+	$(function() {
+
+        var interval = setInterval(increment, 100);
+        var current = 0;
+
+        function increment() {
+          current++;
+          $('#counter').html('已经完成'+current + '%积分');
+          if(current == <?php echo isset($arr['success_point'])?$arr['success_point']:"";?>) {
+            clearInterval(interval);
+            $('#counter').css("animation-play-state","paused")
+            $('.load-bar-inner').css("animation-play-state","paused")
+          }else{
+            
+          }
+
+        }
+
+      });
 //选择头像
 function select_ico(){
 	<?php $callback = urlencode(IUrl::creatUrl('/ucenter/user_ico_upload'))?>
@@ -342,13 +527,18 @@ function callback_user_ico(content){
 }
 
 // 个人中心转存
+
 $(function(){
+
 	$('#btn_zhuan').click(function(){
 		var jiangjin = $('#bonus').html();
 		// 判断奖金是否为0
 		if (jiangjin <= 0) {
 			alert('没有奖金');return;
 		}
+
+		$(this).attr('disabled',true);
+
 		// 获取当前用户ID
 		var user_id = "<?php echo isset($user['user_id'])?$user['user_id']:"";?>";
 
@@ -362,10 +552,11 @@ $(function(){
 			}
 			if (result.code == 200) {
 				alert(result.message);
+				$('#bonus').html(result.data.bonus);
+				$('#consumption').html(result.data.consumption);
+				$('#balance').html(result.data.balance);
 			}
-			$('#bonus').html(result.data.bonus);
-			$('#consumption').html(result.data.consumption);
-			$('#balance').html(result.data.balance);
+			
 		},'JSON');
 		$(this).attr('disabled',false);
 	})
