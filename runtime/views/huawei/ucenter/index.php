@@ -464,9 +464,10 @@
 
         function increment() {
           current++;
-          $('#counter').html('已经完成'+current + '%积分');
-          if(current == <?php echo isset($arr['success_point'])?$arr['success_point']:"";?>) {
+          $('#counter').html('已经完成'+ current + '%积分');
+          if(current >= <?php echo isset($arr['success_point'])?$arr['success_point']:"";?>) {
             clearInterval(interval);
+            $('#counter').html('已经完成'+ <?php echo isset($arr['success_point'])?$arr['success_point']:"";?> + '%积分');
             $('#counter').css("animation-play-state","paused")
             $('.load-bar-inner').css("animation-play-state","paused")
           }else{
@@ -476,6 +477,7 @@
         }
 
       });
+
 //选择头像
 function select_ico(){
 	<?php $callback = urlencode(IUrl::creatUrl('/ucenter/user_ico_upload'))?>
