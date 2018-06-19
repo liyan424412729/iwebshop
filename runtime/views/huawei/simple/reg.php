@@ -234,7 +234,7 @@
 
 <section class="web">
 	<header class="login_header">
-		<h3>用户注册</h3>
+		<h3>用户注册111</h3>
 		<div class="go_login">
 			已有<?php echo $this->_siteConfig->name;?>帐号？请点 <a href="<?php echo IUrl::creatUrl("/simple/login");?>">这里登录</a>
 		</div>
