@@ -61,168 +61,103 @@
 
 		<div id="admin_right">
 			<div class="headbar">
-	<div class="position"><span>积分</span><span>></span><span>积分管理</span><span>></span><span>积分列表</span></div>
+	<div class="position"><span>商品</span><span>></span><span>商品管理</span><span>></span><span>商品回收站</span></div>
 	<div class="operating">
-		<a href="javascript:;"><button class="operating_btn" type="button" onclick="window.location='<?php echo IUrl::creatUrl("/points/point_add");?>'"><span class="addition">添加积分</span></button></a>
-		<!-- <a href="javascript:;"><button class="operating_btn" type="button" title="批量设置" alt="批量设置" name="_goodsCategoryButton"><span class="remove">批量设置</span></button></a> -->
-		<?php plugin::trigger('goodsCategoryWidget',array("name" => "parent_id","callback" => "setCat"))?>
+		<a href="javascript:void(0);"><button class="operating_btn" onclick="window.location='<?php echo IUrl::creatUrl("/goods/goods_list");?>'" type="button"><span class="return">返回列表</span></button></a>
+		<a href="javascript:void(0);"><button class="operating_btn" onclick="selectAll('id[]')" type="button"><span class="sel_all">全选</span></button></a>
+		<a href="javascript:void(0);"><button class="operating_btn" onclick="goods_recycle_del()" type="button"><span class="delete">彻底删除</span></button></a>
+		<a href="javascript:void(0);"><button class="operating_btn" onclick="goods_recycle_restore()" type="button"><span class="recover">还原</span></button></a>
 	</div>
 </div>
 
-<form action="<?php echo IUrl::creatUrl("/goods/category_sort");?>" method="post" name="category_list">
-<div class="content">
-	<table id="list_table" class="list_table">
-		<colgroup>
-			<col width="120px" />
-			<col width="120px" />
-			<col width="120px" />
-			<col width="150px" />
-			<col width="150px" />
-			<col width="120px" />
-			<col width="120px" />
-			<col width="120px" />
-		</colgroup>
+<form action="" method="post" name="orderForm">
+	<div class="content">
+		<table class="list_table">
+			<colgroup>
+				<col width="40px" />
+				<col width="350px" />
+				<col width="100px" />
+				<col width="70px" />
+				<col width="70px" />
+				<col width="70px" />
+				<col width="80px" />
+				<col width="70px" />
+				<col width="70px" />
+				<col width="70px" />
+			</colgroup>
 
-		<thead>
-			<tr>
-				<th>期数</th>
-				<th>目标积分</th>
-				<th>完成积分</th>
-				<th>开始时间</th>
-				<th>结束时间</th>
-				<th>状态</th>
-				<th>是否完成</th>
-				<th>操作</th>
-			</tr>
-		</thead>
-		<?php foreach($items=$this->pointHandle->find() as $key => $item){?>
+			<thead>
 				<tr>
-					<!-- <td><input name="id[]" type="checkbox" value="<?php echo isset($item['sum_id'])?$item['sum_id']:"";?>" /></td> -->
-					<td><?php echo isset($item['sum_num'])?$item['sum_num']:"";?></td>
-					<td><?php echo isset($item['sum_point'])?$item['sum_point']:"";?></td>
+					<th>选择</th>
+					<th>商品名称</th>
+					<th>分类</th>
+					<th>销售价</th>
+					<th>库存</th>
+					<th>上架</th>
+					<th>品牌</th>
+					<th>重量</th>
+					<th>排序</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<?php $page=IReq::get('page') ? IFilter::act(IReq::get('page'),'int') : 1?>
+				<?php $goodsHandle = new IQuery("goods as go");$goodsHandle->join = "left join brand as b on go.brand_id = b.id";$goodsHandle->where = "go.is_del = 1";$goodsHandle->fields = "go.*,b.name as brand_name";$goodsHandle->order = "go.sort asc,go.id desc";$goodsHandle->page = "$page";$items = $goodsHandle->find(); foreach($items as $key => $item){?>
+				<tr>
+					<td><input name="id[]" type="checkbox" value="<?php echo isset($item['id'])?$item['id']:"";?>" /></td>
+					<td><a href="<?php echo IUrl::creatUrl("/site/products/id/".$item['id']."");?>" target="_blank" title="<?php echo isset($item['name'])?$item['name']:"";?>"><?php echo isset($item['name'])?$item['name']:"";?></a></td>
 					<td>
-						<?php if($item['sum_status'] == 2){?>
-						<?php echo isset($item['user_points'])?$item['user_points']:"";?>
-						<?php }else{?>
-						<font color="red">[活动结束后显示]</font>
-						<?php }?>
+					<?php $catName = array()?>
+					<?php $query = new IQuery("category_extend as ce");$query->join = "left join category as cd on cd.id = ce.category_id";$query->fields = "cd.name";$query->where = "goods_id = $item[id]";$items = $query->find(); foreach($items as $key => $catData){?>
+						<?php $catName[] = $catData['name']?>
+					<?php }?>
+					<?php echo join(',',$catName);?>
 					</td>
-					<td><?php echo isset($item['start_time'])?$item['start_time']:"";?></td>
+					<td><?php echo isset($item['sell_price'])?$item['sell_price']:"";?></td>
+					<td><?php echo isset($item['store_nums'])?$item['store_nums']:"";?></td>
+					<td><?php echo $item['is_del']==0?'是':'否';?></td>
+					<td><?php echo isset($item['brand_name'])?$item['brand_name']:"";?></td>
+					<td><?php echo isset($item['weight'])?$item['weight']:"";?></td>
+					<td><?php echo isset($item['sort'])?$item['sort']:"";?></td>
 					<td>
-						<?php if($item['end_time'] == '0000-00-00 00:00:00'){?>
-						未结束
-						<?php }else{?>
-						<?php echo isset($item['end_time'])?$item['end_time']:"";?>
-						<?php }?>
-					</td>
-					<td>
-						<?php if($item['sum_status'] == 0){?>
-						未开始
-						<?php }elseif($item['sum_status'] == 1){?>
-						<font color="red"><b>正在进行中...</b></font>
-						<?php }else{$tiem['sum_status'] == 2?>
-						已结束
-						<?php }?>
-					</td>
-					<td>
-						<?php if($item['user_points'] >= $item['sum_point']){?>
-						<font color="green"><b>本期完成</b></font>
-						<?php }else{?>
-						<font color="red">未完成目标值</font>
-						<?php }?>
-					</td>
-					<td>
-						<!-- <a href="">【查看】</a>&nbsp;||&nbsp; -->
-						<a href="<?php echo IUrl::creatUrl("/points/point_del/sum_id/".$item['sum_id']."");?>">【删除】</a>
+						<a href="<?php echo IUrl::creatUrl("/goods/goods_edit/id/".$item['id']."");?>"><img class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/icon_edit.gif";?>" alt="编辑" /></a>
+						<a href="javascript:void(0)" onclick="delModel({link:'<?php echo IUrl::creatUrl("/goods/goods_del/id/".$item['id']."");?>'})" ><img class="operator" src="<?php echo $this->getWebSkinPath()."images/admin/icon_del.gif";?>" alt="删除" /></a>
 					</td>
 				</tr>
-		<?php }?>
-	</table>
-</div>
+				<?php }?>
+			</tbody>
+		</table>
+	</div>
 </form>
+<?php echo $goodsHandle->getPageBar();?>
 
-<script language="javascript">
-//折叠展示
-function displayData(_self)
+<script type="text/javascript">
+function goods_recycle_del()
 {
-	if(_self.alt == "关闭")
-	{
-		jqshow($(_self).parent().parent().attr('id'), 'hide');
-		$(_self).attr("src", "<?php echo $this->getWebSkinPath()."images/admin/open.gif";?>");
-		_self.alt = '打开';
-	}
-	else
-	{
-		jqshow($(_self).parent().parent().attr('id'), 'show');
-		$(_self).attr("src", "<?php echo $this->getWebSkinPath()."images/admin/close.gif";?>");
-		_self.alt = '关闭';
-	}
+	$("form[name='orderForm']").attr('action','<?php echo IUrl::creatUrl("/goods/goods_recycle_del");?>');
+	confirm('确定要彻底删除所选中的信息吗？','formSubmit(\'orderForm\')');
 }
 
-function jqshow(id,isshow) {
-	var obj = $("#list_table tr[parent='"+id+"']");
-	if (obj.length>0)
-	{
-		obj.each(function(i) {
-			jqshow($(this).attr('id'), isshow);
-		});
-		if (isshow=='hide')
-		{
-			obj.hide();
-		}
-		else
-		{
-			obj.show();
-		}
-	}
-}
-//排序
-function toSort(id)
+function goods_recycle_restore()
 {
-	if(id!='')
-	{
-		var va = $('#s'+id).val();
-		var part = /^\d+$/i;
-		if(va!='' && va!=undefined && part.test(va))
+	var flag = 0;
+	$('input:checkbox[name="id[]"]:checked').each(
+		function(i)
 		{
-			$.get("<?php echo IUrl::creatUrl("/goods/category_sort");?>",{'id':id,'sort':va}, function(data)
-			{
-				if(data=='1')
-				{
-					tips('修改成功');
-				}
-			});
+			flag = 1;
 		}
+	);
+	if(flag == 0 )
+	{
+		alert('请选择要还原的数据');
+		return false;
 	}
-}
-//设置分类
-function setCat(catData)
-{
-	var parent_id = catData[0]['id'];
-	var cat_id    = [];
-	$('[name="cat_id[]"]:checked').each(function(i){
-		cat_id.push($(this).val());
-	});
-
-	if(cat_id && cat_id.length == 0)
-	{
-		alert("请选择分类");
-		return;
-	}
-
-	$.getJSON("<?php echo IUrl::creatUrl("/goods/categoryAjax");?>",{"id":cat_id,"parent_id":parent_id},function(json)
-	{
-		if(json.result == 'success')
-		{
-			window.location.reload();
-		}
-		else
-		{
-			alert('更新失败，当前分类不能设置到其子分类下');
-		}
-	});
+	$("form[name='orderForm']").attr('action','<?php echo IUrl::creatUrl("/goods/goods_recycle_restore");?>');
+	confirm('确定要还原删除所选中的信息吗？','formSubmit(\'orderForm\')');
 }
 </script>
+
 		</div>
 	</div>
 
