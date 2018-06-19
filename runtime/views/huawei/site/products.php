@@ -291,7 +291,9 @@
 
 				<!-- 消费积分 -->
 				<li>获积分：<span id="data_sellPrice" style="font-size: 20px;"><?php echo isset($point)?$point:"";?></span></li>
-
+				<?php if($fen_url != ''){?>
+				<li>分享给其他人：<span id="data_sellPrice"><?php echo isset($fen_url)?$fen_url:"";?></span></li>
+				<?php }?>
 				<li>
 					库存：现货 <span id="data_storeNums"><?php echo isset($store_nums)?$store_nums:"";?> </span>
 					<span class="favorite" onclick="favorite_add_ajax(<?php echo isset($id)?$id:"";?>,this);">

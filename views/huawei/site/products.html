@@ -58,7 +58,9 @@
 
 				<!-- 消费积分 -->
 				<li>获积分：<span id="data_sellPrice" style="font-size: 20px;">{$point}</span></li>
-
+				{if:$fen_url != ''}
+				<li>分享给其他人：<span id="data_sellPrice">{$fen_url}</span></li>
+				{/if}
 				<li>
 					库存：现货 <span id="data_storeNums">{$store_nums} </span>
 					<span class="favorite" onclick="favorite_add_ajax({$id},this);">

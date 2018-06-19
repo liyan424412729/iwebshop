@@ -84,7 +84,7 @@ class Points extends IController implements adminAuthorization
 		// // 查询总积分表
 		$pointHandle = new IQuery('point_sum as po');
 		// // $pointHandle->fields   = "po.sum_id,po.sum_sum,po.sum_point,po.start_time,po.end_time,po.is_show";
-		// // $pointHandle->where    = '=1';
+		$pointHandle->where    = 'is_show=1';
 		$this->pointHandle = $pointHandle;
 		// // echo "<pre>";
   //   // print_r($this->pointHandle);.
@@ -98,10 +98,18 @@ class Points extends IController implements adminAuthorization
 	*/
 	public function point_del(){
 		$sum_id = (int)IReq::get('sum_id');
+		if ($sum_id) {
+			$point_sum_obj = new IModel('point_sum');
+			$point_sum = $point_sum_obj->getObj('sum_id='.$sum_id);
+			if ($point_sum['sum_status'] == 1) {
+				echo "<script>alert('本期还未结束');location.href='/points/point_list';</script>";
+				die;
+			}
+			$arr = array('is_show'=>0);
+			$point_sum_obj->setData($arr);
+			$point_sum_obj->update('sum_id='.$sum_id);
+		}
 		$this->redirect('point_list');
-		Util::showMessage("没有找到相关品牌分类！");
-		return;
-
 
 	}
 

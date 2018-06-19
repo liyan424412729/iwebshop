@@ -307,6 +307,15 @@ class Site extends IController
 	//商品展示
 	function products()
 	{
+
+    if ($this->user) {
+   		$fen_url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'&user_id='.$this->user['user_id'];
+    }else{
+    	$fen_url = '';
+    }
+
+    	echo $fen_url;
+		
 		$goods_id = IFilter::act(IReq::get('id'),'int');
 
 		if(!$goods_id)
@@ -448,6 +457,7 @@ class Site extends IController
 
 		//数据处理用于显示
 		$goods_info['weight'] = common::formatWeight($goods_info['weight']);
+		$goods_info['fen_url'] = $fen_url;
 
 		$this->setRenderData($goods_info);
 		$this->redirect('products');

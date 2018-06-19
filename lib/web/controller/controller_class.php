@@ -92,7 +92,7 @@ class IController extends IControllerBase
 				if (!in_array($controllers, $arr) && $controllers) {
 
 					echo "<div style='text-align:center;margin-top:220px'>
-								<img src='/baocuo3.gif'>2222</img>		
+								<img src='/baocuo3.gif'></img>		
 						  </div>";die;
 				}			
 

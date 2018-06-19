@@ -667,6 +667,7 @@ errorTime: 2018-06-15 15:59:24
 </ERROR_BLOCK>
 
 <ERROR_BLOCK>
+<<<<<<< HEAD
 errorInfo: Undefined variable: tiem
 errorFile: IWEB_PATH/runtime/views/sysdefault/points/point_list.php
 errorLine: 123
@@ -707,11 +708,17 @@ errorTime: 2018-06-15 16:02:23
 </ERROR_BLOCK>
 
 <ERROR_BLOCK>
+=======
+>>>>>>> nzf
 errorInfo: Undefined index: discount
 errorFile: IWEB_PATH/classes/countsum.php
 errorLine: 47
 errorCode: 8
+<<<<<<< HEAD
 errorTime: 2018-06-15 16:02:57
+=======
+errorTime: 2018-06-15 15:57:52
+>>>>>>> nzf
 #0 IWEB_PATH/controllers/site.php(425): CountSum->__construct()
 #1 : Site->products()
 #2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
@@ -726,8 +733,13 @@ errorInfo: Undefined index: discount
 errorFile: IWEB_PATH/classes/countsum.php
 errorLine: 47
 errorCode: 8
+<<<<<<< HEAD
 errorTime: 2018-06-15 16:03:07
 #0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(1)
+=======
+errorTime: 2018-06-15 15:57:59
+#0 IWEB_PATH/controllers/simple.php(291): CountSum->__construct(2)
+>>>>>>> nzf
 #1 : Simple->cart2()
 #2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
 #3 IWEB_PATH/lib/web/controller/controller_class.php(174): IInlineAction->run()
@@ -741,8 +753,13 @@ errorInfo: Undefined index: discount
 errorFile: IWEB_PATH/classes/countsum.php
 errorLine: 47
 errorCode: 8
+<<<<<<< HEAD
 errorTime: 2018-06-15 16:03:11
 #0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(1)
+=======
+errorTime: 2018-06-15 15:58:03
+#0 IWEB_PATH/controllers/simple.php(391): CountSum->__construct(2)
+>>>>>>> nzf
 #1 : Simple->cart3()
 #2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
 #3 IWEB_PATH/lib/web/controller/controller_class.php(174): IInlineAction->run()
@@ -756,7 +773,10 @@ errorInfo: Undefined variable: tiem
 errorFile: IWEB_PATH/runtime/views/sysdefault/points/point_list.php
 errorLine: 123
 errorCode: 8
+<<<<<<< HEAD
 errorTime: 2018-06-15 16:03:50
+=======
+errorTime: 2018-06-15 17:26:28
 #0 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/points/point_list.php)
 #1 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/points/point_list.php)
 #2 IWEB_PATH/lib/web/controller/controller_class.php(226): IControllerBase->renderView(IWEB_PATH/views/sysdefault/points/point_list,)
@@ -776,7 +796,8 @@ errorInfo: Undefined variable: tiem
 errorFile: IWEB_PATH/runtime/views/sysdefault/points/point_list.php
 errorLine: 123
 errorCode: 8
-errorTime: 2018-06-15 16:03:50
+errorTime: 2018-06-15 17:26:28
+>>>>>>> nzf
 #0 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/points/point_list.php)
 #1 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/points/point_list.php)
 #2 IWEB_PATH/lib/web/controller/controller_class.php(226): IControllerBase->renderView(IWEB_PATH/views/sysdefault/points/point_list,)
@@ -796,7 +817,35 @@ errorInfo: Undefined variable: tiem
 errorFile: IWEB_PATH/runtime/views/sysdefault/points/point_list.php
 errorLine: 123
 errorCode: 8
+<<<<<<< HEAD
 errorTime: 2018-06-15 16:03:50
+=======
+errorTime: 2018-06-15 17:28:34
+>>>>>>> nzf
+#0 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/points/point_list.php)
+#1 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/points/point_list.php)
+#2 IWEB_PATH/lib/web/controller/controller_class.php(226): IControllerBase->renderView(IWEB_PATH/views/sysdefault/points/point_list,)
+#3 IWEB_PATH/lib/web/action/view_action.php(35): IController->render(IWEB_PATH/views/sysdefault/points/point_list,)
+#4 IWEB_PATH/lib/web/controller/controller_class.php(433): IViewAction->run()
+#5 IWEB_PATH/controllers/points.php(91): IController->redirect(point_list)
+#6 : Points->point_list()
+#7 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#8 IWEB_PATH/lib/web/controller/controller_class.php(174): IInlineAction->run()
+#9 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(point_list)
+#10 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#11 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined variable: tiem
+errorFile: IWEB_PATH/runtime/views/sysdefault/points/point_list.php
+errorLine: 123
+errorCode: 8
+<<<<<<< HEAD
+errorTime: 2018-06-15 16:03:50
+=======
+errorTime: 2018-06-15 17:28:34
+>>>>>>> nzf
 #0 IWEB_PATH/lib/web/controller/controllerbase_class.php(116): require(IWEB_PATH/runtime/views/sysdefault/points/point_list.php)
 #1 IWEB_PATH/lib/web/controller/controllerbase_class.php(82): IControllerBase->requireFile(IWEB_PATH/runtime/views/sysdefault/points/point_list.php)
 #2 IWEB_PATH/lib/web/controller/controller_class.php(226): IControllerBase->renderView(IWEB_PATH/views/sysdefault/points/point_list,)
