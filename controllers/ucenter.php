@@ -63,7 +63,7 @@ class Ucenter extends IController implements userAuthorization
         if (!empty($sum_point) && !empty($user_point)) {
             $success_point = $user_point / $sum_point * 100;
             $arr = array(
-                'success_point'  => $success_point,
+                'success_point'  => floor($success_point*100)/100,
                 'user_point'     => $user_point,
                 'sum_point'      => $sum_point,
             );

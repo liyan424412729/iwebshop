@@ -539,8 +539,6 @@ $(function(){
 			alert('没有奖金');return;
 		}
 
-		$(this).attr('disabled',true);
-
 		// 获取当前用户ID
 		var user_id = "<?php echo isset($user['user_id'])?$user['user_id']:"";?>";
 
@@ -560,7 +558,6 @@ $(function(){
 			}
 			
 		},'JSON');
-		$(this).attr('disabled',false);
 	})
 
 })
