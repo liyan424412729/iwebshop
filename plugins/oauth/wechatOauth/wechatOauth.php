@@ -14,8 +14,8 @@
  */
 class wechatOauth extends OauthBase
 {
-	private $AppID     = '';
-	private $AppSecret = '';
+	private $AppID     = 'wx215fb7dd6cd53dc9';
+	private $AppSecret = '58b983d1b4c2eb268f5cada1c359a3f1';
 
 	public function __construct($config)
 	{

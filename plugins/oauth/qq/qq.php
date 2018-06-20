@@ -14,8 +14,8 @@
  */
 class qq extends OauthBase
 {
-	private $apiId  = '';
-	private $apiKey = '';
+	private $apiId  = '101467358';
+	private $apiKey = 'fb91f737e56bb6cbdaa1d7609604a20a';
 
 	public function __construct($config)
 	{
