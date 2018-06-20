@@ -1280,3 +1280,48 @@ errorTime: 2018-06-19 15:15:22
 #6 IWEB_PATH/index.php(5): IApplication->run()
 </ERROR_BLOCK>
 
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-19 15:21:06
+#0 IWEB_PATH/controllers/site.php(434): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(174): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-19 16:26:37
+#0 IWEB_PATH/controllers/site.php(434): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(174): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Undefined index: discount
+errorFile: IWEB_PATH/classes/countsum.php
+errorLine: 47
+errorCode: 8
+errorTime: 2018-06-19 16:26:59
+#0 IWEB_PATH/controllers/site.php(434): CountSum->__construct()
+#1 : Site->products()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(174): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(products)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+

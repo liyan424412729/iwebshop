@@ -307,7 +307,7 @@ class Site extends IController
 	//商品展示
 	function products()
 	{
-
+	// 判断是否登录，获取用户ID拼接URL
     if ($this->user) {
    		$fen_url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'&user_id='.$this->user['user_id'];
     }else{
@@ -327,7 +327,8 @@ class Site extends IController
 		//使用商品id获得商品信息
 		$tb_goods = new IModel('goods');
 		$goods_info = $tb_goods->getObj('id='.$goods_id." AND is_del=0");
-		
+		echo "<pre>";
+    print_r($goods_info);die;
 		if(!$goods_info)
 		{
 			IError::show(403,"这件商品不存在");
